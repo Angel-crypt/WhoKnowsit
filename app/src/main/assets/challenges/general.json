@@ -1,0 +1,7 @@
+[
+  {"id": 1, "text": "Haz 10 saltos de tijera", "difficulty": 2},
+  {"id": 2, "text": "Dibuja un gato en 30 segundos", "difficulty": 3},
+  {"id": 3, "text": "Toca tus pies 5 veces", "difficulty": 1},
+  {"id": 4, "text": "Di el abecedario al revés", "difficulty": 3},
+  {"id": 5, "text": "Equilibrate en un pie por 10 segundos", "difficulty": 2}
+]
