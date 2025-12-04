@@ -1,58 +1,181 @@
 # Who Knows it?
 
-**Descripción:**  
-Juego social y competitivo para 2 a 4 jugadores en un solo dispositivo, combinando preguntas y retos para fomentar conocimiento mutuo, diversión y competencia estratégica. Los jugadores acumulan puntos, ganan ítems limitados y participan en rondas dinámicas con interacción y votación.
+**Descripción:**
 
-**Objetivo general:**  
-Fomentar la interacción social y competitividad mediante preguntas y retos, premiando el conocimiento entre jugadores y la toma de decisiones estratégicas.
+Who Knows it? es un juego de trivia para un solo jugador inspirado en clásicos como *Trivia Crack* y *Preguntados*. El jugador responde preguntas de opción múltiple en distintas categorías (Historia, Ciencia, Cultura Pop, Cine, Deportes), acumula aciertos y puede continuar una partida previa gracias al sistema de guardado automático. Está diseñado para ser ligero, rápido y fácil de expandir mediante archivos JSON.
 
-**Objetivos específicos:**
+**Objetivo general:**
 
-- Ofrecer rondas de preguntas y retos con puntuación diferenciada.
-- Permitir selección aleatoria de preguntas y retos según paquetes temáticos y número de rondas.
-- Mantener turnos automáticos equitativos para todos los jugadores.
-- Integrar ítems limitados de uso único para potenciar estrategia y competencia.
-- Mostrar puntaje acumulado y estadísticas al final de la partida.
-- Proporcionar retroalimentación visual y sonora que mejore la experiencia.
-- Guardar récords y estadísticas para seguimiento de desempeño.
+Ofrecer una experiencia sencilla, divertida y educativa, donde el jugador pueda poner a prueba sus conocimientos a través de preguntas aleatorias organizadas por categorías.
 
-**Tipos de rondas:**
+---
 
-- **Pregunta Normal:** Trivia general (1–3 puntos).
-- **Pregunta "Quién conoce mejor a quién":** Evalúa conocimiento sobre otros jugadores (1–3 puntos).
-- **Reto con votación:** Desafíos simples con puntaje mayor (2–5 puntos) y posibilidad de ganar ítems.
+# **Objetivos específicos**
 
-**Selección de preguntas y retos:**
+* Brindar un sistema de trivia directo y dinámico basado en selección múltiple.
+* Permitir partidas nuevas con categorías personalizadas.
+* Proveer un sistema de guardado que permita continuar la partida en cualquier momento.
+* Garantizar un flujo de juego simple y accesible, sin elementos competitivos o multijugador.
+* Facilitar escalabilidad mediante carga de preguntas desde archivos JSON.
+* Mantener un registro claro del progreso: preguntas respondidas, aciertos y avance actual.
 
-- Aleatoria según número de rondas y paquete temático elegido.
-- Evita repeticiones para el mismo jugador; puede repetirse para distintos jugadores.
+---
 
-**Turnos:**
+# **Características principales**
 
-- Automáticos y secuenciales, asignando jugador activo y objetivo de cada pregunta o reto.
-- Permiten responder preguntas, realizar retos y usar ítems estratégicos.
+## **1. Categorías disponibles**
 
-**Ítems:**
+El juego incluye categorías temáticas predefinidas:
 
-- **Skip Question:** Salta una pregunta sin perder puntos.
-- **Double Points:** Duplica puntos de respuesta o reto.
-- Obtenidos al completar retos exitosos mediante votación.
+* **Historia**
+* **Ciencia**
+* **Cultura Pop**
+* **Películas**
+* **Deportes**
 
-**Puntaje:**
+Cada categoría se carga desde archivos JSON independientes en `assets/questions/`.
 
-- Acumulativo por respuestas y retos.
-- Puntaje ajustado según dificultad; afectado por ítems.
+---
 
-**Condición de fin de juego:**
+## **2. Modo de juego**
 
-- Por número de preguntas/retos definidos al inicio o por puntaje objetivo.
-- Al final se muestran: puntaje total, ranking de retos y quién conoce mejor a quién.
+### **Nueva partida**
 
-**Interfaz y animaciones:**
+El jugador elige una o más categorías.
 
-- Canvas + SurfaceView con animaciones simples (resaltar jugador, aparición de ítems, cambios de color).
-- Sonidos asociados a aciertos, errores, cambio de turno y uso de ítems.
+El sistema:
 
-**Persistencia:**
+1. Carga todas las preguntas de los archivos JSON.
+2. Filtra por las categorías seleccionadas.
+3. Mezcla las preguntas aleatoriamente.
+4. Genera una partida nueva con el listado ordenado aleatoriamente.
 
-- Guardado de puntajes máximos y estadísticas de partidas mediante SharedPreferences.
+### **Continuar partida**
+
+Si existe un progreso guardado, el jugador puede retomarlo exactamente en el punto donde lo dejó:
+
+* Pregunta actual
+* Aciertos
+* Preguntas contestadas
+* Orden original de preguntas
+
+El juego guarda automáticamente después de cada respuesta.
+
+---
+
+## **3. Preguntas (Multiple Choice)**
+
+Cada pregunta contiene:
+
+* Enunciado
+* Lista de 4 opciones
+* Índice de la respuesta correcta
+* Categoría
+* ID único
+
+El jugador elige una opción y recibe retroalimentación inmediata (acierto/error).
+
+---
+
+## **4. Sistema de puntuación**
+
+* **Aciertos:** el jugador suma 1 punto por respuesta correcta.
+* **Progreso:** el sistema registra cuántas preguntas ha contestado y cuántas quedan.
+* **Resultados:** al final se muestra un resumen de desempeño.
+
+---
+
+## **5. Persistencia de datos**
+
+El juego utiliza almacenamiento local para:
+
+* Guardar y cargar partidas (`GameState`)
+* Mantener puntaje, índice de pregunta actual y orden de preguntas
+* Almacenamiento basado en SharedPreferences / archivo local (según plataforma)
+
+---
+
+# **Estructura técnica del proyecto**
+
+## **Arquitectura simple, escalable y SOLID**
+
+### **Clases principales**
+
+* `Question` — Modelo de pregunta
+* `Category` — Enum de categorías
+* `GameState` — Representa el estado completo de la partida
+* `GameStateStorage` — Interfaz para guardar/cargar
+* `QuestionRepository` — Interfaz para cargar preguntas
+* `JsonQuestionRepository` — Carga de preguntas desde archivos JSON
+* `GameEngine` — Controlador principal del juego
+
+---
+
+# **Estructura de assets**
+
+```
+assets/
+   questions/
+      history.json
+      science.json
+      movies.json
+      pop_culture.json
+      sports.json
+```
+
+Cada archivo contiene únicamente preguntas de su categoría.
+
+---
+
+# **Formato de JSON**
+
+```json
+[
+  {
+    "id": "h1",
+    "category": "HISTORY",
+    "text": "¿En qué año ocurrió la caída del Imperio romano de Occidente?",
+    "options": ["476 d.C.", "1492 d.C.", "800 d.C.", "1215 d.C."],
+    "correctIndex": 0
+  }
+]
+```
+
+---
+
+# **Flujo de juego**
+
+1. Menú principal:
+
+   * Nueva partida
+   * Continuar partida
+
+2. Selección de categorías
+
+3. El motor selecciona y mezcla preguntas
+
+4. El jugador responde una pregunta a la vez
+
+5. Se registra acierto/error
+
+6. Guardado automático
+
+7. Cuando no quedan preguntas → pantalla de resultados
+
+---
+
+# **Interfaz y experiencia**
+
+* UI minimalista y clara
+* Feedback inmediato:
+
+  * Acierto → verde
+  * Error → rojo
+* Animación ligera para mostrar transición entre preguntas
+* Progreso visible (pregunta X de Y)
+
+---
+
+# **Resumen**
+
+Who Knows it? es un juego de trivia **simple, rápido de implementar y fácil de expandir**, ideal para un proyecto académico en tiempo limitado, pero con base sólida para evolucionar a una app completa en el futuro.
