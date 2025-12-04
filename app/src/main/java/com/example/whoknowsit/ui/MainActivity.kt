@@ -11,7 +11,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.whoknowsit.core.Category
+import com.example.whoknowsit.core.Difficulty
 import com.example.whoknowsit.data.LocalQuestionDataSource
+import com.example.whoknowsit.domain.QuestionManager
 import com.example.whoknowsit.ui.theme.WhoKnowsItTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,12 +22,26 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        // Prueba de local-question-data-source
-        val dataSource = LocalQuestionDataSource(this)
-        val questions = dataSource.loadQuestions()
+        // 1️⃣ Crear DataSource
+        val localDataSource = LocalQuestionDataSource(this)
+
+        // 2️⃣ Crear QuestionManager
+        val questionManager = QuestionManager(localDataSource)
+
+        // 3️⃣ Obtener preguntas filtradas
+        val selectedCategory = Category.HISTORY
+        val selectedDifficulty = Difficulty.HARD
+        val totalQuestions = 5
+
+        val questions = questionManager.getQuestionsForCategory(
+            category = selectedCategory,
+            difficulty = selectedDifficulty,
+            totalQuestions = totalQuestions
+        )
 
         android.util.Log.d("TEST_JSON", "Total preguntas cargadas: ${questions.size}")
         android.util.Log.d("TEST_JSON", "Primera pregunta: ${questions.firstOrNull()}")
+
 
         setContent {
             WhoKnowsItTheme {
