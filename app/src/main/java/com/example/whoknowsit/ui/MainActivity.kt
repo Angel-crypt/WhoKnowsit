@@ -1,4 +1,4 @@
-package com.example.whoknowsit
+package com.example.whoknowsit.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
