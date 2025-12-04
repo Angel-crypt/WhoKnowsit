@@ -1,0 +1,123 @@
+[
+  {
+    "id": 1,
+    "question": "¿Qué actor interpretó a Jack en la película 'Titanic' de 1997?",
+    "options": ["Brad Pitt", "Leonardo DiCaprio", "Tom Cruise", "Johnny Depp"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 2,
+    "question": "¿En qué año se estrenó la película 'El Rey León' de Disney?",
+    "options": ["1992", "1993", "1994", "1995"],
+    "correctIndex": 2,
+    "category": "FILM",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 3,
+    "question": "¿Qué director dirigió las películas 'Pulp Fiction' y 'Kill Bill'?",
+    "options": ["Martin Scorsese", "Quentin Tarantino", "Christopher Nolan", "Steven Spielberg"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 4,
+    "question": "¿Qué película ganó el Oscar a Mejor Película en 2020?",
+    "options": ["1917", "Joker", "Parasite", "Once Upon a Time in Hollywood"],
+    "correctIndex": 2,
+    "category": "FILM",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 5,
+    "question": "¿Qué actor interpretó a Tony Stark (Iron Man) en el Universo Cinematográfico de Marvel?",
+    "options": ["Chris Evans", "Robert Downey Jr.", "Chris Hemsworth", "Mark Ruffalo"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 6,
+    "question": "¿Qué película de 1999, dirigida por los hermanos Wachowski, popularizó el efecto 'bullet time'?",
+    "options": ["Blade Runner", "The Matrix", "Inception", "Minority Report"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 7,
+    "question": "¿Qué película mexicana ganó el Oscar a Mejor Película Extranjera en 2018?",
+    "options": ["Roma", "Amores Perros", "Y tu mamá también", "El laberinto del fauno"],
+    "correctIndex": 0,
+    "category": "FILM",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 8,
+    "question": "¿Qué director dirigió 'El Padrino' y 'Apocalypse Now'?",
+    "options": ["Martin Scorsese", "Francis Ford Coppola", "Steven Spielberg", "Stanley Kubrick"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 9,
+    "question": "¿Qué película de 2010, dirigida por Christopher Nolan, explora los sueños y la arquitectura onírica?",
+    "options": ["Interstellar", "Inception", "The Prestige", "Memento"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 10,
+    "question": "¿Qué actriz interpretó a Hermione Granger en la saga de 'Harry Potter'?",
+    "options": ["Emma Stone", "Emma Watson", "Keira Knightley", "Natalie Portman"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 11,
+    "question": "¿Qué película de 1975, dirigida por Steven Spielberg, se convirtió en el primer gran éxito de taquilla de verano y estableció el concepto de 'blockbuster'?",
+    "options": ["Close Encounters of the Third Kind", "Jaws", "E.T. the Extra-Terrestrial", "Raiders of the Lost Ark"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 12,
+    "question": "¿Qué película de 1957, dirigida por Akira Kurosawa, fue adaptada posteriormente como 'Los Siete Magníficos'?",
+    "options": ["Rashomon", "Los Siete Samuráis", "Yojimbo", "Ran"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 13,
+    "question": "¿Qué película de 1998, dirigida por Darren Aronofsky, presenta a un matemático obsesionado con encontrar patrones numéricos en la naturaleza?",
+    "options": ["Requiem for a Dream", "Black Swan", "Pi", "The Wrestler"],
+    "correctIndex": 2,
+    "category": "FILM",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 14,
+    "question": "¿Qué película de 1968, dirigida por Stanley Kubrick, fue una de las primeras en usar efectos especiales innovadores y música clásica de manera prominente?",
+    "options": ["A Clockwork Orange", "2001: A Space Odyssey", "The Shining", "Full Metal Jacket"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 15,
+    "question": "¿Qué película de 1995, dirigida por Terry Gilliam, presenta a un viajero del tiempo que intenta reparar el pasado mientras lucha contra una organización secreta?",
+    "options": ["Brazil", "The Fisher King", "12 Monkeys", "Fear and Loathing in Las Vegas"],
+    "correctIndex": 2,
+    "category": "FILM",
+    "difficulty": "DIFFICULT"
+  }
+]
+

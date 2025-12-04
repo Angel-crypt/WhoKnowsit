@@ -1,0 +1,123 @@
+[
+  {
+    "id": 1,
+    "question": "¿En qué año terminó la Segunda Guerra Mundial?",
+    "options": ["1943", "1944", "1945", "1946"],
+    "correctIndex": 2,
+    "category": "HISTORY",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 2,
+    "question": "¿Quién fue el primer presidente de los Estados Unidos?",
+    "options": ["Thomas Jefferson", "George Washington", "John Adams", "Benjamin Franklin"],
+    "correctIndex": 1,
+    "category": "HISTORY",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 3,
+    "question": "¿En qué año llegó Cristóbal Colón a América?",
+    "options": ["1490", "1491", "1492", "1493"],
+    "correctIndex": 2,
+    "category": "HISTORY",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 4,
+    "question": "¿Qué imperio construyó el Coliseo de Roma?",
+    "options": ["Imperio Bizantino", "Imperio Romano", "Imperio Griego", "Imperio Egipcio"],
+    "correctIndex": 1,
+    "category": "HISTORY",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 5,
+    "question": "¿Quién escribió 'El Manifiesto Comunista' junto con Friedrich Engels?",
+    "options": ["Vladimir Lenin", "Karl Marx", "Joseph Stalin", "Leon Trotsky"],
+    "correctIndex": 1,
+    "category": "HISTORY",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 6,
+    "question": "¿Qué batalla marcó el fin de la expansión musulmana en Europa occidental?",
+    "options": ["Batalla de Tours", "Batalla de Hastings", "Batalla de Lepanto", "Batalla de Poitiers"],
+    "correctIndex": 0,
+    "category": "HISTORY",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 7,
+    "question": "¿Qué dinastía gobernó China durante más de 400 años, desde 1368 hasta 1644?",
+    "options": ["Dinastía Tang", "Dinastía Ming", "Dinastía Qing", "Dinastía Song"],
+    "correctIndex": 1,
+    "category": "HISTORY",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 8,
+    "question": "¿En qué año se firmó el Tratado de Versalles que puso fin oficialmente a la Primera Guerra Mundial?",
+    "options": ["1917", "1918", "1919", "1920"],
+    "correctIndex": 2,
+    "category": "HISTORY",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 9,
+    "question": "¿Qué emperador romano dividió el imperio en dos partes, oriental y occidental?",
+    "options": ["Augusto", "Trajano", "Diocleciano", "Constantino"],
+    "correctIndex": 2,
+    "category": "HISTORY",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 10,
+    "question": "¿Qué civilización precolombina construyó Machu Picchu?",
+    "options": ["Aztecas", "Mayas", "Incas", "Olmecas"],
+    "correctIndex": 2,
+    "category": "HISTORY",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 11,
+    "question": "¿Qué tratado de 843 d.C. dividió el Imperio Carolingio entre los tres nietos de Carlomagno?",
+    "options": ["Tratado de Verdún", "Tratado de Aquisgrán", "Tratado de Meersen", "Tratado de Ribemont"],
+    "correctIndex": 0,
+    "category": "HISTORY",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 12,
+    "question": "¿Qué batalla naval de 1571 fue la última gran batalla librada principalmente entre galeras?",
+    "options": ["Batalla de Actium", "Batalla de Lepanto", "Batalla de Salamina", "Batalla de Trafalgar"],
+    "correctIndex": 1,
+    "category": "HISTORY",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 13,
+    "question": "¿Qué rey de Francia fue conocido como 'el Rey Sol' y reinó durante 72 años?",
+    "options": ["Luis XIII", "Luis XIV", "Luis XV", "Luis XVI"],
+    "correctIndex": 1,
+    "category": "HISTORY",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 14,
+    "question": "¿Qué guerra civil inglesa tuvo lugar entre 1642 y 1651, resultando en la ejecución del rey Carlos I?",
+    "options": ["Guerra de las Rosas", "Guerra Civil Inglesa", "Guerra de los Cien Años", "Guerra de Sucesión"],
+    "correctIndex": 1,
+    "category": "HISTORY",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 15,
+    "question": "¿Qué emperador bizantino codificó las leyes romanas en el Corpus Juris Civilis en el siglo VI?",
+    "options": ["Justiniano I", "Teodosio II", "Constantino I", "Basilio II"],
+    "correctIndex": 0,
+    "category": "HISTORY",
+    "difficulty": "DIFFICULT"
+  }
+]
+

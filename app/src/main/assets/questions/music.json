@@ -1,0 +1,123 @@
+[
+  {
+    "id": 1,
+    "question": "¿Qué banda británica es conocida por éxitos como 'Bohemian Rhapsody' y 'We Will Rock You'?",
+    "options": ["The Beatles", "Led Zeppelin", "Queen", "The Rolling Stones"],
+    "correctIndex": 2,
+    "category": "MUSIC",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 2,
+    "question": "¿Qué cantante estadounidense es conocida como 'La Reina del Pop'?",
+    "options": ["Beyoncé", "Madonna", "Lady Gaga", "Britney Spears"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 3,
+    "question": "¿Qué instrumento musical tiene 88 teclas?",
+    "options": ["Órgano", "Piano", "Acordeón", "Sintetizador"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 4,
+    "question": "¿Qué grupo de pop coreano se hizo mundialmente famoso con la canción 'Gangnam Style'?",
+    "options": ["BTS", "BLACKPINK", "PSY", "EXO"],
+    "correctIndex": 2,
+    "category": "MUSIC",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 5,
+    "question": "¿Qué cantante puertorriqueño es conocido como 'El Conejo Malo'?",
+    "options": ["Daddy Yankee", "Bad Bunny", "J Balvin", "Ozuna"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 6,
+    "question": "¿Qué álbum de Pink Floyd, lanzado en 1973, presenta una portada con un prisma refractando luz?",
+    "options": ["The Wall", "Wish You Were Here", "The Dark Side of the Moon", "Animals"],
+    "correctIndex": 2,
+    "category": "MUSIC",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 7,
+    "question": "¿Qué compositor alemán escribió 'Para Elisa' y la 'Sinfonía No. 9'?",
+    "options": ["Johann Sebastian Bach", "Wolfgang Amadeus Mozart", "Ludwig van Beethoven", "Franz Schubert"],
+    "correctIndex": 2,
+    "category": "MUSIC",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 8,
+    "question": "¿Qué género musical se originó en Jamaica en la década de 1960?",
+    "options": ["Ska", "Reggae", "Dancehall", "Dub"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 9,
+    "question": "¿Qué banda de rock alternativo estadounidense es conocida por el álbum 'OK Computer' de 1997?",
+    "options": ["Nirvana", "Radiohead", "Pearl Jam", "Soundgarden"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 10,
+    "question": "¿Qué cantante mexicana es conocida como 'La Diva de la Banda'?",
+    "options": ["Paulina Rubio", "Thalía", "Jenni Rivera", "Gloria Trevi"],
+    "correctIndex": 2,
+    "category": "MUSIC",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 11,
+    "question": "¿Qué compositor ruso escribió 'El Cascanueces' y 'La Bella Durmiente'?",
+    "options": ["Igor Stravinsky", "Pyotr Ilyich Tchaikovsky", "Sergei Rachmaninoff", "Modest Mussorgsky"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 12,
+    "question": "¿Qué álbum de The Beatles, lanzado en 1967, fue uno de los primeros concept albums y presentó una portada diseñada por Peter Blake?",
+    "options": ["Revolver", "Sgt. Pepper's Lonely Hearts Club Band", "Abbey Road", "The White Album"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 13,
+    "question": "¿Qué género musical, originario de Chicago a principios de los 80, se caracteriza por ritmos repetitivos y sintetizadores?",
+    "options": ["House", "Techno", "Disco", "Funk"],
+    "correctIndex": 0,
+    "category": "MUSIC",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 14,
+    "question": "¿Qué cantante y compositor estadounidense, conocido por su álbum 'Blonde on Blonde', recibió el Premio Nobel de Literatura en 2016?",
+    "options": ["Leonard Cohen", "Bob Dylan", "Paul Simon", "Neil Young"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 15,
+    "question": "¿Qué ópera de Giuseppe Verdi, estrenada en 1851, cuenta la historia de un bufón que busca venganza?",
+    "options": ["La Traviata", "Aida", "Rigoletto", "Nabucco"],
+    "correctIndex": 2,
+    "category": "MUSIC",
+    "difficulty": "DIFFICULT"
+  }
+]
+

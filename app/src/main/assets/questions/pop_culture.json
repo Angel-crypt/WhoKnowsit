@@ -1,0 +1,123 @@
+[
+  {
+    "id": 1,
+    "question": "¿Qué red social fue creada por Mark Zuckerberg en 2004?",
+    "options": ["Twitter", "Instagram", "Facebook", "LinkedIn"],
+    "correctIndex": 2,
+    "category": "POP_CULTURE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 2,
+    "question": "¿Qué serie de televisión estadounidense se desarrolla en el universo de 'Star Wars' y sigue las aventuras de un cazarrecompensas?",
+    "options": ["The Mandalorian", "Obi-Wan Kenobi", "Andor", "The Book of Boba Fett"],
+    "correctIndex": 0,
+    "category": "POP_CULTURE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 3,
+    "question": "¿Qué videojuego de 2011 popularizó el género 'battle royale'?",
+    "options": ["Fortnite", "PlayerUnknown's Battlegrounds", "Apex Legends", "Call of Duty: Warzone"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 4,
+    "question": "¿Qué plataforma de streaming es conocida por su logo rojo con la letra 'N'?",
+    "options": ["Disney+", "Netflix", "HBO Max", "Amazon Prime Video"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 5,
+    "question": "¿Qué aplicación de mensajería instantánea es propiedad de Meta y usa el color verde característico?",
+    "options": ["Telegram", "Signal", "WhatsApp", "WeChat"],
+    "correctIndex": 2,
+    "category": "POP_CULTURE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 6,
+    "question": "¿Qué serie de anime de 2019 se convirtió en un fenómeno global y trata sobre un estudiante que quiere convertirse en el mejor héroe?",
+    "options": ["Dragon Ball Z", "Naruto", "My Hero Academia", "One Piece"],
+    "correctIndex": 2,
+    "category": "POP_CULTURE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 7,
+    "question": "¿Qué meme de internet se popularizó en 2020 y mostraba a una mujer gritando a un gato sentado en una mesa?",
+    "options": ["Distracted Boyfriend", "Woman Yelling at a Cat", "Drake Pointing", "This is Fine"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 8,
+    "question": "¿Qué plataforma de videojuegos fue lanzada por Valve Corporation en 2003?",
+    "options": ["Epic Games Store", "Steam", "Origin", "Uplay"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 9,
+    "question": "¿Qué serie de televisión coreana se convirtió en la serie más vista en la historia de Netflix en 2021?",
+    "options": ["Parasite", "Squid Game", "Crash Landing on You", "Kingdom"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 10,
+    "question": "¿Qué aplicación de videos cortos fue fusionada con Musical.ly y se volvió extremadamente popular entre los jóvenes?",
+    "options": ["Instagram Reels", "TikTok", "YouTube Shorts", "Snapchat Spotlight"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 11,
+    "question": "¿Qué videojuego indie de 2018, desarrollado por Team Cherry, se convirtió en un éxito de culto por su diseño de niveles no lineal y su arte estilo dibujo animado?",
+    "options": ["Celeste", "Hollow Knight", "Dead Cells", "Ori and the Blind Forest"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 12,
+    "question": "¿Qué serie de televisión británica, creada por Charlie Brooker, presenta episodios independientes que exploran temas distópicos relacionados con la tecnología?",
+    "options": ["The Crown", "Black Mirror", "Sherlock", "Doctor Who"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 13,
+    "question": "¿Qué fenómeno de internet, popularizado en 2017, involucraba a personas que se tiraban agua helada sobre sí mismas para crear conciencia sobre la ELA?",
+    "options": ["Ice Bucket Challenge", "Mannequin Challenge", "Harlem Shake", "Planking"],
+    "correctIndex": 0,
+    "category": "POP_CULTURE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 14,
+    "question": "¿Qué plataforma de streaming de música fue fundada en 2006 en Suecia y se convirtió en una de las más populares del mundo?",
+    "options": ["Apple Music", "Spotify", "Pandora", "SoundCloud"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 15,
+    "question": "¿Qué serie de televisión estadounidense, estrenada en 2011, se desarrolla en el universo de 'A Song of Ice and Fire' y fue adaptada de las novelas de George R.R. Martin?",
+    "options": ["The Witcher", "Game of Thrones", "The Last Kingdom", "Vikings"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "DIFFICULT"
+  }
+]
+

@@ -1,7 +1,0 @@
-[
-  {"id": 1, "text": "¿Cuál es tu color favorito?", "difficulty": 1, "targetPlayerId": 0, "correctAnswer": ""},
-  {"id": 2, "text": "¿Cuál es tu comida favorita?", "difficulty": 1, "targetPlayerId": 0, "correctAnswer": ""},
-  {"id": 3, "text": "¿Cuál es tu película favorita?", "difficulty": 2, "targetPlayerId": 0, "correctAnswer": ""},
-  {"id": 4, "text": "¿Cuál es tu pasatiempo favorito?", "difficulty": 2, "targetPlayerId": 0, "correctAnswer": ""},
-  {"id": 5, "text": "¿Cuál es tu estación favorita del año?", "difficulty": 1, "targetPlayerId": 0, "correctAnswer": ""}
-]

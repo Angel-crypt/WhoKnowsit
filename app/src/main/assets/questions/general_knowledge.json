@@ -1,7 +1,0 @@
-[
-  {"id": 1, "text": "¿Cuál es la capital de Francia?", "difficulty": 1, "correctAnswer": "París"},
-  {"id": 2, "text": "¿Quién escribió 'Cien años de soledad'?", "difficulty": 2, "correctAnswer": "Gabriel García Márquez"},
-  {"id": 3, "text": "¿Cuál es el planeta conocido como el planeta rojo?", "difficulty": 1, "correctAnswer": "Marte"},
-  {"id": 4, "text": "¿Cuál es el océano más grande del mundo?", "difficulty": 2, "correctAnswer": "Pacífico"},
-  {"id": 5, "text": "¿Quién pintó la Mona Lisa?", "difficulty": 2, "correctAnswer": "Leonardo da Vinci"}
-]

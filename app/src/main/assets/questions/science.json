@@ -1,0 +1,123 @@
+[
+  {
+    "id": 1,
+    "question": "¿Cuál es el planeta más cercano al Sol?",
+    "options": ["Venus", "Mercurio", "Tierra", "Marte"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 2,
+    "question": "¿Cuántos huesos tiene el cuerpo humano adulto aproximadamente?",
+    "options": ["186", "196", "206", "216"],
+    "correctIndex": 2,
+    "category": "SCIENCE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 3,
+    "question": "¿Qué gas respiran principalmente las plantas durante la fotosíntesis?",
+    "options": ["Oxígeno", "Nitrógeno", "Dióxido de carbono", "Hidrógeno"],
+    "correctIndex": 2,
+    "category": "SCIENCE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 4,
+    "question": "¿Cuál es la velocidad de la luz en el vacío aproximadamente?",
+    "options": ["300.000 km/s", "150.000 km/s", "450.000 km/s", "600.000 km/s"],
+    "correctIndex": 0,
+    "category": "SCIENCE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 5,
+    "question": "¿Qué elemento químico tiene el símbolo 'O'?",
+    "options": ["Oro", "Osmio", "Oxígeno", "Oganesón"],
+    "correctIndex": 2,
+    "category": "SCIENCE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 6,
+    "question": "¿Qué tipo de enlace químico se forma cuando los átomos comparten electrones?",
+    "options": ["Iónico", "Covalente", "Metálico", "De hidrógeno"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 7,
+    "question": "¿Cuál es el órgano más grande del cuerpo humano?",
+    "options": ["Hígado", "Pulmones", "Piel", "Intestino delgado"],
+    "correctIndex": 2,
+    "category": "SCIENCE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 8,
+    "question": "¿Qué partícula subatómica tiene carga positiva?",
+    "options": ["Electrón", "Protón", "Neutrón", "Fotón"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 9,
+    "question": "¿En qué año se descubrió la estructura del ADN por Watson y Crick?",
+    "options": ["1951", "1953", "1955", "1957"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 10,
+    "question": "¿Qué proceso celular produce la mayor cantidad de ATP?",
+    "options": ["Glucólisis", "Fermentación", "Respiración celular", "Fotosíntesis"],
+    "correctIndex": 2,
+    "category": "SCIENCE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 11,
+    "question": "¿Qué principio de la mecánica cuántica establece que es imposible conocer simultáneamente con precisión la posición y el momento de una partícula?",
+    "options": ["Principio de exclusión de Pauli", "Principio de incertidumbre de Heisenberg", "Principio de superposición", "Principio de correspondencia"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 12,
+    "question": "¿Qué tipo de estrella tiene una masa entre 0,5 y 8 veces la masa del Sol y se encuentra en la secuencia principal?",
+    "options": ["Gigante roja", "Enana blanca", "Estrella de neutrones", "Estrella de tipo G"],
+    "correctIndex": 3,
+    "category": "SCIENCE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 13,
+    "question": "¿Qué enzima es responsable de la síntesis de ARN a partir de una plantilla de ADN?",
+    "options": ["ADN polimerasa", "ARN polimerasa", "Helicasa", "Ligasa"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 14,
+    "question": "¿Qué número cuántico describe la forma del orbital atómico?",
+    "options": ["Número cuántico principal (n)", "Número cuántico de momento angular (l)", "Número cuántico magnético (m)", "Número cuántico de espín (s)"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 15,
+    "question": "¿Qué fenómeno físico explica por qué el cielo es azul durante el día?",
+    "options": ["Refracción", "Dispersión de Rayleigh", "Reflexión", "Difracción"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "DIFFICULT"
+  }
+]
+

@@ -1,0 +1,123 @@
+[
+  {
+    "id": 1,
+    "question": "¿En qué deporte se juega con una pelota y dos canastas?",
+    "options": ["Fútbol", "Baloncesto", "Voleibol", "Balonmano"],
+    "correctIndex": 1,
+    "category": "SPORTS",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 2,
+    "question": "¿Cuántos jugadores hay en un equipo de fútbol en el campo durante un partido?",
+    "options": ["10", "11", "12", "9"],
+    "correctIndex": 1,
+    "category": "SPORTS",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 3,
+    "question": "¿En qué año se celebraron los Juegos Olímpicos de verano en Barcelona?",
+    "options": ["1990", "1991", "1992", "1993"],
+    "correctIndex": 2,
+    "category": "SPORTS",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 4,
+    "question": "¿Qué tenista serbio ha ganado múltiples veces el Abierto de Australia?",
+    "options": ["Rafael Nadal", "Roger Federer", "Novak Djokovic", "Andy Murray"],
+    "correctIndex": 2,
+    "category": "SPORTS",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 5,
+    "question": "¿En qué deporte se usa un bate y una pelota?",
+    "options": ["Fútbol americano", "Béisbol", "Rugby", "Cricket"],
+    "correctIndex": 1,
+    "category": "SPORTS",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 6,
+    "question": "¿Qué país ha ganado más Copas del Mundo de fútbol?",
+    "options": ["Alemania", "Italia", "Brasil", "Argentina"],
+    "correctIndex": 2,
+    "category": "SPORTS",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 7,
+    "question": "¿En qué deporte olímpico se compite en las modalidades de velocidad, medio fondo y fondo?",
+    "options": ["Natación", "Atletismo", "Ciclismo", "Remo"],
+    "correctIndex": 1,
+    "category": "SPORTS",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 8,
+    "question": "¿Qué boxeador estadounidense es conocido como 'The Greatest' y ganó la medalla de oro olímpica en 1960?",
+    "options": ["Mike Tyson", "Muhammad Ali", "Joe Frazier", "George Foreman"],
+    "correctIndex": 1,
+    "category": "SPORTS",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 9,
+    "question": "¿Cuántos sets se necesitan ganar para ganar un partido de tenis en un Grand Slam masculino?",
+    "options": ["2 de 3", "2 de 5", "3 de 5", "3 de 7"],
+    "correctIndex": 2,
+    "category": "SPORTS",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 10,
+    "question": "¿Qué equipo de la NBA tiene su sede en Los Ángeles y es conocido por su color púrpura y dorado?",
+    "options": ["Los Angeles Clippers", "Los Angeles Lakers", "Golden State Warriors", "Sacramento Kings"],
+    "correctIndex": 1,
+    "category": "SPORTS",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 11,
+    "question": "¿Qué ciclista español ganó el Tour de Francia en 1995, convirtiéndose en el primer español en lograrlo?",
+    "options": ["Alberto Contador", "Miguel Induráin", "Carlos Sastre", "Óscar Pereiro"],
+    "correctIndex": 1,
+    "category": "SPORTS",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 12,
+    "question": "¿En qué año se fundó la FIFA (Federación Internacional de Fútbol Asociación)?",
+    "options": ["1902", "1904", "1906", "1908"],
+    "correctIndex": 1,
+    "category": "SPORTS",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 13,
+    "question": "¿Qué nadador estadounidense ganó 8 medallas de oro en los Juegos Olímpicos de Beijing 2008?",
+    "options": ["Ryan Lochte", "Michael Phelps", "Mark Spitz", "Ian Thorpe"],
+    "correctIndex": 1,
+    "category": "SPORTS",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 14,
+    "question": "¿Qué equipo de fútbol inglés tiene su estadio en Anfield y es conocido como 'The Reds'?",
+    "options": ["Manchester United", "Liverpool", "Arsenal", "Chelsea"],
+    "correctIndex": 1,
+    "category": "SPORTS",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 15,
+    "question": "¿En qué deporte se juega en una cancha dividida por una red y los puntos se anotan cuando el oponente no puede devolver la pelota dentro de los límites?",
+    "options": ["Bádminton", "Tenis de mesa", "Tenis", "Squash"],
+    "correctIndex": 2,
+    "category": "SPORTS",
+    "difficulty": "DIFFICULT"
+  }
+]
+
