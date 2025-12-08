@@ -1,9 +1,12 @@
 package com.example.whoknowsit.ui
 
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.OvershootInterpolator
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -64,39 +67,96 @@ class NewGameSetupActivity : AppCompatActivity() {
         btnEasy = findViewById(R.id.btn_easy)
         btnMedium = findViewById(R.id.btn_medium)
         btnHard = findViewById(R.id.btn_hard)
-        btnEasy.setOnClickListener {
+        
+        setupButtonPressAnimation(btnEasy) {
             selectDifficulty(Difficulty.EASY)
         }
-        btnMedium.setOnClickListener {
+        setupButtonPressAnimation(btnMedium) {
             selectDifficulty(Difficulty.MEDIUM)
         }
-        btnHard.setOnClickListener {
+        setupButtonPressAnimation(btnHard) {
             selectDifficulty(Difficulty.HARD)
+        }
+    }
+    
+    private fun setupButtonPressAnimation(button: MaterialButton, onClick: () -> Unit) {
+        button.setOnTouchListener { view, event ->
+            when (event.action) {
+                android.view.MotionEvent.ACTION_DOWN -> {
+                    view.animate()
+                        .scaleX(0.95f)
+                        .scaleY(0.95f)
+                        .setDuration(100)
+                        .start()
+                }
+                android.view.MotionEvent.ACTION_UP, android.view.MotionEvent.ACTION_CANCEL -> {
+                    view.animate()
+                        .scaleX(1f)
+                        .scaleY(1f)
+                        .setDuration(100)
+                        .start()
+                    if (event.action == android.view.MotionEvent.ACTION_UP) {
+                        onClick()
+                    }
+                }
+            }
+            true
         }
     }
     
     private fun selectDifficulty(difficulty: Difficulty) {
         selectedDifficulty = difficulty
         
-        resetDifficultyButtons()
+        // Reset all buttons to unselected state
+        setDifficultyButtonState(btnEasy, false, Difficulty.EASY)
+        setDifficultyButtonState(btnMedium, false, Difficulty.MEDIUM)
+        setDifficultyButtonState(btnHard, false, Difficulty.HARD)
         
+        // Set selected button
         when (difficulty) {
             Difficulty.EASY -> {
-                btnEasy.elevation = 12f
+                setDifficultyButtonState(btnEasy, true, Difficulty.EASY)
+                animateButtonSelection(btnEasy, true)
             }
             Difficulty.MEDIUM -> {
-                btnMedium.elevation = 12f
+                setDifficultyButtonState(btnMedium, true, Difficulty.MEDIUM)
+                animateButtonSelection(btnMedium, true)
             }
             Difficulty.HARD -> {
-                btnHard.elevation = 12f
+                setDifficultyButtonState(btnHard, true, Difficulty.HARD)
+                animateButtonSelection(btnHard, true)
             }
         }
     }
     
+    private fun setDifficultyButtonState(button: MaterialButton, isSelected: Boolean, difficulty: Difficulty) {
+        if (isSelected) {
+            val colorRes = when (difficulty) {
+                Difficulty.EASY -> R.color.success
+                Difficulty.MEDIUM -> R.color.warning
+                Difficulty.HARD -> R.color.error
+            }
+            button.backgroundTintList = ContextCompat.getColorStateList(this, colorRes)
+            button.setTextColor(ContextCompat.getColor(this, R.color.white))
+            button.strokeWidth = 0
+            button.elevation = 8f
+            button.scaleX = 1.05f
+            button.scaleY = 1.05f
+        } else {
+            button.backgroundTintList = ContextCompat.getColorStateList(this, R.color.surface_variant)
+            button.setTextColor(ContextCompat.getColor(this, R.color.primary))
+            button.strokeWidth = 2
+            button.strokeColor = ContextCompat.getColorStateList(this, R.color.primary)
+            button.elevation = 2f
+            button.scaleX = 1f
+            button.scaleY = 1f
+        }
+    }
+    
     private fun resetDifficultyButtons() {
-        btnEasy.elevation = 6f
-        btnMedium.elevation = 6f
-        btnHard.elevation = 6f
+        setDifficultyButtonState(btnEasy, false, Difficulty.EASY)
+        setDifficultyButtonState(btnMedium, false, Difficulty.MEDIUM)
+        setDifficultyButtonState(btnHard, false, Difficulty.HARD)
     }
     
     private fun setupQuantityButtons() {
@@ -104,15 +164,15 @@ class NewGameSetupActivity : AppCompatActivity() {
         btnQuantity10 = findViewById(R.id.btn_quantity_10)
         btnQuantity20 = findViewById(R.id.btn_quantity_20)
         
-        btnQuantity5.setOnClickListener {
+        setupButtonPressAnimation(btnQuantity5) {
             selectQuantity(5)
         }
         
-        btnQuantity10.setOnClickListener {
+        setupButtonPressAnimation(btnQuantity10) {
             selectQuantity(10)
         }
         
-        btnQuantity20.setOnClickListener {
+        setupButtonPressAnimation(btnQuantity20) {
             selectQuantity(20)
         }
     }
@@ -120,30 +180,84 @@ class NewGameSetupActivity : AppCompatActivity() {
     private fun selectQuantity(quantity: Int) {
         selectedQuantity = quantity
         
-        resetQuantityButtons()
+        setQuantityButtonState(btnQuantity5, false)
+        setQuantityButtonState(btnQuantity10, false)
+        setQuantityButtonState(btnQuantity20, false)
         
         when (quantity) {
             5 -> {
-                btnQuantity5.elevation = 12f
+                setQuantityButtonState(btnQuantity5, true)
+                animateButtonSelection(btnQuantity5, true)
             }
             10 -> {
-                btnQuantity10.elevation = 12f
+                setQuantityButtonState(btnQuantity10, true)
+                animateButtonSelection(btnQuantity10, true)
             }
             20 -> {
-                btnQuantity20.elevation = 12f
+                setQuantityButtonState(btnQuantity20, true)
+                animateButtonSelection(btnQuantity20, true)
             }
         }
     }
     
+    private fun setQuantityButtonState(button: MaterialButton, isSelected: Boolean) {
+        if (isSelected) {
+            button.backgroundTintList = ContextCompat.getColorStateList(this, R.color.primary)
+            button.setTextColor(ContextCompat.getColor(this, R.color.white))
+            button.strokeWidth = 0
+            button.elevation = 8f
+            button.scaleX = 1.05f
+            button.scaleY = 1.05f
+        } else {
+            button.backgroundTintList = ContextCompat.getColorStateList(this, R.color.surface_variant)
+            button.setTextColor(ContextCompat.getColor(this, R.color.primary))
+            button.strokeWidth = 2
+            button.strokeColor = ContextCompat.getColorStateList(this, R.color.primary)
+            button.elevation = 2f
+            button.scaleX = 1f
+            button.scaleY = 1f
+        }
+    }
+    
     private fun resetQuantityButtons() {
-        btnQuantity5.elevation = 6f
-        btnQuantity10.elevation = 6f
-        btnQuantity20.elevation = 6f
+        setQuantityButtonState(btnQuantity5, false)
+        setQuantityButtonState(btnQuantity10, false)
+        setQuantityButtonState(btnQuantity20, false)
+    }
+    
+    private fun animateButtonSelection(button: MaterialButton, isSelected: Boolean) {
+        val scaleX = ObjectAnimator.ofFloat(button, "scaleX", if (isSelected) 1.05f else 1f)
+        val scaleY = ObjectAnimator.ofFloat(button, "scaleY", if (isSelected) 1.05f else 1f)
+        val elevation = ObjectAnimator.ofFloat(button, "elevation", if (isSelected) 12f else 6f)
+        
+        val animatorSet = AnimatorSet()
+        animatorSet.playTogether(scaleX, scaleY, elevation)
+        animatorSet.duration = 200
+        animatorSet.interpolator = OvershootInterpolator(1.2f)
+        animatorSet.start()
     }
     
     private fun setupStartButton() {
         btnStart = findViewById(R.id.btn_start)
-        btnStart.setOnClickListener {
+        
+        btnStart.setOnClickListener { view ->
+            val scaleDownX = ObjectAnimator.ofFloat(view, "scaleX", 0.95f)
+            val scaleDownY = ObjectAnimator.ofFloat(view, "scaleY", 0.95f)
+            val scaleUpX = ObjectAnimator.ofFloat(view, "scaleX", 1f)
+            val scaleUpY = ObjectAnimator.ofFloat(view, "scaleY", 1f)
+            
+            val scaleDown = AnimatorSet()
+            scaleDown.playTogether(scaleDownX, scaleDownY)
+            scaleDown.duration = 100
+            
+            val scaleUp = AnimatorSet()
+            scaleUp.playTogether(scaleUpX, scaleUpY)
+            scaleUp.duration = 100
+            
+            val animatorSet = AnimatorSet()
+            animatorSet.play(scaleDown).before(scaleUp)
+            animatorSet.start()
+            
             if (selectedCategory != null && selectedDifficulty != null && selectedQuantity != null) {
                 android.widget.Toast.makeText(
                     this,
@@ -209,31 +323,60 @@ class NewGameSetupActivity : AppCompatActivity() {
                 
                 if (isSelected) {
                     cardView.strokeWidth = 0
-                    cardView.cardElevation = 12f
+                    cardView.cardElevation = 8f
                     cardView.setCardBackgroundColor(
                         ContextCompat.getColor(itemView.context, R.color.primary)
                     )
                     nameView.setTextColor(
-                        ContextCompat.getColor(itemView.context, R.color.on_primary)
+                        ContextCompat.getColor(itemView.context, R.color.white)
                     )
                     iconView.setColorFilter(
-                        ContextCompat.getColor(itemView.context, R.color.on_primary)
+                        ContextCompat.getColor(itemView.context, R.color.white)
                     )
+                    cardView.animate()
+                        .scaleX(1.05f)
+                        .scaleY(1.05f)
+                        .setDuration(200)
+                        .setInterpolator(OvershootInterpolator(1.2f))
+                        .start()
                 } else {
-                    cardView.strokeWidth = 4
-                    cardView.cardElevation = 8f
+                    cardView.strokeWidth = 2
+                    cardView.strokeColor = ContextCompat.getColor(itemView.context, R.color.primary)
+                    cardView.cardElevation = 2f
                     cardView.setCardBackgroundColor(
-                        ContextCompat.getColor(itemView.context, R.color.surface)
+                        ContextCompat.getColor(itemView.context, R.color.surface_variant)
                     )
                     nameView.setTextColor(
-                        ContextCompat.getColor(itemView.context, R.color.on_surface)
+                        ContextCompat.getColor(itemView.context, R.color.primary)
                     )
                     iconView.setColorFilter(
-                        ContextCompat.getColor(itemView.context, R.color.on_surface)
+                        ContextCompat.getColor(itemView.context, R.color.primary)
                     )
+                    cardView.animate()
+                        .scaleX(1f)
+                        .scaleY(1f)
+                        .setDuration(200)
+                        .start()
                 }
                 
-                itemView.setOnClickListener {
+                itemView.setOnClickListener { view ->
+                    val scaleDownX = ObjectAnimator.ofFloat(view, "scaleX", 0.95f)
+                    val scaleDownY = ObjectAnimator.ofFloat(view, "scaleY", 0.95f)
+                    val scaleUpX = ObjectAnimator.ofFloat(view, "scaleX", 1f)
+                    val scaleUpY = ObjectAnimator.ofFloat(view, "scaleY", 1f)
+                    
+                    val scaleDown = AnimatorSet()
+                    scaleDown.playTogether(scaleDownX, scaleDownY)
+                    scaleDown.duration = 100
+                    
+                    val scaleUp = AnimatorSet()
+                    scaleUp.playTogether(scaleUpX, scaleUpY)
+                    scaleUp.duration = 100
+                    
+                    val animatorSet = AnimatorSet()
+                    animatorSet.play(scaleDown).before(scaleUp)
+                    animatorSet.start()
+                    
                     onCategorySelected(category)
                 }
             }

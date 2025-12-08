@@ -5,11 +5,11 @@
     android:id="@+id/card_view"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
+    android:layout_margin="4dp"
     app:cardCornerRadius="24dp"
-    app:cardElevation="8dp"
-    app:strokeWidth="4dp"
-    app:strokeColor="@color/on_primary"
+    app:cardElevation="2dp"
+    app:strokeWidth="2dp"
+    app:strokeColor="@color/primary"
     android:clickable="true"
     android:focusable="true"
     android:foreground="?android:attr/selectableItemBackground">
@@ -19,25 +19,25 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
-        android:padding="12dp"
-        android:minHeight="100dp">
+        android:padding="10dp"
+        android:minHeight="90dp">
 
         <ImageView
             android:id="@+id/category_icon"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginBottom="8dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginBottom="6dp"
             android:scaleType="fitCenter"
-            app:tint="@color/on_primary"
+            app:tint="@color/primary"
             tools:src="@android:drawable/ic_menu_gallery" />
 
         <TextView
             android:id="@+id/category_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="14sp"
+            android:textSize="13sp"
             android:textStyle="bold"
-            android:textColor="@color/on_primary"
+            android:textColor="@color/primary"
             android:gravity="center"
             tools:text="Cine" />
 
