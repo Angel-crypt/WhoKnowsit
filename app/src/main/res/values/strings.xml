@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Who Knows it</string>
+    <string name="title_activity_test_audio">Pruebas de Audio</string>
+    <string name="title_activity_test_logic">Pruebas de Lógica</string>
 </resources>
