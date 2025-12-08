@@ -46,7 +46,6 @@
 
     </LinearLayout>
 
-    <!-- Overlay para cerrar el menú al tocar fuera -->
     <View
         android:id="@+id/fab_overlay"
         android:layout_width="match_parent"
@@ -60,7 +59,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- FAB Menu Container -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/fab_menu_container"
         android:layout_width="wrap_content"
@@ -68,7 +66,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- FAB Audio (Secundario) -->
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/fab_audio"
             android:layout_width="wrap_content"
@@ -84,7 +81,6 @@
             app:layout_constraintBottom_toTopOf="@id/fab_logic"
             app:layout_constraintEnd_toEndOf="parent" />
 
-        <!-- FAB Lógica (Secundario) -->
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/fab_logic"
             android:layout_width="wrap_content"
@@ -100,7 +96,6 @@
             app:layout_constraintBottom_toTopOf="@id/fab_main"
             app:layout_constraintEnd_toEndOf="parent" />
 
-        <!-- FAB Principal -->
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab_main"
             android:layout_width="wrap_content"

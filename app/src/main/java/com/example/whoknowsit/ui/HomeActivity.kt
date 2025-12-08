@@ -30,27 +30,30 @@ class HomeActivity : AppCompatActivity() {
         val fabAudio = findViewById<ExtendedFloatingActionButton>(R.id.fab_audio)
         val fabLogic = findViewById<ExtendedFloatingActionButton>(R.id.fab_logic)
         val fabOverlay = findViewById<View>(R.id.fab_overlay)
-        
-        // FAB Principal - Toggle menu
+
+        val newGameBtn = findViewById<View>(R.id.newGame_btn)
+
+        newGameBtn.setOnClickListener {
+            val intent = Intent(this, NewGameSetupActivity::class.java)
+            startActivity(intent)
+        }
+
         fabMain.setOnClickListener {
             toggleFabMenu()
         }
-        
-        // FAB Audio
+
         fabAudio.setOnClickListener {
             val intent = Intent(this, TestAudioActivity::class.java)
             startActivity(intent)
             closeFabMenu()
         }
-        
-        // FAB Lógica
+
         fabLogic.setOnClickListener {
             val intent = Intent(this, TestLogicActivity::class.java)
             startActivity(intent)
             closeFabMenu()
         }
         
-        // Overlay - Cerrar menú al tocar fuera
         fabOverlay.setOnClickListener {
             closeFabMenu()
         }
