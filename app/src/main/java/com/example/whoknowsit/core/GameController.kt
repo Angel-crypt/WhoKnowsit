@@ -25,6 +25,9 @@ class GameController(private val context: Context) {
         )
     }
 
+    val state: GameState?
+        get() = currentGameState
+
     fun handleAnswer(selectedOptionIndex: Int){
         val state = currentGameState ?: return
         val question = state.currentQuestion ?: return
@@ -60,5 +63,4 @@ class GameController(private val context: Context) {
             soundManager.playLose()
         }
     }
-
 }

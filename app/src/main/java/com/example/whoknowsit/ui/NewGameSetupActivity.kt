@@ -3,6 +3,7 @@ package com.example.whoknowsit.ui
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,12 +18,17 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.whoknowsit.R
+import com.example.whoknowsit.WhoKnowsItApplication
 import com.example.whoknowsit.core.Category
 import com.example.whoknowsit.core.Difficulty
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.card.MaterialCardView
 
 class NewGameSetupActivity : AppCompatActivity() {
+    
+    // Acceso al GameController desde la Application
+    private val gameController: com.example.whoknowsit.core.GameController
+        get() = WhoKnowsItApplication.getInstance(this).gameController
     
     private var selectedCategory: Category? = null
     private var selectedDifficulty: Difficulty? = null
@@ -259,11 +265,24 @@ class NewGameSetupActivity : AppCompatActivity() {
             animatorSet.start()
             
             if (selectedCategory != null && selectedDifficulty != null && selectedQuantity != null) {
-                android.widget.Toast.makeText(
-                    this,
-                    "Iniciando juego: ${selectedCategory?.displayName}, ${selectedDifficulty?.displayName}, ${selectedQuantity} preguntas",
-                    android.widget.Toast.LENGTH_SHORT
-                ).show()
+                gameController.startNewGame(
+                    category = selectedCategory!!,
+                    difficulty = selectedDifficulty!!,
+                    totalQuestions = selectedQuantity!!
+                )
+
+                Log.d(
+                    "LogSetupActivity",
+                    "selectedCategory: ${gameController.state?.selectedCategory?.displayName}"
+                )
+                Log.d(
+                    "LogSetupActivity",
+                    "selectedDifficulty: ${gameController.state?.selectedDifficulty?.displayName}"
+                )
+                Log.d(
+                    "LogSetupActivity",
+                    "currentQuestion: ${gameController.state?.currentQuestion}"
+                )
             } else {
                 android.widget.Toast.makeText(
                     this,
