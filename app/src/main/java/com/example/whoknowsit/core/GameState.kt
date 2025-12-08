@@ -4,8 +4,9 @@ import com.example.whoknowsit.data.models.Question
 
 data class GameState(
     val currentQuestionIndex: Int = 0,
-    val selectedCategory: Category,
-    val questions: List<Question>,
+    val selectedCategory: Category = Category.RANDOM,
+    val selectedDifficulty: Difficulty = Difficulty.EASY,
+    val questions: List<Question> = emptyList(),
     val score: Int = 0
 ) {
     val currentQuestion: Question?
