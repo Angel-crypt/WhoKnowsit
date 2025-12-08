@@ -7,11 +7,13 @@ import com.example.whoknowsit.domain.ScoreManager
 import com.example.whoknowsit.domain.SoundManager
 
 class GameController(private val context: Context) {
-    val localDataSource = LocalQuestionDataSource(context)
-    val questionManager = QuestionManager(localDataSource)
     private val scoreManager = ScoreManager()
     private val soundManager = SoundManager(context)
     private var currentGameState: GameState? = null
+
+    var onGameFinished: ((finalScore: Int) -> Unit)? = null
+    val localDataSource = LocalQuestionDataSource(context)
+    val questionManager = QuestionManager(localDataSource)
 
     fun startNewGame(category: Category, difficulty: Difficulty, totalQuestions: Int) {
         scoreManager.reset()
@@ -27,6 +29,7 @@ class GameController(private val context: Context) {
         val state = currentGameState ?: return
         val question = state.currentQuestion ?: return
 
+        if (state.isFinished) return
         val isCorrect = (question.correctAnswerIndex == selectedOptionIndex)
 
         if (isCorrect) {
@@ -38,6 +41,24 @@ class GameController(private val context: Context) {
             soundManager.playWrong()
         }
 
-        currentGameState = state.nextQuestion(isCorrect)
+        val newState = state.nextQuestion()
+        currentGameState = newState
+
+        if (newState.isFinished) {
+            handleGameFinished()
+        }
     }
+
+    private fun handleGameFinished() {
+        val finalScore = scoreManager.score
+        onGameFinished?.invoke(finalScore)
+
+        val totalQuestions = currentGameState?.questions?.size ?: 0
+        if (finalScore > (totalQuestions * 10 * 0.5)) {
+            soundManager.playWin()
+        } else {
+            soundManager.playLose()
+        }
+    }
+
 }
