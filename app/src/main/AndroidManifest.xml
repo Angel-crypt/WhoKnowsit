@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WhoKnowsIt">
         <activity
+            android:name=".ui.NewGameSetupActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.HomeActivity"
             android:exported="true">
             <intent-filter>
