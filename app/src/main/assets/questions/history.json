@@ -118,6 +118,366 @@
     "correctIndex": 0,
     "category": "HISTORY",
     "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 16,
+    "question": "¿En qué año comenzó la Primera Guerra Mundial?",
+    "options": ["1912", "1914", "1916", "1918"],
+    "correctIndex": 1,
+    "category": "HISTORY",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 17,
+    "question": "¿Quién fue el líder de la Revolución Rusa de 1917?",
+    "options": ["Joseph Stalin", "Vladimir Lenin", "Leon Trotsky", "Nikita Khrushchev"],
+    "correctIndex": 1,
+    "category": "HISTORY",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 18,
+    "question": "¿Qué muro dividió Berlín durante la Guerra Fría?",
+    "options": ["Muro de Berlín", "Muro de Adriano", "Muro de China", "Muro de Varsovia"],
+    "correctIndex": 0,
+    "category": "HISTORY",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 19,
+    "question": "¿Qué civilización antigua construyó las pirámides de Giza?",
+    "options": ["Griegos", "Romanos", "Egipcios", "Mesopotámicos"],
+    "correctIndex": 2,
+    "category": "HISTORY",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 20,
+    "question": "¿En qué año cayó el Muro de Berlín?",
+    "options": ["1987", "1989", "1991", "1993"],
+    "correctIndex": 1,
+    "category": "HISTORY",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 21,
+    "question": "¿Quién fue el primer hombre en pisar la Luna?",
+    "options": ["Buzz Aldrin", "Neil Armstrong", "Michael Collins", "John Glenn"],
+    "correctIndex": 1,
+    "category": "HISTORY",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 22,
+    "question": "¿Qué imperio fue gobernado por Julio César?",
+    "options": ["Imperio Griego", "Imperio Romano", "Imperio Bizantino", "Imperio Otomano"],
+    "correctIndex": 1,
+    "category": "HISTORY",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 23,
+    "question": "¿En qué año se descubrió América?",
+    "options": ["1490", "1491", "1492", "1493"],
+    "correctIndex": 2,
+    "category": "HISTORY",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 24,
+    "question": "¿Qué guerra tuvo lugar entre 1861 y 1865 en Estados Unidos?",
+    "options": ["Guerra de Independencia", "Guerra Civil Estadounidense", "Guerra de 1812", "Guerra México-Estados Unidos"],
+    "correctIndex": 1,
+    "category": "HISTORY",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 25,
+    "question": "¿Quién fue el primer emperador de Roma?",
+    "options": ["Julio César", "Augusto", "Nerón", "Trajano"],
+    "correctIndex": 1,
+    "category": "HISTORY",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 26,
+    "question": "¿Qué evento histórico ocurrió el 11 de septiembre de 2001?",
+    "options": ["Caída del Muro de Berlín", "Ataques terroristas a las Torres Gemelas", "Inicio de la Guerra de Irak", "Fin de la Guerra Fría"],
+    "correctIndex": 1,
+    "category": "HISTORY",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 27,
+    "question": "¿Qué filósofo griego fue maestro de Alejandro Magno?",
+    "options": ["Sócrates", "Platón", "Aristóteles", "Pitágoras"],
+    "correctIndex": 2,
+    "category": "HISTORY",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 28,
+    "question": "¿En qué año terminó la Guerra Fría?",
+    "options": ["1987", "1989", "1991", "1993"],
+    "correctIndex": 2,
+    "category": "HISTORY",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 29,
+    "question": "¿Qué reina de Inglaterra reinó durante 63 años en el siglo XIX?",
+    "options": ["Isabel I", "Victoria", "María I", "Ana"],
+    "correctIndex": 1,
+    "category": "HISTORY",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 30,
+    "question": "¿Qué imperio fue derrotado en la Batalla de Waterloo en 1815?",
+    "options": ["Imperio Británico", "Imperio Francés de Napoleón", "Imperio Austríaco", "Imperio Ruso"],
+    "correctIndex": 1,
+    "category": "HISTORY",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 31,
+    "question": "¿Qué batalla de 1066 cambió el curso de la historia inglesa y fue ganada por Guillermo el Conquistador?",
+    "options": ["Batalla de Hastings", "Batalla de Agincourt", "Batalla de Bosworth", "Batalla de Stamford Bridge"],
+    "correctIndex": 0,
+    "category": "HISTORY",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 32,
+    "question": "¿Qué emperador mongol fundó el imperio más grande de la historia en términos de territorio continuo?",
+    "options": ["Kublai Khan", "Genghis Khan", "Ögedei Khan", "Möngke Khan"],
+    "correctIndex": 1,
+    "category": "HISTORY",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 33,
+    "question": "¿Qué evento histórico ocurrió el 14 de julio de 1789 en Francia?",
+    "options": ["Coronación de Napoleón", "Toma de la Bastilla", "Ejecución de Luis XVI", "Revolución de 1848"],
+    "correctIndex": 1,
+    "category": "HISTORY",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 34,
+    "question": "¿Qué civilización precolombina tenía su capital en Tenochtitlán?",
+    "options": ["Mayas", "Incas", "Aztecas", "Olmecas"],
+    "correctIndex": 2,
+    "category": "HISTORY",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 35,
+    "question": "¿Qué guerra tuvo lugar entre 1337 y 1453 entre Inglaterra y Francia?",
+    "options": ["Guerra de los Cien Años", "Guerra de las Rosas", "Guerra de Sucesión Española", "Guerras Napoleónicas"],
+    "correctIndex": 0,
+    "category": "HISTORY",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 36,
+    "question": "¿Qué explorador portugués fue el primero en llegar a la India por mar?",
+    "options": ["Cristóbal Colón", "Vasco da Gama", "Fernando de Magallanes", "Bartolomeu Dias"],
+    "correctIndex": 1,
+    "category": "HISTORY",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 37,
+    "question": "¿Qué dinastía gobernó Egipto desde 305 a.C. hasta 30 a.C., siendo la última dinastía faraónica?",
+    "options": ["Dinastía Ptolemaica", "Dinastía Ramésida", "Dinastía Tutmósida", "Dinastía Saíta"],
+    "correctIndex": 0,
+    "category": "HISTORY",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 38,
+    "question": "¿Qué batalla de 480 a.C. fue una victoria griega clave contra el Imperio Persa?",
+    "options": ["Batalla de Maratón", "Batalla de las Termópilas", "Batalla de Salamina", "Batalla de Platea"],
+    "correctIndex": 2,
+    "category": "HISTORY",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 39,
+    "question": "¿Qué emperador romano construyó el Coliseo?",
+    "options": ["Nerón", "Vespasiano", "Tito", "Domiciano"],
+    "correctIndex": 1,
+    "category": "HISTORY",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 40,
+    "question": "¿Qué evento histórico marcó el inicio de la Edad Media en Europa?",
+    "options": ["Caída del Imperio Romano de Occidente", "Coronación de Carlomagno", "Primera Cruzada", "Invasión normanda"],
+    "correctIndex": 0,
+    "category": "HISTORY",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 41,
+    "question": "¿Qué rey español patrocinó el viaje de Cristóbal Colón?",
+    "options": ["Felipe II", "Carlos V", "Fernando II de Aragón", "Alfonso X"],
+    "correctIndex": 2,
+    "category": "HISTORY",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 42,
+    "question": "¿Qué imperio fue derrotado en la Batalla de Actium en 31 a.C.?",
+    "options": ["Imperio Romano", "Imperio de Cleopatra y Marco Antonio", "Imperio Parto", "Imperio Seleúcida"],
+    "correctIndex": 1,
+    "category": "HISTORY",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 43,
+    "question": "¿Qué guerra tuvo lugar entre 1910 y 1920 en México?",
+    "options": ["Guerra de Independencia", "Revolución Mexicana", "Guerra de Reforma", "Guerra México-Estados Unidos"],
+    "correctIndex": 1,
+    "category": "HISTORY",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 44,
+    "question": "¿Qué filósofo griego fue condenado a muerte por beber cicuta?",
+    "options": ["Platón", "Sócrates", "Aristóteles", "Heráclito"],
+    "correctIndex": 1,
+    "category": "HISTORY",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 45,
+    "question": "¿Qué emperador bizantino recuperó gran parte del Imperio Romano de Occidente en el siglo VI?",
+    "options": ["Constantino I", "Justiniano I", "Teodosio I", "Heraclio"],
+    "correctIndex": 1,
+    "category": "HISTORY",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 46,
+    "question": "¿Qué batalla de 732 d.C. detuvo la expansión musulmana hacia el norte de los Pirineos?",
+    "options": ["Batalla de Tours", "Batalla de Poitiers", "Batalla de Covadonga", "Batalla de Roncesvalles"],
+    "correctIndex": 0,
+    "category": "HISTORY",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 47,
+    "question": "¿Qué tratado de 1648 puso fin a la Guerra de los Treinta Años?",
+    "options": ["Tratado de Westfalia", "Tratado de Utrecht", "Tratado de París", "Tratado de Tordesillas"],
+    "correctIndex": 0,
+    "category": "HISTORY",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 48,
+    "question": "¿Qué dinastía china construyó la Gran Muralla China tal como la conocemos hoy?",
+    "options": ["Dinastía Qin", "Dinastía Han", "Dinastía Ming", "Dinastía Tang"],
+    "correctIndex": 2,
+    "category": "HISTORY",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 49,
+    "question": "¿Qué emperador romano inició la persecución sistemática de los cristianos en el año 303?",
+    "options": ["Nerón", "Domiciano", "Diocleciano", "Decio"],
+    "correctIndex": 2,
+    "category": "HISTORY",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 50,
+    "question": "¿Qué batalla de 331 a.C. fue la victoria decisiva de Alejandro Magno sobre el Imperio Persa?",
+    "options": ["Batalla de Issos", "Batalla de Gaugamela", "Batalla de Granico", "Batalla de Hidaspes"],
+    "correctIndex": 1,
+    "category": "HISTORY",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 51,
+    "question": "¿Qué rey de Inglaterra firmó la Carta Magna en 1215?",
+    "options": ["Ricardo I", "Juan I", "Eduardo I", "Enrique II"],
+    "correctIndex": 1,
+    "category": "HISTORY",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 52,
+    "question": "¿Qué guerra tuvo lugar entre 1756 y 1763 y se libró en múltiples continentes?",
+    "options": ["Guerra de los Siete Años", "Guerra de Sucesión Austríaca", "Guerra de Independencia Estadounidense", "Guerras Napoleónicas"],
+    "correctIndex": 0,
+    "category": "HISTORY",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 53,
+    "question": "¿Qué emperador otomano conquistó Constantinopla en 1453, poniendo fin al Imperio Bizantino?",
+    "options": ["Mehmed II", "Suleimán el Magnífico", "Bayaceto I", "Selim I"],
+    "correctIndex": 0,
+    "category": "HISTORY",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 54,
+    "question": "¿Qué batalla de 480 a.C. fue una derrota griega pero se convirtió en un símbolo de resistencia?",
+    "options": ["Batalla de Maratón", "Batalla de las Termópilas", "Batalla de Salamina", "Batalla de Platea"],
+    "correctIndex": 1,
+    "category": "HISTORY",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 55,
+    "question": "¿Qué rey de Francia fue ejecutado durante la Revolución Francesa en 1793?",
+    "options": ["Luis XV", "Luis XVI", "Luis XVII", "Luis XVIII"],
+    "correctIndex": 1,
+    "category": "HISTORY",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 56,
+    "question": "¿Qué tratado de 1494 dividió el Nuevo Mundo entre España y Portugal?",
+    "options": ["Tratado de Tordesillas", "Tratado de Zaragoza", "Tratado de Alcáçovas", "Tratado de Madrid"],
+    "correctIndex": 0,
+    "category": "HISTORY",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 57,
+    "question": "¿Qué emperador romano construyó el Panteón de Roma?",
+    "options": ["Trajano", "Adriano", "Antonino Pío", "Marco Aurelio"],
+    "correctIndex": 1,
+    "category": "HISTORY",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 58,
+    "question": "¿Qué batalla de 1815 marcó la derrota final de Napoleón Bonaparte?",
+    "options": ["Batalla de Austerlitz", "Batalla de Leipzig", "Batalla de Waterloo", "Batalla de Borodino"],
+    "correctIndex": 2,
+    "category": "HISTORY",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 59,
+    "question": "¿Qué dinastía gobernó el Imperio Otomano desde 1299 hasta 1922?",
+    "options": ["Dinastía Omeya", "Dinastía Abasí", "Dinastía Osmanlí", "Dinastía Safávida"],
+    "correctIndex": 2,
+    "category": "HISTORY",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 60,
+    "question": "¿Qué evento histórico de 476 d.C. tradicionalmente marca el fin del Imperio Romano de Occidente?",
+    "options": ["Saqueo de Roma por los visigodos", "Deposición de Rómulo Augústulo", "Muerte de Justiniano I", "Invasión de los hunos"],
+    "correctIndex": 1,
+    "category": "HISTORY",
+    "difficulty": "DIFFICULT"
   }
 ]
 

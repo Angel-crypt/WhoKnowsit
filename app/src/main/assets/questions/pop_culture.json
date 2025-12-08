@@ -118,6 +118,366 @@
     "correctIndex": 1,
     "category": "POP_CULTURE",
     "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 16,
+    "question": "¿Qué red social permite compartir fotos y videos con filtros?",
+    "options": ["Facebook", "Instagram", "Twitter", "Snapchat"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 17,
+    "question": "¿Qué videojuego de construcción con bloques es extremadamente popular entre niños y adultos?",
+    "options": ["Roblox", "Minecraft", "Fortnite", "Terraria"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 18,
+    "question": "¿Qué plataforma de videos es la más grande del mundo?",
+    "options": ["Vimeo", "YouTube", "TikTok", "Dailymotion"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 19,
+    "question": "¿Qué serie de televisión trata sobre un profesor de química que se convierte en fabricante de drogas?",
+    "options": ["Breaking Bad", "Better Call Saul", "The Sopranos", "The Wire"],
+    "correctIndex": 0,
+    "category": "POP_CULTURE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 20,
+    "question": "¿Qué aplicación de mensajería usa un logo de un avión de papel?",
+    "options": ["Telegram", "WhatsApp", "Signal", "WeChat"],
+    "correctIndex": 0,
+    "category": "POP_CULTURE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 21,
+    "question": "¿Qué videojuego de batalla real es conocido por su modo de construcción?",
+    "options": ["Apex Legends", "Fortnite", "PUBG", "Call of Duty: Warzone"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 22,
+    "question": "¿Qué serie de anime trata sobre un joven ninja llamado Naruto?",
+    "options": ["Dragon Ball Z", "Naruto", "One Piece", "Bleach"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 23,
+    "question": "¿Qué plataforma de streaming es propiedad de Disney?",
+    "options": ["Netflix", "Disney+", "HBO Max", "Amazon Prime Video"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 24,
+    "question": "¿Qué red social limita los mensajes a 280 caracteres?",
+    "options": ["Facebook", "Instagram", "Twitter", "LinkedIn"],
+    "correctIndex": 2,
+    "category": "POP_CULTURE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 25,
+    "question": "¿Qué videojuego de Nintendo presenta a un fontanero que rescata a una princesa?",
+    "options": ["The Legend of Zelda", "Super Mario Bros", "Donkey Kong", "Metroid"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 26,
+    "question": "¿Qué serie de televisión trata sobre zombies en un mundo post-apocalíptico?",
+    "options": ["The Walking Dead", "Fear the Walking Dead", "Z Nation", "iZombie"],
+    "correctIndex": 0,
+    "category": "POP_CULTURE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 27,
+    "question": "¿Qué aplicación de citas usa un sistema de deslizar a la izquierda o derecha?",
+    "options": ["Bumble", "Tinder", "Hinge", "OkCupid"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 28,
+    "question": "¿Qué videojuego de Pokémon fue el primero en salir para Nintendo Switch?",
+    "options": ["Pokémon Let's Go", "Pokémon Sword and Shield", "Pokémon Brilliant Diamond", "Pokémon Legends: Arceus"],
+    "correctIndex": 0,
+    "category": "POP_CULTURE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 29,
+    "question": "¿Qué serie de televisión trata sobre un grupo de amigos en Nueva York?",
+    "options": ["How I Met Your Mother", "Friends", "Seinfeld", "The Big Bang Theory"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 30,
+    "question": "¿Qué plataforma de streaming de música tiene un logo verde con ondas de sonido?",
+    "options": ["Apple Music", "Spotify", "Amazon Music", "YouTube Music"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 31,
+    "question": "¿Qué serie de televisión de HBO trata sobre dragones y familias nobles en guerra?",
+    "options": ["The Witcher", "Game of Thrones", "House of the Dragon", "The Last Kingdom"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 32,
+    "question": "¿Qué videojuego de 2017, desarrollado por Nintendo, presenta a Link en un mundo abierto?",
+    "options": ["The Legend of Zelda: Breath of the Wild", "The Legend of Zelda: Skyward Sword", "The Legend of Zelda: Twilight Princess", "The Legend of Zelda: Wind Waker"],
+    "correctIndex": 0,
+    "category": "POP_CULTURE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 33,
+    "question": "¿Qué meme de internet muestra a un perro sentado en una habitación en llamas diciendo 'This is fine'?",
+    "options": ["Doge", "This is Fine", "Grumpy Cat", "Success Kid"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 34,
+    "question": "¿Qué serie de televisión de Netflix trata sobre un grupo de adolescentes con superpoderes?",
+    "options": ["Stranger Things", "The Umbrella Academy", "Locke & Key", "The Boys"],
+    "correctIndex": 0,
+    "category": "POP_CULTURE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 35,
+    "question": "¿Qué videojuego de 2018, desarrollado por Rockstar Games, es un western ambientado en 1899?",
+    "options": ["Red Dead Redemption", "Red Dead Redemption 2", "Grand Theft Auto V", "L.A. Noire"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 36,
+    "question": "¿Qué plataforma de streaming es conocida por sus series originales como 'The Crown'?",
+    "options": ["Netflix", "Amazon Prime Video", "HBO Max", "Disney+"],
+    "correctIndex": 0,
+    "category": "POP_CULTURE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 37,
+    "question": "¿Qué serie de anime trata sobre un joven que quiere convertirse en el mejor chef del mundo?",
+    "options": ["Food Wars!", "Toriko", "Yakitate!! Japan", "Cooking Master Boy"],
+    "correctIndex": 0,
+    "category": "POP_CULTURE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 38,
+    "question": "¿Qué videojuego de 2020, desarrollado por Naughty Dog, es la secuela de 'The Last of Us'?",
+    "options": ["The Last of Us Part II", "Uncharted 4", "Days Gone", "Ghost of Tsushima"],
+    "correctIndex": 0,
+    "category": "POP_CULTURE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 39,
+    "question": "¿Qué serie de televisión trata sobre un grupo de científicos trabajando en un acelerador de partículas?",
+    "options": ["The Big Bang Theory", "Breaking Bad", "Stranger Things", "Dark"],
+    "correctIndex": 0,
+    "category": "POP_CULTURE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 40,
+    "question": "¿Qué videojuego de 2019, desarrollado por FromSoftware, es conocido por su dificultad extrema?",
+    "options": ["Dark Souls III", "Bloodborne", "Sekiro: Shadows Die Twice", "Elden Ring"],
+    "correctIndex": 2,
+    "category": "POP_CULTURE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 41,
+    "question": "¿Qué serie de televisión de Amazon Prime trata sobre un mundo donde casi todos tienen superpoderes?",
+    "options": ["The Boys", "Invincible", "The Umbrella Academy", "Doom Patrol"],
+    "correctIndex": 0,
+    "category": "POP_CULTURE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 42,
+    "question": "¿Qué videojuego de 2017, desarrollado por Supergiant Games, combina acción y elementos de roguelike?",
+    "options": ["Bastion", "Transistor", "Pyre", "Hades"],
+    "correctIndex": 3,
+    "category": "POP_CULTURE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 43,
+    "question": "¿Qué serie de televisión de HBO trata sobre un grupo de supervivientes después de un apocalipsis zombie?",
+    "options": ["The Walking Dead", "The Last of Us", "Fear the Walking Dead", "Z Nation"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 44,
+    "question": "¿Qué videojuego de 2019, desarrollado por Kojima Productions, es un juego de acción y exploración?",
+    "options": ["Metal Gear Solid V", "Death Stranding", "Horizon Zero Dawn", "Days Gone"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 45,
+    "question": "¿Qué serie de televisión de Netflix trata sobre un grupo de criminales que planean un atraco a la Casa de la Moneda?",
+    "options": ["Money Heist", "Ozark", "Narcos", "Elite"],
+    "correctIndex": 0,
+    "category": "POP_CULTURE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 46,
+    "question": "¿Qué videojuego de 2011, desarrollado por Mojang Studios, popularizó el género de supervivencia con bloques?",
+    "options": ["Terraria", "Minecraft", "Roblox", "Stardew Valley"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 47,
+    "question": "¿Qué serie de televisión de HBO, creada por David Benioff y D.B. Weiss, adaptó las novelas de George R.R. Martin?",
+    "options": ["The Witcher", "Game of Thrones", "House of the Dragon", "The Last Kingdom"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 48,
+    "question": "¿Qué videojuego de 2015, desarrollado por CD Projekt Red, es un RPG de mundo abierto basado en las novelas de Andrzej Sapkowski?",
+    "options": ["The Witcher 3: Wild Hunt", "Cyberpunk 2077", "Divinity: Original Sin 2", "Pillars of Eternity"],
+    "correctIndex": 0,
+    "category": "POP_CULTURE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 49,
+    "question": "¿Qué serie de televisión de Netflix, creada por los hermanos Duffer, está ambientada en los años 80?",
+    "options": ["Dark", "Stranger Things", "The Umbrella Academy", "Locke & Key"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 50,
+    "question": "¿Qué videojuego de 2018, desarrollado por Insomniac Games, presenta a Spider-Man en un mundo abierto?",
+    "options": ["Marvel's Spider-Man", "Spider-Man: Miles Morales", "Batman: Arkham City", "Infamous: Second Son"],
+    "correctIndex": 0,
+    "category": "POP_CULTURE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 51,
+    "question": "¿Qué serie de televisión de HBO, creada por Vince Gilligan, trata sobre un profesor de química que se convierte en fabricante de metanfetamina?",
+    "options": ["Better Call Saul", "Breaking Bad", "The Wire", "The Sopranos"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 52,
+    "question": "¿Qué videojuego de 2017, desarrollado por Nintendo, presenta a Mario en un mundo abierto con un sombrero que puede poseer enemigos?",
+    "options": ["Super Mario Odyssey", "Super Mario 3D World", "Super Mario Galaxy", "Super Mario 64"],
+    "correctIndex": 0,
+    "category": "POP_CULTURE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 53,
+    "question": "¿Qué serie de televisión de Netflix, creada por Charlie Brooker, presenta episodios independientes sobre tecnología distópica?",
+    "options": ["The Crown", "Black Mirror", "Sherlock", "Doctor Who"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 54,
+    "question": "¿Qué videojuego de 2019, desarrollado por Respawn Entertainment, popularizó el género battle royale con héroes?",
+    "options": ["Fortnite", "Apex Legends", "Call of Duty: Warzone", "PUBG"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 55,
+    "question": "¿Qué serie de televisión de HBO, creada por David Simon, trata sobre el tráfico de drogas en Baltimore?",
+    "options": ["The Sopranos", "The Wire", "Boardwalk Empire", "True Detective"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 56,
+    "question": "¿Qué videojuego de 2022, desarrollado por FromSoftware, es un RPG de mundo abierto con elementos de souls-like?",
+    "options": ["Dark Souls III", "Bloodborne", "Sekiro: Shadows Die Twice", "Elden Ring"],
+    "correctIndex": 3,
+    "category": "POP_CULTURE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 57,
+    "question": "¿Qué serie de televisión de Netflix, creada por Mike Flanagan, adapta las novelas de terror de Shirley Jackson?",
+    "options": ["The Haunting of Hill House", "The Haunting of Bly Manor", "Midnight Mass", "The Midnight Club"],
+    "correctIndex": 0,
+    "category": "POP_CULTURE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 58,
+    "question": "¿Qué videojuego de 2020, desarrollado por Sucker Punch Productions, es un juego de acción ambientado en el Japón feudal?",
+    "options": ["Sekiro: Shadows Die Twice", "Ghost of Tsushima", "Nioh 2", "Nioh"],
+    "correctIndex": 1,
+    "category": "POP_CULTURE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 59,
+    "question": "¿Qué serie de televisión de Amazon Prime, creada por Eric Kripke, adapta el cómic de Garth Ennis sobre superhéroes corruptos?",
+    "options": ["The Boys", "Invincible", "The Umbrella Academy", "Doom Patrol"],
+    "correctIndex": 0,
+    "category": "POP_CULTURE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 60,
+    "question": "¿Qué videojuego de 2018, desarrollado por Santa Monica Studio, es la secuela de God of War III?",
+    "options": ["God of War", "God of War: Ragnarök", "Assassin's Creed Odyssey", "Horizon Zero Dawn"],
+    "correctIndex": 0,
+    "category": "POP_CULTURE",
+    "difficulty": "DIFFICULT"
   }
 ]
 

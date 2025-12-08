@@ -118,6 +118,366 @@
     "correctIndex": 2,
     "category": "FILM",
     "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 16,
+    "question": "¿Qué película de Disney cuenta la historia de una princesa que se convierte en una sirena?",
+    "options": ["La Bella y la Bestia", "La Sirenita", "Aladdín", "Pocahontas"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 17,
+    "question": "¿Qué actor interpretó a Batman en la trilogía de Christopher Nolan?",
+    "options": ["Ben Affleck", "Christian Bale", "Michael Keaton", "Val Kilmer"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 18,
+    "question": "¿Qué película de animación de Pixar trata sobre juguetes que cobran vida?",
+    "options": ["Monsters Inc.", "Toy Story", "Finding Nemo", "Cars"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 19,
+    "question": "¿Qué película de 1997 ganó 11 premios Oscar, incluyendo Mejor Película?",
+    "options": ["Titanic", "Forrest Gump", "The English Patient", "Shakespeare in Love"],
+    "correctIndex": 0,
+    "category": "FILM",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 20,
+    "question": "¿Qué saga de películas está basada en los libros de J.K. Rowling?",
+    "options": ["El Señor de los Anillos", "Harry Potter", "Las Crónicas de Narnia", "Percy Jackson"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 21,
+    "question": "¿Qué actor interpretó a Jack Sparrow en 'Piratas del Caribe'?",
+    "options": ["Orlando Bloom", "Johnny Depp", "Geoffrey Rush", "Keira Knightley"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 22,
+    "question": "¿Qué película de 2013 cuenta la historia de una reina de hielo y su hermana?",
+    "options": ["Brave", "Frozen", "Tangled", "Moana"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 23,
+    "question": "¿Qué película de superhéroes de 2008 fue protagonizada por Robert Downey Jr. como Iron Man?",
+    "options": ["Iron Man", "The Incredible Hulk", "Thor", "Captain America"],
+    "correctIndex": 0,
+    "category": "FILM",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 24,
+    "question": "¿Qué director dirigió 'Jurassic Park' y 'E.T. el Extraterrestre'?",
+    "options": ["George Lucas", "Steven Spielberg", "James Cameron", "Ridley Scott"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 25,
+    "question": "¿Qué película de 1994 ganó el Oscar a Mejor Película y cuenta la historia de Forrest Gump?",
+    "options": ["Pulp Fiction", "Forrest Gump", "The Shawshank Redemption", "The Lion King"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 26,
+    "question": "¿Qué actriz interpretó a Katniss Everdeen en 'Los Juegos del Hambre'?",
+    "options": ["Emma Watson", "Jennifer Lawrence", "Shailene Woodley", "Kristen Stewart"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 27,
+    "question": "¿Qué película de 2019 de Marvel fue la primera en ganar el Oscar a Mejor Película?",
+    "options": ["Avengers: Endgame", "Black Panther", "Spider-Man: Into the Spider-Verse", "Ninguna ganó ese premio"],
+    "correctIndex": 3,
+    "category": "FILM",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 28,
+    "question": "¿Qué película de 2001 cuenta la historia de un hobbit que debe destruir un anillo?",
+    "options": ["El Hobbit", "El Señor de los Anillos: La Comunidad del Anillo", "Harry Potter", "Las Crónicas de Narnia"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 29,
+    "question": "¿Qué película de 1985 protagonizada por Michael J. Fox trata sobre viajes en el tiempo?",
+    "options": ["Terminator", "Back to the Future", "The Time Machine", "Looper"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 30,
+    "question": "¿Qué película de Disney de 1991 cuenta la historia de una joven que se enamora de una bestia?",
+    "options": ["La Cenicienta", "La Bella y la Bestia", "Blancanieves", "La Sirenita"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 31,
+    "question": "¿Qué película de 2006, dirigida por Martin Scorsese, ganó finalmente su primer Oscar a Mejor Director?",
+    "options": ["Gangs of New York", "The Aviator", "The Departed", "Hugo"],
+    "correctIndex": 2,
+    "category": "FILM",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 32,
+    "question": "¿Qué película de 1999, dirigida por David Fincher, adapta la novela de Chuck Palahniuk sobre un club de lucha?",
+    "options": ["Se7en", "Fight Club", "Zodiac", "Gone Girl"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 33,
+    "question": "¿Qué película de 2000, dirigida por Ridley Scott, ganó el Oscar a Mejor Película?",
+    "options": ["Gladiator", "Black Hawk Down", "American Gangster", "The Martian"],
+    "correctIndex": 0,
+    "category": "FILM",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 34,
+    "question": "¿Qué película de 2004, dirigida por Michel Gondry, explora la naturaleza de los recuerdos y el amor?",
+    "options": ["Eternal Sunshine of the Spotless Mind", "The Science of Sleep", "Be Kind Rewind", "Mood Indigo"],
+    "correctIndex": 0,
+    "category": "FILM",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 35,
+    "question": "¿Qué película de 2007, dirigida por los hermanos Coen, ganó el Oscar a Mejor Película?",
+    "options": ["No Country for Old Men", "Fargo", "The Big Lebowski", "O Brother, Where Art Thou?"],
+    "correctIndex": 0,
+    "category": "FILM",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 36,
+    "question": "¿Qué película de 2014, dirigida por Alejandro González Iñárritu, ganó el Oscar a Mejor Película?",
+    "options": ["Birdman", "Babel", "21 Grams", "The Revenant"],
+    "correctIndex": 0,
+    "category": "FILM",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 37,
+    "question": "¿Qué película de 2017, dirigida por Guillermo del Toro, ganó el Oscar a Mejor Película?",
+    "options": ["Pan's Labyrinth", "The Shape of Water", "Pacific Rim", "Crimson Peak"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 38,
+    "question": "¿Qué película de 2008, dirigida por Danny Boyle, ganó el Oscar a Mejor Película?",
+    "options": ["28 Days Later", "Slumdog Millionaire", "127 Hours", "Trainspotting"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 39,
+    "question": "¿Qué película de 2011, dirigida por Michel Hazanavicius, es un homenaje al cine mudo?",
+    "options": ["The Artist", "Hugo", "Singin' in the Rain", "Modern Times"],
+    "correctIndex": 0,
+    "category": "FILM",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 40,
+    "question": "¿Qué película de 2015, dirigida por George Miller, es la cuarta entrega de la saga Mad Max?",
+    "options": ["Mad Max: Fury Road", "Mad Max Beyond Thunderdome", "The Road Warrior", "Mad Max"],
+    "correctIndex": 0,
+    "category": "FILM",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 41,
+    "question": "¿Qué película de 2012, dirigida por Ben Affleck, cuenta la historia de un rescate durante la crisis de rehenes en Irán?",
+    "options": ["Gone Baby Gone", "Argo", "The Town", "Live by Night"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 42,
+    "question": "¿Qué película de 2003, dirigida por Peter Jackson, ganó 11 premios Oscar?",
+    "options": ["El Señor de los Anillos: Las Dos Torres", "El Señor de los Anillos: El Retorno del Rey", "El Señor de los Anillos: La Comunidad del Anillo", "King Kong"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 43,
+    "question": "¿Qué película de 2009, dirigida por Kathryn Bigelow, ganó el Oscar a Mejor Película y la convirtió en la primera mujer en ganar Mejor Director?",
+    "options": ["Zero Dark Thirty", "The Hurt Locker", "Point Break", "Strange Days"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 44,
+    "question": "¿Qué película de 2016, dirigida por Damien Chazelle, es un musical sobre dos aspirantes a artistas en Los Ángeles?",
+    "options": ["Whiplash", "La La Land", "First Man", "10 Cloverfield Lane"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 45,
+    "question": "¿Qué película de 2018, dirigida por Alfonso Cuarón, ganó el Oscar a Mejor Película Extranjera y Mejor Director?",
+    "options": ["Gravity", "Children of Men", "Roma", "Y tu mamá también"],
+    "correctIndex": 2,
+    "category": "FILM",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 46,
+    "question": "¿Qué película de 1927, dirigida por Fritz Lang, es considerada una de las primeras películas de ciencia ficción y presenta una distopía futurista?",
+    "options": ["Nosferatu", "Metropolis", "The Cabinet of Dr. Caligari", "M"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 47,
+    "question": "¿Qué película de 1941, dirigida por Orson Welles, es famosa por su innovador uso de la profundidad de campo y la narrativa no lineal?",
+    "options": ["The Magnificent Ambersons", "Citizen Kane", "Touch of Evil", "The Lady from Shanghai"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 48,
+    "question": "¿Qué película de 1950, dirigida por Akira Kurosawa, utiliza múltiples perspectivas para contar la historia de un crimen?",
+    "options": ["Los Siete Samuráis", "Rashomon", "Yojimbo", "Ikiru"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 49,
+    "question": "¿Qué película de 1960, dirigida por Alfred Hitchcock, es famosa por su escena de la ducha y el uso innovador de la música de Bernard Herrmann?",
+    "options": ["Vertigo", "North by Northwest", "Psycho", "The Birds"],
+    "correctIndex": 2,
+    "category": "FILM",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 50,
+    "question": "¿Qué película de 1972, dirigida por Francis Ford Coppola, es la primera parte de la trilogía de El Padrino?",
+    "options": ["The Godfather", "Apocalypse Now", "The Conversation", "The Godfather Part II"],
+    "correctIndex": 0,
+    "category": "FILM",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 51,
+    "question": "¿Qué película de 1976, dirigida por Martin Scorsese, presenta a Robert De Niro como un taxista obsesionado con la violencia?",
+    "options": ["Mean Streets", "Taxi Driver", "Raging Bull", "Goodfellas"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 52,
+    "question": "¿Qué película de 1982, dirigida por Ridley Scott, es una adaptación de la novela de Philip K. Dick sobre androides?",
+    "options": ["Alien", "Blade Runner", "Thelma & Louise", "Gladiator"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 53,
+    "question": "¿Qué película de 1985, dirigida por Akira Kurosawa, es un épico drama histórico ambientado en el Japón feudal del siglo XVI?",
+    "options": ["Ran", "Kagemusha", "Dreams", "Rhapsody in August"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 54,
+    "question": "¿Qué película de 1991, dirigida por Jonathan Demme, ganó el Oscar a Mejor Película y presenta a Anthony Hopkins como Hannibal Lecter?",
+    "options": ["The Silence of the Lambs", "Hannibal", "Red Dragon", "Manhunter"],
+    "correctIndex": 0,
+    "category": "FILM",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 55,
+    "question": "¿Qué película de 1994, dirigida por Frank Darabont, está basada en una novela de Stephen King sobre la amistad en prisión?",
+    "options": ["The Green Mile", "The Shawshank Redemption", "Misery", "The Mist"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 56,
+    "question": "¿Qué película de 2000, dirigida por Christopher Nolan, presenta una narrativa no lineal sobre un hombre con amnesia anterógrada?",
+    "options": ["The Prestige", "Memento", "Inception", "Interstellar"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 57,
+    "question": "¿Qué película de 2004, dirigida por Michael Mann, presenta a Tom Cruise como un asesino a sueldo en Los Ángeles?",
+    "options": ["Heat", "Collateral", "Public Enemies", "Miami Vice"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 58,
+    "question": "¿Qué película de 2012, dirigida por Paul Thomas Anderson, presenta a Joaquin Phoenix como un veterano de guerra con problemas?",
+    "options": ["There Will Be Blood", "The Master", "Inherent Vice", "Phantom Thread"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 59,
+    "question": "¿Qué película de 2019, dirigida por Bong Joon-ho, se convirtió en la primera película de habla no inglesa en ganar el Oscar a Mejor Película?",
+    "options": ["Memories of Murder", "The Host", "Snowpiercer", "Parasite"],
+    "correctIndex": 3,
+    "category": "FILM",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 60,
+    "question": "¿Qué película de 2020, dirigida por Chloé Zhao, ganó el Oscar a Mejor Película y presenta a actores no profesionales?",
+    "options": ["The Rider", "Nomadland", "Eternals", "Songs My Brothers Taught Me"],
+    "correctIndex": 1,
+    "category": "FILM",
+    "difficulty": "DIFFICULT"
   }
 ]
 

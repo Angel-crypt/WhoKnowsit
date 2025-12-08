@@ -118,6 +118,366 @@
     "correctIndex": 1,
     "category": "SCIENCE",
     "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 16,
+    "question": "¿Cuál es el planeta más grande del sistema solar?",
+    "options": ["Saturno", "Júpiter", "Neptuno", "Urano"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 17,
+    "question": "¿Qué gas es el más abundante en la atmósfera terrestre?",
+    "options": ["Oxígeno", "Nitrógeno", "Dióxido de carbono", "Argón"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 18,
+    "question": "¿Cuántos cromosomas tiene una célula humana normal?",
+    "options": ["42", "44", "46", "48"],
+    "correctIndex": 2,
+    "category": "SCIENCE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 19,
+    "question": "¿Qué elemento químico tiene el símbolo 'H'?",
+    "options": ["Helio", "Hidrógeno", "Hafnio", "Holmio"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 20,
+    "question": "¿Cuál es la unidad básica de la vida?",
+    "options": ["Átomo", "Molécula", "Célula", "Tejido"],
+    "correctIndex": 2,
+    "category": "SCIENCE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 21,
+    "question": "¿Qué planeta es conocido como 'el planeta rojo'?",
+    "options": ["Venus", "Marte", "Júpiter", "Saturno"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 22,
+    "question": "¿Cuál es la fórmula química del agua?",
+    "options": ["H2O", "CO2", "O2", "NaCl"],
+    "correctIndex": 0,
+    "category": "SCIENCE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 23,
+    "question": "¿Qué parte del cuerpo humano bombea la sangre?",
+    "options": ["Pulmones", "Corazón", "Hígado", "Riñones"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 24,
+    "question": "¿Cuántos planetas hay en el sistema solar?",
+    "options": ["7", "8", "9", "10"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 25,
+    "question": "¿Qué elemento químico tiene el símbolo 'Fe'?",
+    "options": ["Flúor", "Fierro (Hierro)", "Francio", "Fermio"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 26,
+    "question": "¿Qué tipo de animal es una ballena?",
+    "options": ["Pez", "Mamífero", "Reptil", "Anfibio"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 27,
+    "question": "¿Cuál es la temperatura de ebullición del agua a nivel del mar?",
+    "options": ["90°C", "100°C", "110°C", "120°C"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 28,
+    "question": "¿Qué gas producen las plantas durante la fotosíntesis?",
+    "options": ["Dióxido de carbono", "Nitrógeno", "Oxígeno", "Hidrógeno"],
+    "correctIndex": 2,
+    "category": "SCIENCE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 29,
+    "question": "¿Cuál es el estado de la materia más común en el universo?",
+    "options": ["Sólido", "Líquido", "Gas", "Plasma"],
+    "correctIndex": 3,
+    "category": "SCIENCE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 30,
+    "question": "¿Qué órgano del cuerpo humano filtra la sangre?",
+    "options": ["Hígado", "Pulmones", "Riñones", "Corazón"],
+    "correctIndex": 2,
+    "category": "SCIENCE",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 31,
+    "question": "¿Qué tipo de enlace químico se forma cuando un átomo dona electrones a otro?",
+    "options": ["Covalente", "Iónico", "Metálico", "De hidrógeno"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 32,
+    "question": "¿Cuál es el pH del agua pura?",
+    "options": ["5", "6", "7", "8"],
+    "correctIndex": 2,
+    "category": "SCIENCE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 33,
+    "question": "¿Qué partícula subatómica no tiene carga eléctrica?",
+    "options": ["Protón", "Electrón", "Neutrón", "Fotón"],
+    "correctIndex": 2,
+    "category": "SCIENCE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 34,
+    "question": "¿Cuál es la velocidad del sonido en el aire a temperatura ambiente?",
+    "options": ["300 m/s", "330 m/s", "340 m/s", "350 m/s"],
+    "correctIndex": 2,
+    "category": "SCIENCE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 35,
+    "question": "¿Qué proceso biológico convierte la glucosa en energía sin oxígeno?",
+    "options": ["Respiración celular", "Fotosíntesis", "Fermentación", "Glucólisis"],
+    "correctIndex": 2,
+    "category": "SCIENCE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 36,
+    "question": "¿Cuál es el elemento más abundante en el Sol?",
+    "options": ["Helio", "Hidrógeno", "Oxígeno", "Carbono"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 37,
+    "question": "¿Qué tipo de célula sanguínea transporta oxígeno?",
+    "options": ["Glóbulos blancos", "Glóbulos rojos", "Plaquetas", "Plasma"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 38,
+    "question": "¿Cuál es la fórmula química del dióxido de carbono?",
+    "options": ["CO", "CO2", "C2O", "C2O2"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 39,
+    "question": "¿Qué ley física establece que la energía no se crea ni se destruye, solo se transforma?",
+    "options": ["Ley de Newton", "Ley de conservación de la energía", "Ley de Ohm", "Ley de gravitación universal"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 40,
+    "question": "¿Cuál es el órgano más grande del sistema digestivo?",
+    "options": ["Estómago", "Intestino delgado", "Intestino grueso", "Hígado"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 41,
+    "question": "¿Qué tipo de onda se utiliza en las comunicaciones por radio?",
+    "options": ["Ondas sonoras", "Ondas electromagnéticas", "Ondas sísmicas", "Ondas de agua"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 42,
+    "question": "¿Cuál es la temperatura del cero absoluto en grados Celsius?",
+    "options": ["-273°C", "-250°C", "-200°C", "-150°C"],
+    "correctIndex": 0,
+    "category": "SCIENCE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 43,
+    "question": "¿Qué proceso celular produce gametos?",
+    "options": ["Mitosis", "Meiosis", "Fotosíntesis", "Respiración celular"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 44,
+    "question": "¿Cuál es la unidad de medida de la fuerza en el Sistema Internacional?",
+    "options": ["Joule", "Newton", "Watt", "Pascal"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 45,
+    "question": "¿Qué tipo de reacción química libera energía?",
+    "options": ["Endotérmica", "Exotérmica", "Catalítica", "Equilibrada"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 46,
+    "question": "¿Qué teoría física describe el comportamiento de partículas a escala atómica?",
+    "options": ["Teoría de la relatividad", "Mecánica cuántica", "Teoría de cuerdas", "Teoría del campo unificado"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 47,
+    "question": "¿Qué proceso nuclear ocurre en el Sol para producir energía?",
+    "options": ["Fisión nuclear", "Fusión nuclear", "Desintegración radiactiva", "Transmutación"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 48,
+    "question": "¿Qué tipo de estrella colapsa para formar un agujero negro?",
+    "options": ["Enana blanca", "Gigante roja", "Estrella de neutrones", "Estrella masiva"],
+    "correctIndex": 3,
+    "category": "SCIENCE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 49,
+    "question": "¿Qué enzima es responsable de la replicación del ADN?",
+    "options": ["ARN polimerasa", "ADN polimerasa", "Helicasa", "Ligasa"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 50,
+    "question": "¿Qué principio de la termodinámica establece que la entropía de un sistema aislado siempre aumenta?",
+    "options": ["Primera ley", "Segunda ley", "Tercera ley", "Ley cero"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 51,
+    "question": "¿Qué tipo de partícula es el bosón de Higgs?",
+    "options": ["Fermión", "Bosón", "Leptón", "Quark"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 52,
+    "question": "¿Qué proceso biológico convierte el ARN mensajero en proteínas?",
+    "options": ["Transcripción", "Traducción", "Replicación", "Transducción"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 53,
+    "question": "¿Qué tipo de onda tiene la frecuencia más alta en el espectro electromagnético?",
+    "options": ["Ondas de radio", "Microondas", "Rayos X", "Rayos gamma"],
+    "correctIndex": 3,
+    "category": "SCIENCE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 54,
+    "question": "¿Qué teoría explica la expansión del universo?",
+    "options": ["Teoría del Big Bang", "Teoría del estado estacionario", "Teoría del universo oscilante", "Teoría del multiverso"],
+    "correctIndex": 0,
+    "category": "SCIENCE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 55,
+    "question": "¿Qué tipo de enlace químico mantiene unidas las bases nitrogenadas en el ADN?",
+    "options": ["Enlace covalente", "Enlace iónico", "Enlace de hidrógeno", "Enlace metálico"],
+    "correctIndex": 2,
+    "category": "SCIENCE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 56,
+    "question": "¿Qué proceso celular produce la mayor cantidad de ATP mediante la cadena de transporte de electrones?",
+    "options": ["Glucólisis", "Ciclo de Krebs", "Fosforilación oxidativa", "Fermentación"],
+    "correctIndex": 2,
+    "category": "SCIENCE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 57,
+    "question": "¿Qué tipo de estrella tiene una masa mayor a 8 veces la masa del Sol?",
+    "options": ["Enana roja", "Gigante roja", "Estrella masiva", "Enana blanca"],
+    "correctIndex": 2,
+    "category": "SCIENCE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 58,
+    "question": "¿Qué principio de la mecánica cuántica establece que dos fermiones idénticos no pueden ocupar el mismo estado cuántico?",
+    "options": ["Principio de incertidumbre de Heisenberg", "Principio de exclusión de Pauli", "Principio de superposición", "Principio de correspondencia"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 59,
+    "question": "¿Qué tipo de reacción química requiere energía para ocurrir?",
+    "options": ["Exotérmica", "Endotérmica", "Catalítica", "Espontánea"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 60,
+    "question": "¿Qué proceso biológico convierte el ADN en ARN mensajero?",
+    "options": ["Traducción", "Transcripción", "Replicación", "Transducción"],
+    "correctIndex": 1,
+    "category": "SCIENCE",
+    "difficulty": "DIFFICULT"
   }
 ]
 

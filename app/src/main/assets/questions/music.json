@@ -118,6 +118,366 @@
     "correctIndex": 2,
     "category": "MUSIC",
     "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 16,
+    "question": "¿Qué banda británica es conocida por la canción 'Hey Jude'?",
+    "options": ["The Rolling Stones", "The Beatles", "Led Zeppelin", "The Who"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 17,
+    "question": "¿Qué cantante es conocido como 'El Rey del Pop'?",
+    "options": ["Elvis Presley", "Michael Jackson", "Prince", "Stevie Wonder"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 18,
+    "question": "¿Cuántas cuerdas tiene una guitarra estándar?",
+    "options": ["4", "5", "6", "7"],
+    "correctIndex": 2,
+    "category": "MUSIC",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 19,
+    "question": "¿Qué cantante colombiana es conocida por éxitos como 'Hips Don't Lie'?",
+    "options": ["Shakira", "Maluma", "J Balvin", "Karol G"],
+    "correctIndex": 0,
+    "category": "MUSIC",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 20,
+    "question": "¿Qué banda de rock es conocida por la canción 'Stairway to Heaven'?",
+    "options": ["The Beatles", "Led Zeppelin", "Pink Floyd", "The Rolling Stones"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 21,
+    "question": "¿Qué género musical se caracteriza por el uso de sintetizadores y ritmos electrónicos?",
+    "options": ["Rock", "Pop", "Electrónica", "Jazz"],
+    "correctIndex": 2,
+    "category": "MUSIC",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 22,
+    "question": "¿Qué cantante puertorriqueño es conocido como 'El Jefe'?",
+    "options": ["Bad Bunny", "Daddy Yankee", "Ricky Martin", "Marc Anthony"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 23,
+    "question": "¿Qué instrumento de viento tiene llaves y se toca horizontalmente?",
+    "options": ["Trompeta", "Flauta", "Saxofón", "Clarinete"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 24,
+    "question": "¿Qué cantante estadounidense es conocida por éxitos como 'Shake It Off' y 'Blank Space'?",
+    "options": ["Ariana Grande", "Taylor Swift", "Selena Gomez", "Miley Cyrus"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 25,
+    "question": "¿Qué banda de rock es conocida por la canción 'Bohemian Rhapsody'?",
+    "options": ["The Beatles", "Queen", "Led Zeppelin", "Pink Floyd"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 26,
+    "question": "¿Qué género musical se originó en Nueva Orleans a principios del siglo XX?",
+    "options": ["Blues", "Jazz", "Rock and Roll", "Soul"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 27,
+    "question": "¿Qué cantante mexicano es conocido como 'El Divo de Juárez'?",
+    "options": ["Vicente Fernández", "Juan Gabriel", "José José", "Luis Miguel"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 28,
+    "question": "¿Qué instrumento de percusión se toca con baquetas?",
+    "options": ["Tambor", "Batería", "Xilófono", "Todos los anteriores"],
+    "correctIndex": 3,
+    "category": "MUSIC",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 29,
+    "question": "¿Qué banda de rock es conocida por la canción 'Smells Like Teen Spirit'?",
+    "options": ["Pearl Jam", "Nirvana", "Soundgarden", "Alice in Chains"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 30,
+    "question": "¿Qué cantante es conocido como 'El Rey del Rock and Roll'?",
+    "options": ["Chuck Berry", "Elvis Presley", "Little Richard", "Buddy Holly"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 31,
+    "question": "¿Qué álbum de The Beatles, lanzado en 1969, presenta a los miembros cruzando un paso de cebra?",
+    "options": ["Sgt. Pepper's Lonely Hearts Club Band", "Abbey Road", "The White Album", "Let It Be"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 32,
+    "question": "¿Qué compositor austriaco escribió 'La Flauta Mágica' y 'Las Bodas de Fígaro'?",
+    "options": ["Johann Sebastian Bach", "Wolfgang Amadeus Mozart", "Ludwig van Beethoven", "Franz Schubert"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 33,
+    "question": "¿Qué género musical se originó en el Bronx, Nueva York, a principios de los años 70?",
+    "options": ["Funk", "Disco", "Hip Hop", "Soul"],
+    "correctIndex": 2,
+    "category": "MUSIC",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 34,
+    "question": "¿Qué cantante estadounidense es conocida como 'La Reina del Soul'?",
+    "options": ["Aretha Franklin", "Diana Ross", "Tina Turner", "Whitney Houston"],
+    "correctIndex": 0,
+    "category": "MUSIC",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 35,
+    "question": "¿Qué banda de rock progresivo es conocida por el álbum 'The Wall'?",
+    "options": ["Led Zeppelin", "Pink Floyd", "The Who", "Yes"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 36,
+    "question": "¿Qué cantante mexicano es conocido como 'El Rey' de la música ranchera?",
+    "options": ["Antonio Aguilar", "Vicente Fernández", "Pedro Infante", "Jorge Negrete"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 37,
+    "question": "¿Qué álbum de Michael Jackson, lanzado en 1982, es el álbum más vendido de todos los tiempos?",
+    "options": ["Off the Wall", "Thriller", "Bad", "Dangerous"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 38,
+    "question": "¿Qué género musical se caracteriza por el uso de guitarras distorsionadas y ritmos pesados?",
+    "options": ["Rock", "Heavy Metal", "Punk", "Grunge"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 39,
+    "question": "¿Qué compositor alemán escribió 'El Mesías' y 'Música Acuática'?",
+    "options": ["Johann Sebastian Bach", "George Frideric Handel", "Antonio Vivaldi", "Johann Pachelbel"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 40,
+    "question": "¿Qué banda de rock alternativo es conocida por el álbum 'Nevermind'?",
+    "options": ["Pearl Jam", "Nirvana", "Soundgarden", "Alice in Chains"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 41,
+    "question": "¿Qué cantante puertorriqueño es conocido como 'El Cantante de los Cantantes'?",
+    "options": ["Héctor Lavoe", "Willie Colón", "Rubén Blades", "Marc Anthony"],
+    "correctIndex": 0,
+    "category": "MUSIC",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 42,
+    "question": "¿Qué género musical se originó en Brasil y combina samba con jazz?",
+    "options": ["Bossa Nova", "Samba", "Tango", "Cumbia"],
+    "correctIndex": 0,
+    "category": "MUSIC",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 43,
+    "question": "¿Qué álbum de Led Zeppelin, lanzado en 1971, no tiene título y es conocido como 'Led Zeppelin IV'?",
+    "options": ["Led Zeppelin I", "Led Zeppelin II", "Led Zeppelin III", "Led Zeppelin IV"],
+    "correctIndex": 3,
+    "category": "MUSIC",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 44,
+    "question": "¿Qué cantante estadounidense es conocida por éxitos como 'I Will Always Love You'?",
+    "options": ["Mariah Carey", "Whitney Houston", "Celine Dion", "Barbra Streisand"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 45,
+    "question": "¿Qué compositor italiano escribió 'Las Cuatro Estaciones'?",
+    "options": ["Antonio Vivaldi", "Giuseppe Verdi", "Gioachino Rossini", "Giacomo Puccini"],
+    "correctIndex": 0,
+    "category": "MUSIC",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": 46,
+    "question": "¿Qué compositor alemán escribió 'El Clave Bien Temperado' y 'La Pasión según San Mateo'?",
+    "options": ["Johann Sebastian Bach", "Wolfgang Amadeus Mozart", "Ludwig van Beethoven", "Franz Schubert"],
+    "correctIndex": 0,
+    "category": "MUSIC",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 47,
+    "question": "¿Qué ópera de Richard Wagner, estrenada en 1876, forma parte de 'El Anillo del Nibelungo'?",
+    "options": ["Tristán e Isolda", "El Holandés Errante", "El Oro del Rin", "Parsifal"],
+    "correctIndex": 2,
+    "category": "MUSIC",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 48,
+    "question": "¿Qué álbum de Pink Floyd, lanzado en 1979, es un ópera rock sobre la alienación?",
+    "options": ["The Dark Side of the Moon", "Wish You Were Here", "Animals", "The Wall"],
+    "correctIndex": 3,
+    "category": "MUSIC",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 49,
+    "question": "¿Qué compositor ruso escribió 'La Consagración de la Primavera' y 'El Pájaro de Fuego'?",
+    "options": ["Pyotr Ilyich Tchaikovsky", "Igor Stravinsky", "Sergei Rachmaninoff", "Modest Mussorgsky"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 50,
+    "question": "¿Qué género musical, originario de Detroit a principios de los 80, se caracteriza por ritmos mecánicos y sintetizadores?",
+    "options": ["House", "Techno", "Disco", "Garage"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 51,
+    "question": "¿Qué álbum de The Velvet Underground, lanzado en 1967, fue producido por Andy Warhol?",
+    "options": ["The Velvet Underground & Nico", "White Light/White Heat", "The Velvet Underground", "Loaded"],
+    "correctIndex": 0,
+    "category": "MUSIC",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 52,
+    "question": "¿Qué compositor francés escribió 'Claro de Luna' y 'Preludio a la Siesta de un Fauno'?",
+    "options": ["Maurice Ravel", "Claude Debussy", "Camille Saint-Saëns", "Gabriel Fauré"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 53,
+    "question": "¿Qué banda de rock progresivo es conocida por el álbum 'Close to the Edge'?",
+    "options": ["Pink Floyd", "Genesis", "Yes", "King Crimson"],
+    "correctIndex": 2,
+    "category": "MUSIC",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 54,
+    "question": "¿Qué ópera de Giacomo Puccini, estrenada en 1904, cuenta la historia de una geisha japonesa?",
+    "options": ["La Bohème", "Tosca", "Madama Butterfly", "Turandot"],
+    "correctIndex": 2,
+    "category": "MUSIC",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 55,
+    "question": "¿Qué compositor húngaro es conocido por sus estudios etnomusicológicos y composiciones como 'Concierto para Orquesta'?",
+    "options": ["Béla Bartók", "Zoltán Kodály", "Franz Liszt", "György Ligeti"],
+    "correctIndex": 0,
+    "category": "MUSIC",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 56,
+    "question": "¿Qué álbum de Radiohead, lanzado en 2000, marcó un cambio hacia sonidos más experimentales y electrónicos?",
+    "options": ["OK Computer", "Kid A", "Amnesiac", "Hail to the Thief"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 57,
+    "question": "¿Qué compositor austriaco escribió 'La Sinfonía Incompleta' y 'El Viaje de Invierno'?",
+    "options": ["Wolfgang Amadeus Mozart", "Ludwig van Beethoven", "Franz Schubert", "Johann Strauss II"],
+    "correctIndex": 2,
+    "category": "MUSIC",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 58,
+    "question": "¿Qué género musical, originario de Jamaica a finales de los 60, se caracteriza por ritmos sincopados y letras sociales?",
+    "options": ["Ska", "Reggae", "Rocksteady", "Dub"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 59,
+    "question": "¿Qué compositor alemán escribió 'Carmina Burana' y 'Los Planetas'?",
+    "options": ["Richard Strauss", "Carl Orff", "Gustav Holst", "Paul Hindemith"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "DIFFICULT"
+  },
+  {
+    "id": 60,
+    "question": "¿Qué álbum de Miles Davis, lanzado en 1959, es considerado uno de los mejores álbumes de jazz de todos los tiempos?",
+    "options": ["Birth of the Cool", "Kind of Blue", "Bitches Brew", "Sketches of Spain"],
+    "correctIndex": 1,
+    "category": "MUSIC",
+    "difficulty": "DIFFICULT"
   }
 ]
 
