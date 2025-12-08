@@ -22,4 +22,22 @@ class GameController(private val context: Context) {
             questions = questions
         )
     }
+
+    fun handleAnswer(selectedOptionIndex: Int){
+        val state = currentGameState ?: return
+        val question = state.currentQuestion ?: return
+
+        val isCorrect = (question.correctAnswerIndex == selectedOptionIndex)
+
+        if (isCorrect) {
+            val difficulty = question.difficulty
+            val points = 10 * difficulty.multiplier
+            scoreManager.addPoints(points)
+            soundManager.playCorrect()
+        } else {
+            soundManager.playWrong()
+        }
+
+        currentGameState = state.nextQuestion(isCorrect)
+    }
 }
