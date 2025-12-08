@@ -38,7 +38,6 @@ class NewGameSetupActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_new_game_setup)
-        
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -65,15 +64,12 @@ class NewGameSetupActivity : AppCompatActivity() {
         btnEasy = findViewById(R.id.btn_easy)
         btnMedium = findViewById(R.id.btn_medium)
         btnHard = findViewById(R.id.btn_hard)
-        
         btnEasy.setOnClickListener {
             selectDifficulty(Difficulty.EASY)
         }
-        
         btnMedium.setOnClickListener {
             selectDifficulty(Difficulty.MEDIUM)
         }
-        
         btnHard.setOnClickListener {
             selectDifficulty(Difficulty.HARD)
         }
@@ -82,10 +78,8 @@ class NewGameSetupActivity : AppCompatActivity() {
     private fun selectDifficulty(difficulty: Difficulty) {
         selectedDifficulty = difficulty
         
-        // Reset all buttons
         resetDifficultyButtons()
         
-        // Highlight selected button
         when (difficulty) {
             Difficulty.EASY -> {
                 btnEasy.elevation = 12f
@@ -126,10 +120,8 @@ class NewGameSetupActivity : AppCompatActivity() {
     private fun selectQuantity(quantity: Int) {
         selectedQuantity = quantity
         
-        // Reset all buttons
         resetQuantityButtons()
         
-        // Highlight selected button
         when (quantity) {
             5 -> {
                 btnQuantity5.elevation = 12f
@@ -153,8 +145,6 @@ class NewGameSetupActivity : AppCompatActivity() {
         btnStart = findViewById(R.id.btn_start)
         btnStart.setOnClickListener {
             if (selectedCategory != null && selectedDifficulty != null && selectedQuantity != null) {
-                // TODO: Iniciar el juego con las opciones seleccionadas
-                // Por ahora solo mostramos un mensaje
                 android.widget.Toast.makeText(
                     this,
                     "Iniciando juego: ${selectedCategory?.displayName}, ${selectedDifficulty?.displayName}, ${selectedQuantity} preguntas",
@@ -217,7 +207,6 @@ class NewGameSetupActivity : AppCompatActivity() {
                 }
                 iconView.setImageResource(iconRes)
                 
-                // Set colors based on selection
                 if (isSelected) {
                     cardView.strokeWidth = 0
                     cardView.cardElevation = 12f
