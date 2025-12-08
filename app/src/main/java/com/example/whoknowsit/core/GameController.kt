@@ -11,6 +11,15 @@ class GameController(private val context: Context) {
     val questionManager = QuestionManager(localDataSource)
     private val scoreManager = ScoreManager()
     private val soundManager = SoundManager(context)
-    private val currentGameState = GameState()
+    private var currentGameState: GameState? = null
 
+    fun startNewGame(category: Category, difficulty: Difficulty, totalQuestions: Int) {
+        scoreManager.reset()
+        val questions = questionManager.getQuestionsForCategory(category, difficulty, totalQuestions)
+        currentGameState = GameState(
+            selectedCategory = category,
+            selectedDifficulty = difficulty,
+            questions = questions
+        )
+    }
 }
