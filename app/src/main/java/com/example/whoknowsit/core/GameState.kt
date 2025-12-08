@@ -14,7 +14,7 @@ data class GameState(
     val isFinished: Boolean
         get() = currentQuestionIndex >= questions.size
 
-    fun nextQuestion(correct: Boolean): GameState {
+    fun nextQuestion(): GameState {
         return this.copy(
             currentQuestionIndex = this.currentQuestionIndex + 1
         )
