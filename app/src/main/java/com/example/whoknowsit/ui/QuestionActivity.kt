@@ -1,5 +1,6 @@
 package com.example.whoknowsit.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
@@ -70,6 +71,12 @@ class QuestionActivity : AppCompatActivity() {
         optionViews.forEach { view ->
             view.isSelected = (view == selectedView)
         }
+        val selectedOption = optionViews.indexOf(selectedView)
+        gameController.handleAnswer(selectedOption)
+
+        val intent = Intent(this, FeedbackActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 
     fun setQuestionText(text: String) {
