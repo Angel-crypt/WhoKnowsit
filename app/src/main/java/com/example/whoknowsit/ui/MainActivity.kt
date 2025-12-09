@@ -1,5 +1,6 @@
 package com.example.whoknowsit.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         (application as WhoKnowsItApplication).gameController
     }
     private lateinit var loadGameButton: MaterialButton
+    private lateinit var newGameButton: MaterialButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +31,13 @@ class MainActivity : AppCompatActivity() {
             val hasSavedGame = gameController.saveManager.isSavedGameState()
             loadGameButton.visibility =
                 if (hasSavedGame) View.VISIBLE else View.GONE
+        }
+
+        newGameButton = findViewById(R.id.new_game_button)
+        newGameButton.setOnClickListener {
+            val intent = Intent(this, GameScreenActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 }
