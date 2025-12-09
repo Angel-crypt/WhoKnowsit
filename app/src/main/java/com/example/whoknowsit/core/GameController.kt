@@ -14,7 +14,7 @@ class GameController(private val context: Context) {
     private val questionManager = QuestionManager(localDataSource)
     private val scoreManager = ScoreManager()
     private val soundManager = SoundManager(context)
-    private val saveManager = SaveManager(context)
+    val saveManager = SaveManager(context)
 
     private lateinit var gameState: GameState
     var onGameFinished: ((finalScore: Int) -> Unit)? = null
@@ -22,8 +22,7 @@ class GameController(private val context: Context) {
     fun startNewGame(config: GameConfig) {
         scoreManager.reset()
         gameState = GameState(
-            selectedCategory = config.category,
-            selectedDifficulty = config.difficulty,
+            gameConfig = config,
             questions = questionManager.getQuestionsForCategory(
                 config.category,
                 config.difficulty,
