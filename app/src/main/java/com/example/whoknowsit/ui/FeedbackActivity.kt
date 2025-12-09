@@ -23,7 +23,8 @@ class FeedbackActivity : AppCompatActivity() {
         val correctAnswerTextView = findViewById<android.widget.TextView>(R.id.correct_answer_text_view)
 
 
-        val isCorrect = true
+        val isCorrect = intent.getBooleanExtra("IS_CORRECT", false)
+        val correctAnswer = intent.getStringExtra("CORRECT_ANSWER")
 
         if (isCorrect) {
             correctAnswerTextView.visibility = android.view.View.GONE
@@ -31,6 +32,7 @@ class FeedbackActivity : AppCompatActivity() {
             resultTextView.setTextColor(androidx.core.content.ContextCompat.getColor(this, R.color.white))
             resultMascotView.setImageResource(R.drawable.mascot_correct)
         } else {
+            correctAnswerTextView.text = "La respuesta correcta era: $correctAnswer"
             correctAnswerTextView.visibility = android.view.View.VISIBLE
             resultTextView.text = "¡Sigue intentando!"
             resultTextView.setTextColor(androidx.core.content.ContextCompat.getColor(this, R.color.error))
