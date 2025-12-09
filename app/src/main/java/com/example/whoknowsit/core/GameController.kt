@@ -42,7 +42,7 @@ class GameController(private val context: Context) {
         return false
     }
 
-    fun handleAnswer(selectedOptionIndex: Int) {
+    fun handleAnswer(selectedOptionIndex: Int, context: Context) {
         gameState.currentQuestion?.let { question ->
             if (gameState.isFinished) return
 
@@ -55,9 +55,20 @@ class GameController(private val context: Context) {
                 soundManager.playWrong()
             }
 
-            gameState = gameState.copy(score = scoreManager.score).nextQuestion()
+            android.os.Handler(android.os.Looper.getMainLooper()).postDelayed({
+                val intent = android.content.Intent(context, com.example.whoknowsit.ui.FeedbackActivity::class.java).apply {
+                    putExtra("IS_CORRECT", isCorrect)
+                    val correctAnswerText = question.options[question.correctAnswerIndex]
+                    putExtra("CORRECT_ANSWER", correctAnswerText)
+                }
+                context.startActivity(intent)
+                if (context is android.app.Activity) {
+                    context.finish()
+                }
 
-            if (gameState.isFinished) handleGameFinished()
+                gameState = gameState.copy(score = scoreManager.score).nextQuestion()
+                if (gameState.isFinished) handleGameFinished()
+            }, 2000)
         }
     }
 
