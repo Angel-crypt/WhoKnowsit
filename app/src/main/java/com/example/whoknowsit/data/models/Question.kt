@@ -1,7 +1,7 @@
 package com.example.whoknowsit.data.models
 
-import com.example.whoknowsit.core.Category
-import com.example.whoknowsit.core.Difficulty
+import com.example.whoknowsit.core.enums.Category
+import com.example.whoknowsit.core.enums.Difficulty
 import kotlinx.serialization.Serializable
 
 @Serializable

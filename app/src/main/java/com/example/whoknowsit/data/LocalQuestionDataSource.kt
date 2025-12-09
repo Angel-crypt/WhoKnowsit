@@ -1,8 +1,8 @@
 package com.example.whoknowsit.data
 
 import android.content.Context
-import com.example.whoknowsit.core.Category
-import com.example.whoknowsit.core.Difficulty
+import com.example.whoknowsit.core.enums.Category
+import com.example.whoknowsit.core.enums.Difficulty
 import com.example.whoknowsit.data.models.Question
 import org.json.JSONArray
 import org.json.JSONObject
