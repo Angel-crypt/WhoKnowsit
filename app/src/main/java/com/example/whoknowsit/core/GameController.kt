@@ -55,20 +55,18 @@ class GameController(private val context: Context) {
                 soundManager.playWrong()
             }
 
-            android.os.Handler(android.os.Looper.getMainLooper()).postDelayed({
-                val intent = android.content.Intent(context, com.example.whoknowsit.ui.FeedbackActivity::class.java).apply {
-                    putExtra("IS_CORRECT", isCorrect)
-                    val correctAnswerText = question.options[question.correctAnswerIndex]
-                    putExtra("CORRECT_ANSWER", correctAnswerText)
-                }
-                context.startActivity(intent)
-                if (context is android.app.Activity) {
-                    context.finish()
-                }
+            val intent = android.content.Intent(context, com.example.whoknowsit.ui.FeedbackActivity::class.java).apply {
+                putExtra("IS_CORRECT", isCorrect)
+                val correctAnswerText = question.options[question.correctAnswerIndex]
+                putExtra("CORRECT_ANSWER", correctAnswerText)
+            }
+            context.startActivity(intent)
+            if (context is android.app.Activity) {
+                context.finish()
+            }
 
-                gameState = gameState.copy(score = scoreManager.score).nextQuestion()
-                if (gameState.isFinished) handleGameFinished()
-            }, 2000)
+            gameState = gameState.copy(score = scoreManager.score).nextQuestion()
+            if (gameState.isFinished) handleGameFinished()
         }
     }
 

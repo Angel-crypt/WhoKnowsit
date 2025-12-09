@@ -38,5 +38,14 @@ class FeedbackActivity : AppCompatActivity() {
             resultTextView.setTextColor(androidx.core.content.ContextCompat.getColor(this, R.color.error))
             resultMascotView.setImageResource(R.drawable.mascot_wrong)
         }
+
+        val gameController = (application as com.example.whoknowsit.WhoKnowsItApplication).gameController
+
+        android.os.Handler(android.os.Looper.getMainLooper()).postDelayed({
+            if (!gameController.gameState.isFinished) {
+                val intent = android.content.Intent(this, QuestionActivity::class.java)
+                startActivity(intent)
+            }
+        }, 1000)
     }
 }
