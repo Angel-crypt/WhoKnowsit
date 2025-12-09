@@ -2,17 +2,25 @@ package com.example.whoknowsit.ui
 
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.whoknowsit.R
+import com.example.whoknowsit.WhoKnowsItApplication
 import com.google.android.material.button.MaterialButton
 
 class QuestionActivity : AppCompatActivity() {
 
+    private lateinit var questionTextView: TextView
+    private lateinit var counterTextView: TextView
     private lateinit var optionViews: List<MaterialButton>
     private var selectedOptionIndex: Int? = null
+
+    private val gameController by lazy {
+        (application as WhoKnowsItApplication).gameController
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,9 +34,16 @@ class QuestionActivity : AppCompatActivity() {
 
         initializeViews()
         setupListeners()
+        
+        gameController.gameState.currentQuestion?.text?.let { text ->
+            setQuestionText(text)
+        }
     }
 
     private fun initializeViews() {
+        questionTextView = findViewById(R.id.question_text_view)
+        counterTextView = findViewById(R.id.counter_question)
+        
         optionViews = listOf(
             findViewById(R.id.opt_1),
             findViewById(R.id.opt_2),
@@ -50,5 +65,9 @@ class QuestionActivity : AppCompatActivity() {
         optionViews.forEach { view ->
             view.isSelected = (view == selectedView)
         }
+    }
+
+    fun setQuestionText(text: String) {
+        questionTextView.text = text
     }
 }
