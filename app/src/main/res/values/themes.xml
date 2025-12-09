@@ -22,31 +22,35 @@
         <!-- Background -->
         <item name="android:colorBackground">@color/background</item>
         <item name="colorOnBackground">@color/on_background</item>
-        
-        <!-- Error & Success -->
-        <item name="colorError">@color/error</item>
-        <item name="colorOnError">@color/white</item>
-        
-        <!-- Shape Appearances - Todo muy redondo -->
-        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.WhoKnowsIt.SmallComponent</item>
-        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.WhoKnowsIt.MediumComponent</item>
-        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.WhoKnowsIt.LargeComponent</item>
     </style>
 
-    <!-- Shape Appearances - Formas muy redondeadas -->
-    <style name="ShapeAppearance.WhoKnowsIt.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">50%</item>
+    <style name="SectionTitleStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="ShapeAppearance.WhoKnowsIt.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">24dp</item>
+    <style name="CategoryIconStyle">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_margin">6dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:background">@drawable/bg_image_view_selector</item>
+        <item name="tint">@color/white</item>
     </style>
 
-    <style name="ShapeAppearance.WhoKnowsIt.LargeComponent" parent="ShapeAppearance.MaterialComponents.LargeComponent">
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">28dp</item>
+    <style name="OptionButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">40dp</item> <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginHorizontal">4dp</item>
+        <item name="android:textSize">12sp</item> <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:background">@drawable/bg_button_selector</item>
+        <item name="cornerRadius">10dp</item>
     </style>
 
 </resources>

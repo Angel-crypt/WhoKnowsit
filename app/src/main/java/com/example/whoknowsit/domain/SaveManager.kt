@@ -38,6 +38,7 @@ class SaveManager(private val context: Context) {
         }
 
     suspend fun isSavedGameState(): Boolean =
+        //true // Test de boton
         dataStore.data.first()[KEY_GAME_STATE] != null
 
     suspend fun clearSavedGame() {

@@ -13,17 +13,17 @@ class GameController(private val context: Context) {
     private val localDataSource = LocalQuestionDataSource(context)
     private val questionManager = QuestionManager(localDataSource)
     private val scoreManager = ScoreManager()
-    private val soundManager = SoundManager(context)
-    private val saveManager = SaveManager(context)
+    val soundManager = SoundManager(context)
+    val saveManager = SaveManager(context)
 
-    private lateinit var gameState: GameState
+    lateinit var gameState: GameState
+        private set
     var onGameFinished: ((finalScore: Int) -> Unit)? = null
 
     fun startNewGame(config: GameConfig) {
         scoreManager.reset()
         gameState = GameState(
-            selectedCategory = config.category,
-            selectedDifficulty = config.difficulty,
+            gameConfig = config,
             questions = questionManager.getQuestionsForCategory(
                 config.category,
                 config.difficulty,
@@ -42,7 +42,7 @@ class GameController(private val context: Context) {
         return false
     }
 
-    fun handleAnswer(selectedOptionIndex: Int) {
+    fun handleAnswer(selectedOptionIndex: Int, context: Context) {
         gameState.currentQuestion?.let { question ->
             if (gameState.isFinished) return
 
@@ -55,8 +55,17 @@ class GameController(private val context: Context) {
                 soundManager.playWrong()
             }
 
-            gameState = gameState.copy(score = scoreManager.score).nextQuestion()
+            val intent = android.content.Intent(context, com.example.whoknowsit.ui.FeedbackActivity::class.java).apply {
+                putExtra("IS_CORRECT", isCorrect)
+                val correctAnswerText = question.options[question.correctAnswerIndex]
+                putExtra("CORRECT_ANSWER", correctAnswerText)
+            }
+            context.startActivity(intent)
+            if (context is android.app.Activity) {
+                context.finish()
+            }
 
+            gameState = gameState.copy(score = scoreManager.score).nextQuestion()
             if (gameState.isFinished) handleGameFinished()
         }
     }
