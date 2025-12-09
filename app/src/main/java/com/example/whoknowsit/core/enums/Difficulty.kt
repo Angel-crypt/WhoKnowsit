@@ -1,4 +1,4 @@
-package com.example.whoknowsit.core
+package com.example.whoknowsit.core.enums
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -7,3 +7,4 @@ enum class Difficulty(val displayName: String, val multiplier: Int) {
     MEDIUM("Medio", 2),
     HARD("Difícil", 3)
 }
+

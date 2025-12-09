@@ -1,4 +1,4 @@
-package com.example.whoknowsit.core
+package com.example.whoknowsit.core.enums
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -11,3 +11,4 @@ enum class Category(val displayName: String) {
     SPORTS("Deportes"),
     RANDOM("Aleatorio")
 }
+
