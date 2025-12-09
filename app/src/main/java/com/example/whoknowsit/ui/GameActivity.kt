@@ -109,6 +109,11 @@ class GameActivity : AppCompatActivity() {
             val intent = Intent(this, QuestionActivity::class.java)
             startActivity(intent)
             finish()
+
+            Log.d(
+                "GameConfig",
+                "Category=${gameController.gameState.gameConfig.category}"
+            )
         } else {
             Toast.makeText(this, "Por favor selecciona todas las opciones", Toast.LENGTH_SHORT).show()
         }
@@ -116,6 +121,5 @@ class GameActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-        gameController.soundManager.release()
     }
 }

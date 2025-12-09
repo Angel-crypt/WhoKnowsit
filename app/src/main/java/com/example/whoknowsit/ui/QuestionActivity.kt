@@ -72,11 +72,7 @@ class QuestionActivity : AppCompatActivity() {
             view.isSelected = (view == selectedView)
         }
         val selectedOption = optionViews.indexOf(selectedView)
-        gameController.handleAnswer(selectedOption)
-
-        val intent = Intent(this, FeedbackActivity::class.java)
-        startActivity(intent)
-        finish()
+        gameController.handleAnswer(selectedOption, this)
     }
 
     fun setQuestionText(text: String) {
