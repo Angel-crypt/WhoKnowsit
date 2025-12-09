@@ -11,8 +11,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:gravity="center"
+        android:orientation="vertical"
         android:padding="16dp">
 
         <TextView
@@ -30,48 +30,48 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/opt_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_button_selector"
                 android:text="opt_1"
                 android:textSize="18sp"
-                app:backgroundTint="@null"
-                android:background="@drawable/bg_button_selector" />
+                app:backgroundTint="@null" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/opt_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_button_selector"
                 android:text="opt_2"
                 android:textSize="18sp"
-                app:backgroundTint="@null"
-                android:background="@drawable/bg_button_selector" />
+                app:backgroundTint="@null" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/opt_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_button_selector"
                 android:text="opt_3"
                 android:textSize="18sp"
-                app:backgroundTint="@null"
-                android:background="@drawable/bg_button_selector" />
+                app:backgroundTint="@null" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/opt_4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_button_selector"
                 android:text="opt_4"
                 android:textSize="18sp"
-                app:backgroundTint="@null"
-                android:background="@drawable/bg_button_selector" />
+                app:backgroundTint="@null" />
         </LinearLayout>
 
         <ImageView
@@ -79,6 +79,19 @@
             android:layout_height="200dp"
             android:layout_marginTop="20dp"
             android:src="@drawable/mascot_sitting" />
+
+        <TextView
+            android:id="@+id/counter_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="0/0"
+            android:textAppearance="?attr/textAppearanceHeadlineMedium"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
 
     </LinearLayout>
 
