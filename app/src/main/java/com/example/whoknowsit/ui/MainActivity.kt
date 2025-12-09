@@ -5,8 +5,6 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
 import com.example.whoknowsit.R
 import com.example.whoknowsit.WhoKnowsItApplication
@@ -35,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
         newGameButton = findViewById(R.id.new_game_button)
         newGameButton.setOnClickListener {
-            val intent = Intent(this, GameScreenActivity::class.java)
+            val intent = Intent(this, GameActivity::class.java)
             startActivity(intent)
             finish()
         }

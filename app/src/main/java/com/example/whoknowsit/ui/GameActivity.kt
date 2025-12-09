@@ -1,24 +1,19 @@
 package com.example.whoknowsit.ui
 
-import android.content.res.ColorStateList
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
-import androidx.core.widget.ImageViewCompat
 import com.example.whoknowsit.R
 import com.example.whoknowsit.WhoKnowsItApplication
 import com.example.whoknowsit.core.GameConfig
 import com.example.whoknowsit.core.enums.Category
 import com.example.whoknowsit.core.enums.Difficulty
 import com.example.whoknowsit.core.enums.GameMode
-import com.google.android.material.button.MaterialButton
 
-class GameScreenActivity : AppCompatActivity() {
+class GameActivity : AppCompatActivity() {
 
     private var selectedCategory: Category? = null
     private var selectedDifficulty: Difficulty? = null
@@ -35,7 +30,7 @@ class GameScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_game_screen)
+        setContentView(R.layout.activity_game)
 
         initializeViews()
         setupListeners()
