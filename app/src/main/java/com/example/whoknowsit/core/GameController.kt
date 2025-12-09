@@ -13,7 +13,7 @@ class GameController(private val context: Context) {
     private val localDataSource = LocalQuestionDataSource(context)
     private val questionManager = QuestionManager(localDataSource)
     private val scoreManager = ScoreManager()
-    private val soundManager = SoundManager(context)
+    val soundManager = SoundManager(context)
     val saveManager = SaveManager(context)
 
     private lateinit var gameState: GameState
