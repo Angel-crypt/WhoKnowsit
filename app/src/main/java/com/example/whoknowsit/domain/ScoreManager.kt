@@ -10,6 +10,11 @@ class ScoreManager(initialScore: Int = 0) {
         score += points
     }
 
+    fun subtractPoints(points: Int) {
+        require(points < 0) { "Los puntos deben ser menores que 0." }
+        score += points
+    }
+
     fun setScore(value: Int) {
         require(value >= 0) { "El puntaje no puede ser negativo." }
         score = value
