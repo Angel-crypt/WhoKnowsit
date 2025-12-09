@@ -12,8 +12,10 @@ import androidx.core.content.ContextCompat
 import androidx.core.widget.ImageViewCompat
 import com.example.whoknowsit.R
 import com.example.whoknowsit.WhoKnowsItApplication
+import com.example.whoknowsit.core.GameConfig
 import com.example.whoknowsit.core.enums.Category
 import com.example.whoknowsit.core.enums.Difficulty
+import com.example.whoknowsit.core.enums.GameMode
 import com.google.android.material.button.MaterialButton
 
 class GameScreenActivity : AppCompatActivity() {
@@ -99,9 +101,30 @@ class GameScreenActivity : AppCompatActivity() {
 
     private fun validateAndPlay() {
         if (selectedCategory != null && selectedDifficulty != null && selectedQuestions != null) {
+            val config = GameConfig(
+                totalQuestions = selectedQuestions!!,
+                category = selectedCategory!!,
+                difficulty = selectedDifficulty!!,
+                gameMode = GameMode.NEW
+            )
+
+            gameController.startNewGame(config)
             Log.d(
-                "GameChoice",
-                "Category: ${selectedCategory?.name}, Difficulty: ${selectedDifficulty?.name}, Questions: $selectedQuestions"
+                "GameConfig",
+                "Category=${gameController.gameState.gameConfig.category}"
+            )
+            Log.d(
+                "GameConfig",
+                "Difficulty=${gameController.gameState.gameConfig.difficulty}"
+            )
+            Log.d(
+                "GameConfig",
+                "TotalQuestions=${gameController.gameState.gameConfig.totalQuestions}"
+            )
+
+            Log.d(
+                "GameConfig",
+                "First Question=${gameController.gameState.questions[0]}"
             )
         } else {
             Toast.makeText(this, "Por favor selecciona todas las opciones", Toast.LENGTH_SHORT).show()
