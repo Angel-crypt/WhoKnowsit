@@ -6,8 +6,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class GameState(
     val currentQuestionIndex: Int = 0,
-    val selectedCategory: Category = Category.RANDOM,
-    val selectedDifficulty: Difficulty = Difficulty.EASY,
+    val gameConfig: GameConfig,
     val questions: List<Question> = emptyList(),
     val score: Int = 0
 ) {
