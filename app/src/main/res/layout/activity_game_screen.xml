@@ -6,32 +6,256 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
-    android:gravity="center"
-    tools:context=".ui.MainActivity">
+    tools:context=".ui.GameScreenActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="16dp">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="160dp"
-            android:layout_marginBottom="5dp" android:src="@drawable/mascot_confused">
-        </ImageView>
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/mascot_confused" />
 
         <TextView
             android:id="@+id/title_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp" android:text="¿Cómo quieres jugar?"
-            android:textSize="30dp"
-            android:textColor="@color/white"
-            android:textStyle="bold"
+            android:layout_marginBottom="20dp"
             android:gravity="center"
-            android:layout_gravity="center_horizontal"
-            android:textAppearance="?attr/textAppearanceHeadlineMedium" />
+            android:text="¿Cómo quieres jugar?"
+            android:textAppearance="?attr/textAppearanceHeadlineMedium"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="Categoria"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/cat_film"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_category_film"
+                android:background="@drawable/bg_image_view_selector"
+                app:tint="@color/white" />
+
+            <ImageView
+                android:id="@+id/cat_history"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_category_history"
+                android:background="@drawable/bg_image_view_selector"
+                app:tint="@color/white" />
+
+            <ImageView
+                android:id="@+id/cat_music"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_category_music"
+                android:background="@drawable/bg_image_view_selector"
+                app:tint="@color/white" />
+
+            <ImageView
+                android:id="@+id/cat_pop"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_category_pop_culture"
+                android:background="@drawable/bg_image_view_selector"
+                app:tint="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.5" />
+
+            <ImageView
+                android:id="@+id/cat_random"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_category_random"
+                android:background="@drawable/bg_image_view_selector"
+                app:tint="@color/white" />
+
+            <ImageView
+                android:id="@+id/cat_science"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_category_science"
+                android:background="@drawable/bg_image_view_selector"
+                app:tint="@color/white" />
+
+            <ImageView
+                android:id="@+id/cat_sports"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_category_sports"
+                android:background="@drawable/bg_image_view_selector"
+                app:tint="@color/white" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="10dp"
+            android:text="Dificultad"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/diff_easy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:text="Fácil"
+                app:backgroundTint="@null"
+                android:background="@drawable/bg_button_selector" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/diff_medium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:text="Medio"
+                app:backgroundTint="@null"
+                android:background="@drawable/bg_button_selector" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/diff_hard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Difícil"
+                app:backgroundTint="@null"
+                android:background="@drawable/bg_button_selector" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="10dp"
+            android:text="Cantidad de preguntas"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/qty_5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:text="5"
+                app:backgroundTint="@null"
+                android:background="@drawable/bg_button_selector"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/qty_10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:text="10"
+                app:backgroundTint="@null"
+                android:background="@drawable/bg_button_selector" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/qty_20"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="20"
+                app:backgroundTint="@null"
+                android:background="@drawable/bg_button_selector" />
+        </LinearLayout>
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/play_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:padding="16dp"
+            android:text="Jugar"
+            android:textSize="24sp"
+            app:backgroundTint="@color/primary"
+            app:cornerRadius="32dp" />
+
     </LinearLayout>
 
 </RelativeLayout>
