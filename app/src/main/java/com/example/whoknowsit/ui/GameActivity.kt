@@ -1,5 +1,6 @@
 package com.example.whoknowsit.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -104,23 +105,10 @@ class GameActivity : AppCompatActivity() {
             )
 
             gameController.startNewGame(config)
-            Log.d(
-                "GameConfig",
-                "Category=${gameController.gameState.gameConfig.category}"
-            )
-            Log.d(
-                "GameConfig",
-                "Difficulty=${gameController.gameState.gameConfig.difficulty}"
-            )
-            Log.d(
-                "GameConfig",
-                "TotalQuestions=${gameController.gameState.gameConfig.totalQuestions}"
-            )
 
-            Log.d(
-                "GameConfig",
-                "First Question=${gameController.gameState.questions[0]}"
-            )
+            val intent = Intent(this, QuestionActivity::class.java)
+            startActivity(intent)
+            finish()
         } else {
             Toast.makeText(this, "Por favor selecciona todas las opciones", Toast.LENGTH_SHORT).show()
         }
