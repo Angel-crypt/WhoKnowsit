@@ -1,261 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
+    android:orientation="vertical"
+    android:padding="24dp"
     tools:context=".ui.GameActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_marginBottom="24dp">
 
         <ImageView
             android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_height="120dp"
+            android:src="@drawable/mascot_confused"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:src="@drawable/mascot_confused" />
+            android:contentDescription="Mascota" />
 
         <TextView
             android:id="@+id/title_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
             android:gravity="center"
-            android:text="¿Cómo quieres jugar?"
-            android:textAppearance="?attr/textAppearanceHeadlineMedium"
+            android:text="Configura tu partida"
             android:textColor="@color/white"
-            android:textSize="24sp"
+            android:textSize="22sp"
             android:textStyle="bold" />
+    </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:text="Categoria"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="20dp"> <TextView
+        style="@style/SectionTitleStyle"
+        android:text="Categoría" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:orientation="horizontal"
-            android:layout_marginTop="8dp">
+            android:layout_marginBottom="8dp">
 
             <ImageView
                 android:id="@+id/cat_film"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:layout_margin="8dp"
-                android:padding="4dp"
-                android:src="@drawable/ic_category_film"
-                android:background="@drawable/bg_image_view_selector"
-                app:tint="@color/white" />
+                style="@style/CategoryIconStyle"
+                android:src="@drawable/ic_category_film" />
 
             <ImageView
                 android:id="@+id/cat_history"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:layout_margin="8dp"
-                android:padding="4dp"
-                android:src="@drawable/ic_category_history"
-                android:background="@drawable/bg_image_view_selector"
-                app:tint="@color/white" />
+                style="@style/CategoryIconStyle"
+                android:src="@drawable/ic_category_history" />
 
             <ImageView
                 android:id="@+id/cat_music"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:layout_margin="8dp"
-                android:padding="4dp"
-                android:src="@drawable/ic_category_music"
-                android:background="@drawable/bg_image_view_selector"
-                app:tint="@color/white" />
+                style="@style/CategoryIconStyle"
+                android:src="@drawable/ic_category_music" />
 
             <ImageView
                 android:id="@+id/cat_pop"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:layout_margin="8dp"
-                android:padding="4dp"
-                android:src="@drawable/ic_category_pop_culture"
-                android:background="@drawable/bg_image_view_selector"
-                app:tint="@color/white" />
+                style="@style/CategoryIconStyle"
+                android:src="@drawable/ic_category_pop_culture" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:layout_marginBottom="10dp">
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="0.5" />
+            android:gravity="center">
 
             <ImageView
                 android:id="@+id/cat_random"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:layout_margin="8dp"
-                android:padding="4dp"
-                android:src="@drawable/ic_category_random"
-                android:background="@drawable/bg_image_view_selector"
-                app:tint="@color/white" />
+                style="@style/CategoryIconStyle"
+                android:src="@drawable/ic_category_random" />
 
             <ImageView
                 android:id="@+id/cat_science"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:layout_margin="8dp"
-                android:padding="4dp"
-                android:src="@drawable/ic_category_science"
-                android:background="@drawable/bg_image_view_selector"
-                app:tint="@color/white" />
+                style="@style/CategoryIconStyle"
+                android:src="@drawable/ic_category_science" />
 
             <ImageView
                 android:id="@+id/cat_sports"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:layout_margin="8dp"
-                android:padding="4dp"
-                android:src="@drawable/ic_category_sports"
-                android:background="@drawable/bg_image_view_selector"
-                app:tint="@color/white" />
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="0.5" />
+                style="@style/CategoryIconStyle"
+                android:src="@drawable/ic_category_sports" />
         </LinearLayout>
+    </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginTop="10dp"
-            android:text="Dificultad"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"> <TextView
+        style="@style/SectionTitleStyle"
+        android:text="Dificultad" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:layout_marginTop="8dp">
+            android:gravity="center">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/diff_easy"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginEnd="4dp"
-                android:text="Fácil"
-                app:backgroundTint="@null"
-                android:background="@drawable/bg_button_selector" />
+                style="@style/OptionButtonStyle"
+                android:text="Fácil" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/diff_medium"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginEnd="4dp"
-                android:text="Medio"
-                app:backgroundTint="@null"
-                android:background="@drawable/bg_button_selector" />
+                style="@style/OptionButtonStyle"
+                android:text="Medio" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/diff_hard"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Difícil"
-                app:backgroundTint="@null"
-                android:background="@drawable/bg_button_selector" />
+                style="@style/OptionButtonStyle"
+                android:text="Difícil" />
         </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginTop="10dp"
-            android:text="Cantidad de preguntas"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            style="@style/SectionTitleStyle"
+            android:text="Cantidad" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:layout_marginTop="8dp">
+            android:gravity="center">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/qty_5"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginEnd="4dp"
-                android:text="5"
-                app:backgroundTint="@null"
-                android:background="@drawable/bg_button_selector"/>
+                style="@style/OptionButtonStyle"
+                android:text="5" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/qty_10"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginEnd="4dp"
-                android:text="10"
-                app:backgroundTint="@null"
-                android:background="@drawable/bg_button_selector" />
+                style="@style/OptionButtonStyle"
+                android:text="10" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/qty_20"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="20"
-                app:backgroundTint="@null"
-                android:background="@drawable/bg_button_selector" />
+                style="@style/OptionButtonStyle"
+                android:text="20" />
         </LinearLayout>
-        
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/play_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:padding="16dp"
-            android:text="Jugar"
-            android:textSize="24sp"
-            app:backgroundTint="@color/primary"
-            app:cornerRadius="32dp" />
-
     </LinearLayout>
 
-</RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_weight="0" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/play_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="12dp"
+        android:text="¡A JUGAR!"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/primary"
+        app:cornerRadius="50dp" />
+
+</LinearLayout>
