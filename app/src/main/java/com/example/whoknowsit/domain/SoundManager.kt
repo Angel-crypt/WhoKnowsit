@@ -5,32 +5,28 @@ import android.media.SoundPool
 import com.example.whoknowsit.R
 
 class SoundManager(context: Context) {
-    private val soundPool: SoundPool =
-        SoundPool.Builder().setMaxStreams(4).build()
 
-    private val correctSound: Int
-    private val wrongSound: Int
-    private val winSound: Int
-    private val loseSound: Int
+    private val soundPool = SoundPool.Builder()
+        .setMaxStreams(4)
+        .build()
 
-    init {
-        correctSound = soundPool.load(context, R.raw.correct_sound, 1)
-        wrongSound = soundPool.load(context, R.raw.wrong_sound, 1)
-        winSound = soundPool.load(context, R.raw.win_sound, 1)
-        loseSound = soundPool.load(context, R.raw.lose_sound, 1)
-    }
+    private val sounds = mapOf(
+        "correct" to soundPool.load(context, R.raw.correct_sound, 1),
+        "wrong"   to soundPool.load(context, R.raw.wrong_sound, 1),
+        "win"     to soundPool.load(context, R.raw.win_sound, 1),
+        "lose"    to soundPool.load(context, R.raw.lose_sound, 1)
+    )
 
-    fun playCorrect() = playSound(correctSound)
-    fun playWrong() = playSound(wrongSound)
-    fun playWin() = playSound(winSound)
-    fun playLose() = playSound(loseSound)
+    fun playCorrect() = play("correct")
+    fun playWrong() = play("wrong")
+    fun playWin() = play("win")
+    fun playLose() = play("lose")
 
-    private fun playSound(soundId: Int) {
-        android.util.Log.d("SoundManager", "Playing sound with ID: $soundId")
+    private fun play(key: String) {
+        val soundId = sounds[key] ?: return
+        android.util.Log.d("SoundManager", "Playing sound: $key ($soundId)")
         soundPool.play(soundId, 1f, 1f, 1, 0, 1f)
     }
 
-    fun release() {
-        soundPool.release()
-    }
+    fun release() = soundPool.release()
 }

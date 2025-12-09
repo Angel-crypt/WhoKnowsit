@@ -1,22 +1,23 @@
 package com.example.whoknowsit.core
 
 import com.example.whoknowsit.data.models.Question
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class GameState(
     val currentQuestionIndex: Int = 0,
     val selectedCategory: Category = Category.RANDOM,
     val selectedDifficulty: Difficulty = Difficulty.EASY,
-    val questions: List<Question> = emptyList()
+    val questions: List<Question> = emptyList(),
+    val score: Int = 0
 ) {
+
     val currentQuestion: Question?
-        get() = if (currentQuestionIndex in questions.indices) questions[currentQuestionIndex] else null
+        get() = questions.getOrNull(currentQuestionIndex)
 
     val isFinished: Boolean
         get() = currentQuestionIndex >= questions.size
 
-    fun nextQuestion(): GameState {
-        return this.copy(
-            currentQuestionIndex = this.currentQuestionIndex + 1
-        )
-    }
+    fun nextQuestion(): GameState =
+        copy(currentQuestionIndex = currentQuestionIndex + 1)
 }

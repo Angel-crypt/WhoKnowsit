@@ -12,16 +12,14 @@ class QuestionManager(private val dataSource: QuestionDataSource) {
         difficulty: Difficulty,
         totalQuestions: Int
     ): List<Question> {
-        val filteredQuestions = if (category == Category.RANDOM) {
-            dataSource.loadQuestions().filter { it.difficulty == difficulty }
-        } else {
-            dataSource.loadQuestions().filter {
-                it.category == category && it.difficulty == difficulty
-            }
+
+        val questions = dataSource.loadQuestions()
+
+        val filtered = questions.filter { q ->
+            q.difficulty == difficulty &&
+                    (category == Category.RANDOM || q.category == category)
         }
 
-        return filteredQuestions.shuffled().take(totalQuestions)
+        return filtered.shuffled().take(totalQuestions)
     }
-
-    fun shuffleQuestions(questions: List<Question>): List<Question> = questions.shuffled()
 }

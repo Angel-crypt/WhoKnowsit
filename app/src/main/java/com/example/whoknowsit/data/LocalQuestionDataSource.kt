@@ -8,6 +8,7 @@ import org.json.JSONArray
 import org.json.JSONObject
 
 class LocalQuestionDataSource(private val context: Context) : QuestionDataSource {
+
     private val jsonFiles = listOf(
         "films.json",
         "history.json",
@@ -17,39 +18,34 @@ class LocalQuestionDataSource(private val context: Context) : QuestionDataSource
         "sports.json"
     )
 
-    override fun loadQuestions(): List<Question> {
-        val questionList = mutableListOf<Question>()
+    override fun loadQuestions(): List<Question> =
+        jsonFiles
+            .flatMap { file -> parseJsonFile("questions/$file") }
 
-        jsonFiles.forEach { fileName ->
-            val raw = loadJsonFromAssets("questions/$fileName")
-            val jsonArray = JSONArray(raw)
+    private fun parseJsonFile(path: String): List<Question> {
+        val raw = loadJsonFromAssets(path)
+        val jsonArray = JSONArray(raw)
 
-            for (i in 0 until jsonArray.length()) {
-                val obj = jsonArray.getJSONObject(i)
-                val question = parseQuestion(obj)
-                questionList.add(question)
-            }
+        return List(jsonArray.length()) { index ->
+            parseQuestion(jsonArray.getJSONObject(index))
         }
-
-        return questionList
     }
 
-    private fun loadJsonFromAssets(path: String): String {
-        return context.assets.open(path).bufferedReader().use { it.readText() }
-    }
+    private fun loadJsonFromAssets(path: String): String =
+        context.assets.open(path).bufferedReader().use { it.readText() }
 
     private fun parseQuestion(obj: JSONObject): Question {
-        val options = List(obj.getJSONArray("options").length()) {
-            obj.getJSONArray("options").getString(it)
-        }
+        val optionsArray = obj.getJSONArray("options")
+        val options = List(optionsArray.length()) { i -> optionsArray.getString(i) }
 
         val category = Category.valueOf(obj.getString("category").uppercase())
 
-        val difficulty = when (obj.getString("difficulty").uppercase()) {
+        val difficultyText = obj.getString("difficulty").uppercase()
+        val difficulty = when (difficultyText) {
             "EASY" -> Difficulty.EASY
             "MEDIUM" -> Difficulty.MEDIUM
             "HARD", "DIFFICULT" -> Difficulty.HARD
-            else -> throw IllegalArgumentException("Dificultad inválida: ${obj.getString("difficulty")}")
+            else -> throw IllegalArgumentException("Dificultad inválida: $difficultyText")
         }
 
         return Question(

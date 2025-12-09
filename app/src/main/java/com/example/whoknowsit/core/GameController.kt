@@ -3,52 +3,61 @@ package com.example.whoknowsit.core
 import android.content.Context
 import com.example.whoknowsit.data.LocalQuestionDataSource
 import com.example.whoknowsit.domain.QuestionManager
+import com.example.whoknowsit.domain.SaveManager
 import com.example.whoknowsit.domain.ScoreManager
 import com.example.whoknowsit.domain.SoundManager
+import kotlinx.coroutines.flow.firstOrNull
 
 class GameController(private val context: Context) {
+
+    private val localDataSource = LocalQuestionDataSource(context)
+    private val questionManager = QuestionManager(localDataSource)
     private val scoreManager = ScoreManager()
     private val soundManager = SoundManager(context)
-    private var currentGameState: GameState? = null
+    private val saveManager = SaveManager(context)
 
+    private lateinit var gameState: GameState
     var onGameFinished: ((finalScore: Int) -> Unit)? = null
-    val localDataSource = LocalQuestionDataSource(context)
-    val questionManager = QuestionManager(localDataSource)
 
-    fun startNewGame(category: Category, difficulty: Difficulty, totalQuestions: Int) {
+    fun startNewGame(config: GameConfig) {
         scoreManager.reset()
-        val questions = questionManager.getQuestionsForCategory(category, difficulty, totalQuestions)
-        currentGameState = GameState(
-            selectedCategory = category,
-            selectedDifficulty = difficulty,
-            questions = questions
+        gameState = GameState(
+            selectedCategory = config.category,
+            selectedDifficulty = config.difficulty,
+            questions = questionManager.getQuestionsForCategory(
+                config.category,
+                config.difficulty,
+                config.totalQuestions
+            ),
+            score = scoreManager.score
         )
     }
 
-    val state: GameState?
-        get() = currentGameState
-
-    fun handleAnswer(selectedOptionIndex: Int){
-        val state = currentGameState ?: return
-        val question = state.currentQuestion ?: return
-
-        if (state.isFinished) return
-        val isCorrect = (question.correctAnswerIndex == selectedOptionIndex)
-
-        if (isCorrect) {
-            val difficulty = question.difficulty
-            val points = 10 * difficulty.multiplier
-            scoreManager.addPoints(points)
-            soundManager.playCorrect()
-        } else {
-            soundManager.playWrong()
+    suspend fun loadSavedGame(): Boolean {
+        saveManager.loadGameState.firstOrNull()?.let {
+            gameState = it
+            scoreManager.setScore(it.score)
+            return true
         }
+        return false
+    }
 
-        val newState = state.nextQuestion()
-        currentGameState = newState
+    fun handleAnswer(selectedOptionIndex: Int) {
+        gameState.currentQuestion?.let { question ->
+            if (gameState.isFinished) return
 
-        if (newState.isFinished) {
-            handleGameFinished()
+            val isCorrect = question.correctAnswerIndex == selectedOptionIndex
+
+            if (isCorrect) {
+                scoreManager.addPoints(10 * question.difficulty.multiplier)
+                soundManager.playCorrect()
+            } else {
+                soundManager.playWrong()
+            }
+
+            gameState = gameState.copy(score = scoreManager.score).nextQuestion()
+
+            if (gameState.isFinished) handleGameFinished()
         }
     }
 
@@ -56,11 +65,7 @@ class GameController(private val context: Context) {
         val finalScore = scoreManager.score
         onGameFinished?.invoke(finalScore)
 
-        val totalQuestions = currentGameState?.questions?.size ?: 0
-        if (finalScore > (totalQuestions * 10 * 0.5)) {
-            soundManager.playWin()
-        } else {
-            soundManager.playLose()
-        }
+        val passingScore = gameState.questions.size * 10 * 0.5
+        if (finalScore > passingScore) soundManager.playWin() else soundManager.playLose()
     }
 }

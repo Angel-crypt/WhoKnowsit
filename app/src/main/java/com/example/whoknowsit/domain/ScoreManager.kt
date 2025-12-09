@@ -1,21 +1,21 @@
 package com.example.whoknowsit.domain
 
-class ScoreManager (initialScore: Int = 0)  {
-    private var currentScore: Int = initialScore
+class ScoreManager(initialScore: Int = 0) {
 
-    val score: Int
-        get() = currentScore
+    var score: Int = initialScore
+        private set
 
     fun addPoints(points: Int) {
-        validatePoints(points)
-        currentScore += points
-    }
-
-    fun reset(){
-        currentScore = 0
-    }
-
-    private fun validatePoints(points: Int) {
         require(points > 0) { "Los puntos deben ser mayores que 0." }
+        score += points
+    }
+
+    fun setScore(value: Int) {
+        require(value >= 0) { "El puntaje no puede ser negativo." }
+        score = value
+    }
+
+    fun reset() {
+        score = 0
     }
 }

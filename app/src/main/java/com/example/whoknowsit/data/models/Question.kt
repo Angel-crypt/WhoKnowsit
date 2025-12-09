@@ -2,7 +2,9 @@ package com.example.whoknowsit.data.models
 
 import com.example.whoknowsit.core.Category
 import com.example.whoknowsit.core.Difficulty
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class Question (
     val id: Int,
     val text: String,

@@ -1,5 +1,7 @@
 package com.example.whoknowsit.core
+import kotlinx.serialization.Serializable
 
+@Serializable
 enum class Category(val displayName: String) {
     HISTORY("Historia"),
     SCIENCE("Ciencia"),
