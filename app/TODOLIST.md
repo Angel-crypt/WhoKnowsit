@@ -1,0 +1,3 @@
+- Boton de guardar
+- Shuffle de options
+- 
