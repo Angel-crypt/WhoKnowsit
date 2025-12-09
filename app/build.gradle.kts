@@ -40,6 +40,17 @@ android {
     buildFeatures {
         compose = true
     }
+    
+    sourceSets {
+        getByName("main") {
+            res.srcDirs(
+                "src/main/res",
+                "src/main/res/drawable/mascots",
+                "src/main/res/drawable/icons",
+                "src/main/res/drawable/backgrounds"
+            )
+        }
+    }
 }
 
 dependencies {
