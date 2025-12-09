@@ -22,31 +22,6 @@
         <!-- Background -->
         <item name="android:colorBackground">@color/background</item>
         <item name="colorOnBackground">@color/on_background</item>
-        
-        <!-- Error & Success -->
-        <item name="colorError">@color/error</item>
-        <item name="colorOnError">@color/white</item>
-        
-        <!-- Shape Appearances - Todo muy redondo -->
-        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.WhoKnowsIt.SmallComponent</item>
-        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.WhoKnowsIt.MediumComponent</item>
-        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.WhoKnowsIt.LargeComponent</item>
-    </style>
-
-    <!-- Shape Appearances - Formas muy redondeadas -->
-    <style name="ShapeAppearance.WhoKnowsIt.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">50%</item>
-    </style>
-
-    <style name="ShapeAppearance.WhoKnowsIt.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">24dp</item>
-    </style>
-
-    <style name="ShapeAppearance.WhoKnowsIt.LargeComponent" parent="ShapeAppearance.MaterialComponents.LargeComponent">
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">28dp</item>
     </style>
 
 </resources>
