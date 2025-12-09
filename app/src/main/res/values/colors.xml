@@ -10,8 +10,8 @@
 
     <color name="tertiary">#D85C87</color>
 
-    <color name="success">#00E676</color>
-    <color name="error">#FF5252</color>
+    <color name="success">#2ECC71</color>
+    <color name="error">#FF453A</color>
     <color name="warning">#FF9800</color>
 
     <color name="background">#F4F7FE</color>
