@@ -38,6 +38,10 @@ class QuestionActivity : AppCompatActivity() {
         gameController.gameState.currentQuestion?.let { question ->
             setQuestionText(question.text)
             setOptions(question.options)
+            setCounter(
+                gameController.gameState.currentQuestionIndex + 1,
+                gameController.gameState.questions.size
+            )
         }
     }
 
@@ -78,5 +82,9 @@ class QuestionActivity : AppCompatActivity() {
                 optionViews[index].text = option
             }
         }
+    }
+
+    fun setCounter(current: Int, total: Int) {
+        counterTextView.text = "$current/$total"
     }
 }
