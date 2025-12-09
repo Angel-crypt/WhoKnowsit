@@ -16,7 +16,8 @@ class GameController(private val context: Context) {
     val soundManager = SoundManager(context)
     val saveManager = SaveManager(context)
 
-    private lateinit var gameState: GameState
+    lateinit var gameState: GameState
+        private set
     var onGameFinished: ((finalScore: Int) -> Unit)? = null
 
     fun startNewGame(config: GameConfig) {
