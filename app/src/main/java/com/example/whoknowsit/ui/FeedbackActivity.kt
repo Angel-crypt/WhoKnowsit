@@ -17,5 +17,24 @@ class FeedbackActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val resultTextView = findViewById<android.widget.TextView>(R.id.result_text_view)
+        val resultMascotView = findViewById<android.widget.ImageView>(R.id.result_mascot_view)
+        val correctAnswerTextView = findViewById<android.widget.TextView>(R.id.correct_answer_text_view)
+
+
+        val isCorrect = true
+
+        if (isCorrect) {
+            correctAnswerTextView.visibility = android.view.View.GONE
+            resultTextView.text = "¡Bien hecho!"
+            resultTextView.setTextColor(androidx.core.content.ContextCompat.getColor(this, R.color.white))
+            resultMascotView.setImageResource(R.drawable.mascot_correct)
+        } else {
+            correctAnswerTextView.visibility = android.view.View.VISIBLE
+            resultTextView.text = "¡Sigue intentando!"
+            resultTextView.setTextColor(androidx.core.content.ContextCompat.getColor(this, R.color.error))
+            resultMascotView.setImageResource(R.drawable.mascot_wrong)
+        }
     }
 }
