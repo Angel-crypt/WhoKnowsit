@@ -35,8 +35,9 @@ class QuestionActivity : AppCompatActivity() {
         initializeViews()
         setupListeners()
         
-        gameController.gameState.currentQuestion?.text?.let { text ->
-            setQuestionText(text)
+        gameController.gameState.currentQuestion?.let { question ->
+            setQuestionText(question.text)
+            setOptions(question.options)
         }
     }
 
@@ -69,5 +70,13 @@ class QuestionActivity : AppCompatActivity() {
 
     fun setQuestionText(text: String) {
         questionTextView.text = text
+    }
+
+    fun setOptions(options: List<String>) {
+        options.forEachIndexed { index, option ->
+            if (index < optionViews.size) {
+                optionViews[index].text = option
+            }
+        }
     }
 }
