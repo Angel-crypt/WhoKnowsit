@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.whoknowsit.R
+import com.google.android.material.button.MaterialButton
 
 class ResultActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,6 +17,7 @@ class ResultActivity : AppCompatActivity() {
         val finalResultTextView = findViewById<android.widget.TextView>(R.id.final_result_text_view)
         val finalResultMascotView = findViewById<android.widget.ImageView>(R.id.final_result_mascot_view)
         val finalScoreTextView = findViewById<android.widget.TextView>(R.id.final_score_text_view)
+        val newGameButton = findViewById<MaterialButton>(R.id.new_game_button)
 
         val isVictory = intent.getBooleanExtra("IS_VICTORY", false)
         val finalScore = intent.getIntExtra("FINAL_SCORE", 0)
@@ -29,5 +31,11 @@ class ResultActivity : AppCompatActivity() {
             finalResultMascotView.setImageResource(R.drawable.mascot_defeat)
         }
         finalScoreTextView.text = "Tu puntaje final fue: $finalScore/$totalScore"
+
+        newGameButton.setOnClickListener {
+            val intent = android.content.Intent(this, com.example.whoknowsit.ui.GameActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 }
