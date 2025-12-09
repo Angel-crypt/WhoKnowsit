@@ -26,7 +26,6 @@ import com.google.android.material.card.MaterialCardView
 
 class NewGameSetupActivity : AppCompatActivity() {
     
-    // Acceso al GameController desde la Application
     private val gameController: com.example.whoknowsit.core.GameController
         get() = WhoKnowsItApplication.getInstance(this).gameController
     
