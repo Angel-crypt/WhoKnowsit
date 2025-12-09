@@ -52,6 +52,9 @@ class GameController(private val context: Context) {
                 scoreManager.addPoints(10 * question.difficulty.multiplier)
                 soundManager.playCorrect()
             } else {
+                if (scoreManager.score > 0){
+                    scoreManager.subtractPoints(-5 * question.difficulty.multiplier)
+                }
                 soundManager.playWrong()
             }
 
