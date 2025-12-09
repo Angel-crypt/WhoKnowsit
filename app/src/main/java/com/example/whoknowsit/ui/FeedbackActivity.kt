@@ -45,6 +45,15 @@ class FeedbackActivity : AppCompatActivity() {
             if (!gameController.gameState.isFinished) {
                 val intent = android.content.Intent(this, QuestionActivity::class.java)
                 startActivity(intent)
+            } else {
+                val multiplier = gameController.gameState.questions.get(0).difficulty.multiplier
+                val intent = android.content.Intent(this, com.example.whoknowsit.ui.ResultActivity::class.java).apply {
+                    putExtra("IS_VICTORY", gameController.gameState.isVictory)
+                    putExtra("FINAL_SCORE", gameController.gameState.score)
+                    putExtra("TOTAL_SCORE", gameController.gameState.questions.size * 10 * multiplier)
+                }
+                startActivity(intent)
+                finish()
             }
         }, 1000)
     }

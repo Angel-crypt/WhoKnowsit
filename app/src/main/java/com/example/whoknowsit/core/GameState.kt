@@ -8,7 +8,8 @@ data class GameState(
     val currentQuestionIndex: Int = 0,
     val gameConfig: GameConfig,
     val questions: List<Question> = emptyList(),
-    val score: Int = 0
+    val score: Int = 0,
+    var isVictory: Boolean = false
 ) {
 
     val currentQuestion: Question?

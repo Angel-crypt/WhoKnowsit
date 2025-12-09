@@ -2,7 +2,6 @@ package com.example.whoknowsit.domain
 
 import android.content.Context
 import android.media.MediaPlayer
-import android.util.Log
 import com.example.whoknowsit.R
 
 class SoundManager(private val context: Context) {
@@ -13,10 +12,7 @@ class SoundManager(private val context: Context) {
     fun playLose() = play(R.raw.lose_sound)
 
     private fun play(resId: Int) {
-        val mediaPlayer = MediaPlayer.create(context, resId)
-        if (mediaPlayer == null) {
-            return
-        }
+        val mediaPlayer = MediaPlayer.create(context, resId) ?: return
         mediaPlayer.setOnCompletionListener {
             it.release()
         }

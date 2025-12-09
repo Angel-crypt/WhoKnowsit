@@ -75,14 +75,7 @@ class GameController(private val context: Context) {
         onGameFinished?.invoke(finalScore)
 
         val passingScore = gameState.questions.size * 10 * 0.5
-        val isVictory = finalScore >= passingScore
-        if (isVictory) soundManager.playWin() else soundManager.playLose()
-        val multiplier = gameState.questions.get(0).difficulty.multiplier
-
-        val intent = android.content.Intent(context, com.example.whoknowsit.ui.ResultActivity::class.java).apply {
-            putExtra("IS_VICTORY", isVictory)
-            putExtra("FINAL_SCORE", finalScore)
-            putExtra("TOTAL_SCORE", gameState.questions.size * 10 * multiplier)
-        }
+        gameState.isVictory = finalScore >= passingScore
+        if (gameState.isVictory) soundManager.playWin() else soundManager.playLose()
     }
 }
