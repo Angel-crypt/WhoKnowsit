@@ -1,6 +1,5 @@
 package com.example.whoknowsit.ui
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
@@ -18,6 +17,7 @@ class QuestionActivity : AppCompatActivity() {
     private lateinit var counterTextView: TextView
     private lateinit var optionViews: List<MaterialButton>
     private var selectedOptionIndex: Int? = null
+    private var shuffledIndexes: List<Int> = emptyList()
 
     private val gameController by lazy {
         (application as WhoKnowsItApplication).gameController
@@ -71,8 +71,11 @@ class QuestionActivity : AppCompatActivity() {
         optionViews.forEach { view ->
             view.isSelected = (view == selectedView)
         }
-        val selectedOption = optionViews.indexOf(selectedView)
-        gameController.handleAnswer(selectedOption, this)
+        val selectedVisualIndex = optionViews.indexOf(selectedView)
+        if (selectedVisualIndex != -1 && selectedVisualIndex < shuffledIndexes.size) {
+            val originalIndex = shuffledIndexes[selectedVisualIndex]
+            gameController.handleAnswer(originalIndex, this)
+        }
     }
 
     fun setQuestionText(text: String) {
@@ -80,9 +83,10 @@ class QuestionActivity : AppCompatActivity() {
     }
 
     fun setOptions(options: List<String>) {
-        options.forEachIndexed { index, option ->
-            if (index < optionViews.size) {
-                optionViews[index].text = option
+        shuffledIndexes = options.indices.toList().shuffled()
+        shuffledIndexes.forEachIndexed { visualIndex, originalIndex ->
+            if (visualIndex < optionViews.size) {
+                optionViews[visualIndex].text = options[originalIndex]
             }
         }
     }
