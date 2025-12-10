@@ -12,6 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WhoKnowsIt">
+
+        <meta-data
+            android:name="developer"
+            android:value="Angel Cruz" />
+
+        <meta-data
+            android:name="appVersion"
+            android:value="0.1.0" />
+
         <activity
             android:name=".ui.ResultActivity"
             android:exported="false" />
@@ -29,7 +38,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
