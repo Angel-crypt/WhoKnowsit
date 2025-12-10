@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -23,6 +24,7 @@ class GameActivity : AppCompatActivity() {
     private lateinit var categoryViews: Map<Category, View>
     private lateinit var difficultyViews: Map<Difficulty, View>
     private lateinit var quantityViews: Map<Int, View>
+    private lateinit var categoryView: TextView
 
     private val gameController by lazy {
         (application as WhoKnowsItApplication).gameController
@@ -38,6 +40,8 @@ class GameActivity : AppCompatActivity() {
     }
 
     private fun initializeViews() {
+        categoryView = findViewById(R.id.cat_text_view)
+        
         categoryViews = mapOf(
             Category.FILM to findViewById(R.id.cat_film),
             Category.HISTORY to findViewById(R.id.cat_history),
@@ -67,6 +71,7 @@ class GameActivity : AppCompatActivity() {
             view.setOnClickListener {
                 selectedCategory = category
                 applySelection(categoryViews, category)
+                categoryView.text = "Categoría: ${category.displayName}"
             }
         }
 
