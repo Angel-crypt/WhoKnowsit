@@ -47,13 +47,17 @@ class GameController(private val context: Context) {
             if (gameState.isFinished) return
 
             val isCorrect = question.correctAnswerIndex == selectedOptionIndex
+            val multiplier = question.difficulty.multiplier
+            var points = 0
 
             if (isCorrect) {
-                scoreManager.addPoints(10 * question.difficulty.multiplier)
+                points = 10 * multiplier
+                scoreManager.addPoints(points)
                 soundManager.playCorrect()
             } else {
                 if (scoreManager.score > 0){
-                    scoreManager.subtractPoints(-5 * question.difficulty.multiplier)
+                    points = -5 * multiplier
+                    scoreManager.subtractPoints(points)
                 }
                 soundManager.playWrong()
             }
@@ -62,6 +66,7 @@ class GameController(private val context: Context) {
                 putExtra("IS_CORRECT", isCorrect)
                 val correctAnswerText = question.options[question.correctAnswerIndex]
                 putExtra("CORRECT_ANSWER", correctAnswerText)
+                putExtra("POINTS_EARNED", points)
             }
             context.startActivity(intent)
             if (context is android.app.Activity) {

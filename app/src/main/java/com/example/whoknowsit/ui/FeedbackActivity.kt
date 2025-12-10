@@ -1,6 +1,7 @@
 package com.example.whoknowsit.ui
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -25,6 +26,7 @@ class FeedbackActivity : AppCompatActivity() {
 
         val isCorrect = intent.getBooleanExtra("IS_CORRECT", false)
         val correctAnswer = intent.getStringExtra("CORRECT_ANSWER")
+        val pointsEarned = intent.getIntExtra("POINTS_EARNED", 0)
 
         if (isCorrect) {
             correctAnswerTextView.visibility = android.view.View.GONE
@@ -38,6 +40,8 @@ class FeedbackActivity : AppCompatActivity() {
             resultTextView.setTextColor(androidx.core.content.ContextCompat.getColor(this, R.color.error))
             resultMascotView.setImageResource(R.drawable.mascot_wrong)
         }
+
+        Toast.makeText(this, "$pointsEarned puntos", Toast.LENGTH_SHORT).show()
 
         val gameController = (application as com.example.whoknowsit.WhoKnowsItApplication).gameController
 
@@ -55,6 +59,6 @@ class FeedbackActivity : AppCompatActivity() {
                 startActivity(intent)
                 finish()
             }
-        }, 1000)
+        }, 2000)
     }
 }
