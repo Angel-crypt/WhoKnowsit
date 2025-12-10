@@ -84,6 +84,5 @@ class GameController(private val context: Context) {
 
         val passingScore = gameState.questions.size * 10 * 0.5
         gameState.isVictory = finalScore >= passingScore
-        if (gameState.isVictory) soundManager.playWin() else soundManager.playLose()
     }
 }

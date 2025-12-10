@@ -23,10 +23,13 @@ class ResultActivity : AppCompatActivity() {
         val finalScore = intent.getIntExtra("FINAL_SCORE", 0)
         val totalScore = intent.getIntExtra("TOTAL_SCORE", 0)
 
+        val gameController = (application as com.example.whoknowsit.WhoKnowsItApplication).gameController
         if (isVictory) {
+            gameController.soundManager.playWin()
             finalResultTextView.text = "¡Felicidades!"
             finalResultMascotView.setImageResource(R.drawable.mascot_victory)
         } else {
+            gameController.soundManager.playLose()
             finalResultTextView.text = "¡Lo sentimos!"
             finalResultMascotView.setImageResource(R.drawable.mascot_defeat)
         }
