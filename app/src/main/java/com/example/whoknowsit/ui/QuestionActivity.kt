@@ -15,6 +15,9 @@ import com.example.whoknowsit.WhoKnowsItApplication
 import com.google.android.material.button.MaterialButton
 import kotlinx.coroutines.launch
 
+/**
+ * Pantalla donde se muestran las preguntas y se juega la partida.
+ */
 class QuestionActivity : AppCompatActivity() {
 
     private lateinit var questionTextView: TextView

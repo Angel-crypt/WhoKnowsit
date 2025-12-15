@@ -6,6 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.whoknowsit.R
 import com.google.android.material.button.MaterialButton
 
+/**
+ * Pantalla final que muestra el resultado de la partida.
+ */
 class ResultActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

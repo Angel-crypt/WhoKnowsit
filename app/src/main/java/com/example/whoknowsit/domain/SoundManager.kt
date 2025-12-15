@@ -4,6 +4,9 @@ import android.content.Context
 import android.media.MediaPlayer
 import com.example.whoknowsit.R
 
+/**
+ * Gestiona la reproducción de efectos de sonido.
+ */
 class SoundManager(private val context: Context) {
 
     fun playCorrect() = play(R.raw.correct_sound)

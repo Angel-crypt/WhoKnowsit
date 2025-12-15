@@ -7,6 +7,9 @@ import com.example.whoknowsit.data.models.Question
 import org.json.JSONArray
 import org.json.JSONObject
 
+/**
+ * Implementación de [QuestionDataSource] que carga preguntas desde archivos JSON locales.
+ */
 class LocalQuestionDataSource(private val context: Context) : QuestionDataSource {
 
     private val jsonFiles = listOf(
@@ -18,6 +21,10 @@ class LocalQuestionDataSource(private val context: Context) : QuestionDataSource
         "sports.json"
     )
 
+    /**
+     * Lee los archivos JSON definidos y parsea las preguntas.
+     * @return Lista combinada de todas las preguntas encontradas.
+     */
     override fun loadQuestions(): List<Question> =
         jsonFiles
             .flatMap { file -> parseJsonFile("questions/$file") }

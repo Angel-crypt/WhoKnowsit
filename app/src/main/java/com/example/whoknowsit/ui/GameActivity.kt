@@ -15,6 +15,10 @@ import com.example.whoknowsit.core.enums.Category
 import com.example.whoknowsit.core.enums.Difficulty
 import com.example.whoknowsit.core.enums.GameMode
 
+/**
+ * Pantalla de configuración del juego.
+ * Permite seleccionar categoría, dificultad y cantidad de preguntas.
+ */
 class GameActivity : AppCompatActivity() {
 
     private var selectedCategory: Category? = null

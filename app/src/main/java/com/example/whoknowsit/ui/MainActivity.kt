@@ -11,6 +11,10 @@ import com.example.whoknowsit.WhoKnowsItApplication
 import com.google.android.material.button.MaterialButton
 import kotlinx.coroutines.launch
 
+/**
+ * Pantalla principal del juego (Menú Principal).
+ * Permite iniciar nuevo juego o cargar partida.
+ */
 class MainActivity : AppCompatActivity() {
     private val gameController by lazy {
         (application as WhoKnowsItApplication).gameController

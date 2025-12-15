@@ -3,6 +3,15 @@ package com.example.whoknowsit.core
 import com.example.whoknowsit.data.models.Question
 import kotlinx.serialization.Serializable
 
+/**
+ * Estado actual del juego.
+ *
+ * @property currentQuestionIndex Índice de la pregunta actual.
+ * @property gameConfig Configuración con la que se inició el juego.
+ * @property questions Lista de preguntas de la partida.
+ * @property score Puntuación actual del jugador.
+ * @property isVictory Indica si el jugador ha ganado la partida.
+ */
 @Serializable
 data class GameState(
     val currentQuestionIndex: Int = 0,

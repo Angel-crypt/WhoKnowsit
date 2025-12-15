@@ -10,6 +10,9 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import kotlinx.serialization.json.Json
 
+/**
+ * Gestiona el guardado y carga del estado del juego usando DataStore.
+ */
 class SaveManager(private val context: Context) {
 
     private val Context.dataStore by preferencesDataStore("SAVED_GAMES")
@@ -24,12 +27,19 @@ class SaveManager(private val context: Context) {
         }
     }
 
+    /**
+     * Guarda el estado actual del juego en disco.
+     * @param state Estado a guardar.
+     */
     suspend fun saveGameState(state: GameState) {
         dataStore.edit { prefs ->
             prefs[KEY_GAME_STATE] = json.encodeToString(GameState.serializer(), state)
         }
     }
 
+    /**
+     * Flujo que emite el estado guardado, o null si no existe.
+     */
     val loadGameState: Flow<GameState?> =
         dataStore.data.map { prefs ->
             prefs[KEY_GAME_STATE]?.let { stored ->
@@ -37,9 +47,15 @@ class SaveManager(private val context: Context) {
             }
         }
 
+    /**
+     * Verifica si existe una partida guardada.
+     */
     suspend fun isSavedGameState(): Boolean =
         dataStore.data.first()[KEY_GAME_STATE] != null
 
+    /**
+     * Elimina el estado guardado.
+     */
     suspend fun clearSavedGame() {
         dataStore.edit { it.remove(KEY_GAME_STATE) }
     }

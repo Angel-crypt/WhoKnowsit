@@ -8,6 +8,10 @@ import com.example.whoknowsit.domain.ScoreManager
 import com.example.whoknowsit.domain.SoundManager
 import kotlinx.coroutines.flow.firstOrNull
 
+/**
+ * Controlador principal de la lógica del juego.
+ * Gestiona el estado, la puntuación, y el flujo entre preguntas.
+ */
 class GameController(private val context: Context) {
 
     private val localDataSource = LocalQuestionDataSource(context)
@@ -20,6 +24,10 @@ class GameController(private val context: Context) {
         private set
     var onGameFinished: ((finalScore: Int) -> Unit)? = null
 
+    /**
+     * Inicia una nueva partida con la configuración dada.
+     * @param config Configuración seleccionada por el usuario.
+     */
     fun startNewGame(config: GameConfig) {
         scoreManager.reset()
         gameState = GameState(
@@ -33,6 +41,10 @@ class GameController(private val context: Context) {
         )
     }
 
+    /**
+     * Carga una partida guardada previamente.
+     * @return true si se cargó correctamente, false si no había partida guardada.
+     */
     suspend fun loadSavedGame(): Boolean {
         saveManager.loadGameState.firstOrNull()?.let {
             gameState = it.copy(
@@ -44,6 +56,11 @@ class GameController(private val context: Context) {
         return false
     }
 
+    /**
+     * Procesa la respuesta seleccionada por el usuario.
+     * @param selectedOptionIndex Índice de la opción elegida.
+     * @param context Contexto para lanzar actividades (Feedback).
+     */
     suspend fun handleAnswer(selectedOptionIndex: Int, context: Context) {
         gameState.currentQuestion?.let { question ->
             if (gameState.isFinished) return

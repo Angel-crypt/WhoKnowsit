@@ -5,6 +5,14 @@ import com.example.whoknowsit.core.enums.Difficulty
 import com.example.whoknowsit.core.enums.GameMode
 import kotlinx.serialization.Serializable
 
+/**
+ * Configuración del juego actual.
+ *
+ * @property totalQuestions Número total de preguntas en la partida.
+ * @property category Categoría de las preguntas.
+ * @property difficulty Dificultad general del juego.
+ * @property gameMode Modo de juego (Nuevo o Continuar).
+ */
 @Serializable
 data class GameConfig(
     val totalQuestions: Int,
