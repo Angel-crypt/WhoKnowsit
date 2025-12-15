@@ -8,9 +8,23 @@
     android:background="@drawable/gradient_background"
     tools:context=".ui.GameActivity">
 
+    <ImageButton
+        android:id="@+id/save_game_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Guardar Partida"
+        android:src="@drawable/ic_save"
+        app:tint="@color/white" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/save_game_button"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="16dp">
