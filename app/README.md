@@ -1,49 +1,50 @@
-# Who Knows it?
+# Who Knows It?
 
-**Descripción:**  
-Juego social y competitivo para 2 a 4 jugadores en un solo dispositivo, combinando preguntas y retos para fomentar conocimiento mutuo, diversión y competencia estratégica. Los jugadores acumulan puntos, ganan ítems limitados y participan en rondas dinámicas con interacción y votación.
+Who Knows It? es un juego de trivia interactivo para un solo jugador desarrollado en Android (Kotlin). Pon a prueba tus conocimientos en diversas categorías, acumula puntos y desafía diferentes niveles de dificultad.
 
-**Objetivo general:**  
-Fomentar la interacción social y competitividad mediante preguntas y retos, premiando el conocimiento entre jugadores y la toma de decisiones estratégicas.
+## Características Principales
 
-**Objetivos específicos:**
-- Ofrecer rondas de preguntas y retos con puntuación diferenciada.
-- Permitir selección aleatoria de preguntas y retos según paquetes temáticos y número de rondas.
-- Mantener turnos automáticos equitativos para todos los jugadores.
-- Integrar ítems limitados de uso único para potenciar estrategia y competencia.
-- Mostrar puntaje acumulado y estadísticas al final de la partida.
-- Proporcionar retroalimentación visual y sonora que mejore la experiencia.
-- Guardar récords y estadísticas para seguimiento de desempeño.
+*   **Categorías Variadas:** Preguntas sobre Cine, Historia, Música, Cultura Pop, Ciencia y Deportes.
+*   **Niveles de Dificultad:** Fácil, Medio y Difícil, cada uno con multiplicadores de puntuación para recompensar el riesgo.
+*   **Sistema de Guardado:**
+    *   Guarda tu progreso en cualquier momento durante la partida.
+    *   Carga tu partida desde el menú principal.
+    *   **Auto-borrado:** La partida guardada se elimina automáticamente al finalizar el juego (Game Over o Victoria) para mantener el desafío.
+*   **Feedback Inmediato:** Retroalimentación visual y sonora al responder correcta e incorrectamente.
+*   **Mascotas:** Personajes animados que reaccionan a tus resultados.
 
-**Tipos de rondas:**
-- **Pregunta Normal:** Trivia general (1–3 puntos).
-- **Pregunta "Quién conoce mejor a quién":** Evalúa conocimiento sobre otros jugadores (1–3 puntos).
-- **Reto con votación:** Desafíos simples con puntaje mayor (2–5 puntos) y posibilidad de ganar ítems.
+## Arquitectura del Proyecto
 
-**Selección de preguntas y retos:**
-- Aleatoria según número de rondas y paquete temático elegido.
-- Evita repeticiones para el mismo jugador; puede repetirse para distintos jugadores.
+El proyecto sigue los principios de **Clean Architecture** para asegurar la escalabilidad y mantenibilidad:
 
-**Turnos:**
-- Automáticos y secuenciales, asignando jugador activo y objetivo de cada pregunta o reto.
-- Permiten responder preguntas, realizar retos y usar ítems estratégicos.
+*   **Core:** Contiene la lógica central del juego (`GameController`, `GameState`, `GameConfig`).
+*   **Domain:** Contiene los casos de uso y gestores de lógica de negocio (`QuestionManager`, `ScoreManager`, `SoundManager`, `SaveManager`).
+*   **Data:** Capa de acceso a datos (`LocalQuestionDataSource`, `QuestionDataSource`).
+*   **UI:** Capa de presentación (Activities de Android).
 
-**Ítems:**
-- **Skip Question:** Salta una pregunta sin perder puntos.
-- **Double Points:** Duplica puntos de respuesta o reto.
-- Obtenidos al completar retos exitosos mediante votación.
+## Tecnologías Utilizadas
 
-**Puntaje:**
-- Acumulativo por respuestas y retos.
-- Puntaje ajustado según dificultad; afectado por ítems.
+*   **Lenguaje:** Kotlin
+*   **Persistencia:** Jetpack DataStore (Preferences)
+*   **Serialización:** Kotlinx Serialization (JSON)
+*   **Concurrencia:** Kotlin Coroutines & Flow
+*   **Diseño:** XML Layouts, Material Design Components
 
-**Condición de fin de juego:**
-- Por número de preguntas/retos definidos al inicio o por puntaje objetivo.
-- Al final se muestran: puntaje total, ranking de retos y quién conoce mejor a quién.
+## Cómo Jugar
 
-**Interfaz y animaciones:**
-- Canvas + SurfaceView con animaciones simples (resaltar jugador, aparición de ítems, cambios de color).
-- Sonidos asociados a aciertos, errores, cambio de turno y uso de ítems.
+1.  **Nuevo Juego:** Selecciona "Juego Nuevo" en el menú principal.
+2.  **Configuración:** Elige la categoría, la dificultad y el número de preguntas.
+3.  **Jugar:** Responde las preguntas seleccionando una de las 4 opciones.
+4.  **Guardar:** Puedes guardar tu partida usando el icono de disquete en la esquina superior derecha.
+5.  **Cargar:** Si tienes una partida guardada, aparecerá el botón "Cargar Partida" en el menú principal.
+6.  **Resultado:** Al finalizar, verás tu puntuación final y si has logrado la victoria.
 
-**Persistencia:**
-- Guardado de puntajes máximos y estadísticas de partidas mediante SharedPreferences.
+## Estructura de Directorios
+
+```
+com.example.whoknowsit
+├── core        # Lógica de estados y configuración
+├── data        # Fuentes de datos (JSON, Repositorios)
+├── domain      # Reglas de negocio (Managers)
+└── ui          # Actividades y vistas
+```
