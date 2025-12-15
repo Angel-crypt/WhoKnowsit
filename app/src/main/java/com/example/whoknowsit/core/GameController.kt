@@ -35,14 +35,17 @@ class GameController(private val context: Context) {
 
     suspend fun loadSavedGame(): Boolean {
         saveManager.loadGameState.firstOrNull()?.let {
-            gameState = it
+            // Cuando cargamos, forzamos el modo a CONTINUE para saber que viene de un save
+            gameState = it.copy(
+                gameConfig = it.gameConfig.copy(gameMode = com.example.whoknowsit.core.enums.GameMode.CONTINUE)
+            )
             scoreManager.setScore(it.score)
             return true
         }
         return false
     }
 
-    fun handleAnswer(selectedOptionIndex: Int, context: Context) {
+    suspend fun handleAnswer(selectedOptionIndex: Int, context: Context) {
         gameState.currentQuestion?.let { question ->
             if (gameState.isFinished) return
 
@@ -78,11 +81,15 @@ class GameController(private val context: Context) {
         }
     }
 
-    private fun handleGameFinished() {
+    private suspend fun handleGameFinished() {
         val finalScore = scoreManager.score
         onGameFinished?.invoke(finalScore)
 
         val passingScore = gameState.questions.size * 10 * 0.5
         gameState.isVictory = finalScore >= passingScore
+
+        if (gameState.gameConfig.gameMode == com.example.whoknowsit.core.enums.GameMode.CONTINUE) {
+            saveManager.clearSavedGame()
+        }
     }
 }
