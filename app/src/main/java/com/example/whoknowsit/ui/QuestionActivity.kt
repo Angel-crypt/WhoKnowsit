@@ -2,20 +2,25 @@ package com.example.whoknowsit.ui
 
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
 import com.example.whoknowsit.R
 import com.example.whoknowsit.WhoKnowsItApplication
 import com.google.android.material.button.MaterialButton
+import kotlinx.coroutines.launch
 
 class QuestionActivity : AppCompatActivity() {
 
     private lateinit var questionTextView: TextView
     private lateinit var counterTextView: TextView
     private lateinit var optionViews: List<MaterialButton>
+    private lateinit var saveGameBtn: ImageButton
     private var selectedOptionIndex: Int? = null
     private var shuffledIndexes: List<Int> = emptyList()
 
@@ -35,6 +40,12 @@ class QuestionActivity : AppCompatActivity() {
 
         initializeViews()
         setupListeners()
+
+        lifecycleScope.launch {
+            val canSaveGame = gameController.gameState.currentQuestionIndex < gameController.gameState.questions.size - 1
+            saveGameBtn.visibility =
+                if (canSaveGame) View.VISIBLE else View.GONE
+        }
         
         gameController.gameState.currentQuestion?.let { question ->
             setQuestionText(question.text)
@@ -49,6 +60,7 @@ class QuestionActivity : AppCompatActivity() {
     private fun initializeViews() {
         questionTextView = findViewById(R.id.question_text_view)
         counterTextView = findViewById(R.id.counter_question)
+        saveGameBtn = findViewById(R.id.save_game_button)
         
         optionViews = listOf(
             findViewById(R.id.opt_1),
@@ -65,6 +77,16 @@ class QuestionActivity : AppCompatActivity() {
                 updateSelection(button)
             }
         }
+
+        saveGameBtn.setOnClickListener {
+            lifecycleScope.launch {
+                gameController.saveManager.saveGameState(gameController.gameState)
+                Toast.makeText(this@QuestionActivity, "Partida guardada correctamente", Toast.LENGTH_SHORT).show()
+                val intent = android.content.Intent(this@QuestionActivity, com.example.whoknowsit.ui.MainActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+        }
     }
 
     private fun updateSelection(selectedView: View) {
@@ -74,7 +96,9 @@ class QuestionActivity : AppCompatActivity() {
         val selectedVisualIndex = optionViews.indexOf(selectedView)
         if (selectedVisualIndex != -1 && selectedVisualIndex < shuffledIndexes.size) {
             val originalIndex = shuffledIndexes[selectedVisualIndex]
-            gameController.handleAnswer(originalIndex, this)
+            lifecycleScope.launch {
+                gameController.handleAnswer(originalIndex, this@QuestionActivity)
+            }
         }
     }
 

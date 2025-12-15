@@ -92,6 +92,12 @@ class GameActivity : AppCompatActivity() {
         findViewById<View>(R.id.play_button).setOnClickListener {
             validateAndPlay()
         }
+
+        findViewById<View>(R.id.back_home_button).setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
     private fun <T> applySelection(map: Map<T, View>, selected: T) {

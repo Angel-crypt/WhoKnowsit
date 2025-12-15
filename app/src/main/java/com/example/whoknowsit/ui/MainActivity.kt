@@ -31,6 +31,18 @@ class MainActivity : AppCompatActivity() {
                 if (hasSavedGame) View.VISIBLE else View.GONE
         }
 
+        loadGameButton.setOnClickListener {
+            lifecycleScope.launch {
+                if (gameController.loadSavedGame()) {
+                    val intent = Intent(this@MainActivity, QuestionActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                } else {
+                    android.widget.Toast.makeText(this@MainActivity, "No se pudo cargar la partida", android.widget.Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+
         newGameButton = findViewById(R.id.new_game_button)
         newGameButton.setOnClickListener {
             val intent = Intent(this, GameActivity::class.java)

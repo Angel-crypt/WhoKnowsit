@@ -3,8 +3,6 @@ package com.example.whoknowsit.ui
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.whoknowsit.R
 import com.google.android.material.button.MaterialButton
 
@@ -37,6 +35,12 @@ class ResultActivity : AppCompatActivity() {
 
         newGameButton.setOnClickListener {
             val intent = android.content.Intent(this, com.example.whoknowsit.ui.GameActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        findViewById<android.widget.ImageButton>(R.id.back_home_button).setOnClickListener {
+            val intent = android.content.Intent(this, com.example.whoknowsit.ui.MainActivity::class.java)
             startActivity(intent)
             finish()
         }
