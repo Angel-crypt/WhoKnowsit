@@ -35,7 +35,6 @@ class GameController(private val context: Context) {
 
     suspend fun loadSavedGame(): Boolean {
         saveManager.loadGameState.firstOrNull()?.let {
-            // Cuando cargamos, forzamos el modo a CONTINUE para saber que viene de un save
             gameState = it.copy(
                 gameConfig = it.gameConfig.copy(gameMode = com.example.whoknowsit.core.enums.GameMode.CONTINUE)
             )
