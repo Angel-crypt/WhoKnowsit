@@ -63,21 +63,21 @@ utilicé apoyo de herramientas de IA para analizar y definir una estructura más
 
 ### Capas del sistema
 
-* **UI (Presentation Layer):**  
+* **UI (Presentation Layer - 1):**  
   Activities encargadas únicamente de renderizar el estado  
   (`MainActivity`, `GameActivity`, `QuestionActivity`, etc.).
 
-* **Domain (Business Logic):**  
+* **Domain (Business Logic -2):**  
   Reglas del juego y lógica de negocio  
   (`GameController`, `QuestionManager`, `SaveManager`, `ScoreManager`, `SoundManager`).
 
-* **Data (Data Layer):**  
-  Fuentes de datos y acceso a información  
-  (`QuestionDataSource`, `LocalQuestionDataSource`).
-
-* **Core / App:**  
+* **Core / App (2):**  
   Modelos, configuración y estado global del juego  
   (`GameState`, `GameConfig`, enums, `WhoKnowsItApplication`).
+
+* **Data (Data Layer - 3):**  
+  Fuentes de datos y acceso a información  
+  (`QuestionDataSource`, `LocalQuestionDataSource`).
 
 ## Estructura del proyecto
 ```
