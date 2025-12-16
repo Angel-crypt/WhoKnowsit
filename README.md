@@ -1,181 +1,127 @@
-# Who Knows it?
+# Documentación del Videojuego WhoKnowsIt
 
-**Descripción:**
+## 1. Introducción
 
-Who Knows it? es un juego de trivia para un solo jugador inspirado en clásicos como *Trivia Crack* y *Preguntados*. El jugador responde preguntas de opción múltiple en distintas categorías (Historia, Ciencia, Cultura Pop, Cine, Deportes), acumula aciertos y puede continuar una partida previa gracias al sistema de guardado automático. Está diseñado para ser ligero, rápido y fácil de expandir mediante archivos JSON.
+Esta documentación describe el desarrollo, funcionamiento y características técnicas de **WhoKnowsIt**, un videojuego de preguntas y respuestas desarrollado en Android nativo. El propósito de este proyecto fue crear una experiencia de juego completa, desde la configuración de una partida hasta la gestión del estado del juego, aplicando buenas prácticas de desarrollo móvil y adaptando la arquitectura según las necesidades surgieron.
 
-**Objetivo general:**
+## 2. Descripción del juego
 
-Ofrecer una experiencia sencilla, divertida y educativa, donde el jugador pueda poner a prueba sus conocimientos a través de preguntas aleatorias organizadas por categorías.
+**WhoKnowsIt** es un juego de trivia para un solo jugador ("Single Player") donde el objetivo es responder correctamente cuestionarios generados según las preferencias del usuario.
+
+### Jugabilidad y Aspecto del Juego
+
+#### Flujo real del juego
+
+1.  **Inicio:** Desde el menú principal, el jugador puede elegir entre "Nuevo Juego" o, si existe una partida previa, "Cargar Partida".
+2.  **Configuración:** Al iniciar una nueva partida, se configuran parámetros clave: Categoría, Dificultad y Número de Preguntas.
+3.  **Partida:**
+    *   Se presenta una pregunta a la vez.
+    *   El usuario selecciona una respuesta y recibe retroalimentación inmediata (acierto/error).
+    *   Si **NO** es la última pregunta, aparece un botón para **Guardar Partida**, lo que permite pausar y guardar el progreso actual (pregunta actual y puntaje).
+4.  **Finalización:**
+    *   Al responder la última pregunta, el juego termina y muestra la pantalla de resultados.
+    *   **Importante:** Si se estaba jugando una partida guardada, al llegar al final y ver los resultados, la partida guardada se elimina automáticamente del sistema.
+
+#### Aspecto visual del juego
+
+A continuación se muestran las pantallas principales que componen la experiencia de usuario.
+
+| Pantalla principal | Configuración de partida | Pantalla de pregunta |
+|-------------------|-------------------------|----------------------|
+| ![](docs/images/main_screen.png) | ![](docs/images/config_screen.png) | ![](docs/images/question_screen.png) |
+| *Figura 1. Pantalla principal del juego.* | *Figura 2. Configuración de la partida.* | *Figura 3. Pantalla de pregunta.* |
+
+| Resultado correcto | Resultado incorrecto |
+|-------------------|----------------------|
+| ![](docs/images/result_screen_correct.png) | ![](docs/images/result_screen_incorrect.png) |
+| *Figura 4. Resultado al responder correctamente.* | *Figura 5. Resultado al responder incorrectamente.* |
+
+
+#### Videos de jugabilidad
+
+Para ver el funcionamiento en tiempo real, consulta los siguientes videos demostrativos:
+
+*   [Ver video – Flujo completo del juego](docs/videos/full_gameplay.mp4)
+*   [Ver video – Guardar y cargar partida](docs/videos/save_load_demo.mp4)
+
+## 3. Controles
+
+La interfaz está diseñada para ser intuitiva y totalmente táctil:
+
+*   **Selección de respuesta:** Tocar ("Tap") sobre cualquiera de los 4 botones de opción.
+*   **Guardado:** Botón de disquete (Guardar) ubicado en la barra superior, disponible durante el juego (menos en la última pregunta).
+
+## 4. Arquitectura del sistema
+
+### Decisión de arquitectura
+El proyecto no comenzó con una arquitectura estricta. Inicialmente, gran parte de la lógica residía en las mismas actividades. Conforme el proyecto creció y con el apoyo de herramientas de IA, se refactorizó el código hacia una arquitectura por capas basada en responsabilidades. Esto se eligió para desacoplar la lógica del juego de la interfaz gráfica, facilitando la detección de errores y cambios futuros.
+
+### Arquitectura utilizada
+El sistema se organiza en las siguientes capas:
+
+*   **UI (Presentation Layer):** Activities (`MainActivity`, `GameActivity`) que solo renderizan el estado.
+*   **Domain (Business Logic):** Managers (`QuestionManager`, `SaveManager`) que ejecutan las reglas del negocio.
+*   **Data (Data Layer):** Origen de los datos (DataSource).
+*   **Core:** Clases de soporte y definiciones de estado (`GameState`).
+
+### Clases principales del sistema
+
+*   **`GameController`**:
+    *   *Responsabilidad:* Orquestador central. Maneja el ciclo de vida de una partida activa.
+    *   *Lógica:* Valida respuestas, invoca el cambio de pregunta y determina cuándo termina el juego.
+
+*   **`QuestionManager`**:
+    *   *Responsabilidad:* Proveer las preguntas.
+    *   *Métodos:* Filtra el banco de preguntas según la categoría y dificultad seleccionada.
+
+*   **`SaveManager`**:
+    *   *Responsabilidad:* Persistencia del juego.
+    *   *Tecnología:* Utiliza **DataStore** y Serialización JSON.
+    *   *Métodos:* `saveGameState()` (guarda estado actual), `loadGameState` (recupera flujo), `clearSavedGame()` (borra al terminar).
+
+*   **`SoundManager`**:
+    *   *Responsabilidad:* Reproducción de efectos de sonido.
+    *   *Tecnología:* `MediaPlayer`.
+
+
+## 5. Manual de usuario
+
+**Cómo jugar una partida nueva:**
+1.  Abre la aplicación.
+2.  Toca "Nuevo Juego".
+3.  Selecciona tus preferencias (Ej. Cine, Medio, 10 preguntas) y toca "Comenzar".
+4.  Responde tocando la opción que creas correcta.
+5.  Al final, verás tu resultado.
+
+**Cómo guardar y cargar:**
+1.  **Guardar:** Mientras juegas (antes de la última pregunta), toca el icono de guardar en la parte superior. Aparecerá un mensaje confirmando el guardado. Puedes salir de la app con seguridad.
+2.  **Cargar:** Al abrir la app, si hay una partida guardada, verás activo el botón "Cargar Partida". Tócalo para retomar exactamente donde te quedaste.
+3.  **Nota:** Si terminas una partida cargada, esta se borrará automáticamente.
+
+## 6. Pruebas realizadas
+
+Se realizaron las siguientes pruebas funcionales reales:
+
+*   **Prueba de Flujo:** Completar partidas de principio a fin sin cierres inesperados.
+*   **Prueba de Guardado:** Guardar en la pregunta 3, cerrar la app, cargar y verificar que se retoma en la pregunta 3 con el puntaje correcto.
+*   **Prueba de Sonidos:** Verificación auditiva de que los sonidos corresponden a la acción (acierto/error) y corrección de superposición de audios.
+*   **Prueba de Interfaz:** Ajuste de colores en botones de respuesta para asegurar que el usuario distinga claramente si acertó o falló.
+
+## 7. Conclusiones y mejoras futuras
+
+El proyecto es funcional y demuestra el uso efectivo de componentes modernos de Android como DataStore. Sin embargo, hay margen de mejora:
+
+*   **Guardar múltiples partidas:** Actualmente solo se soporta un "slot" de guardado. Sería ideal permitir varios.
+*   **Administración:** Una pantalla para ver y borrar partidas guardadas manualmente.
+*   **Más preguntas:** Cargar preguntas desde una API remota.
+*   **Modo Multijugador:** Competencia local o en red.
+*   **Time Attack:** Modo de juego contra reloj.
 
 ---
 
-# **Objetivos específicos**
+## 8. Diagramas
 
-* Brindar un sistema de trivia directo y dinámico basado en selección múltiple.
-* Permitir partidas nuevas con categorías personalizadas.
-* Proveer un sistema de guardado que permita continuar la partida en cualquier momento.
-* Garantizar un flujo de juego simple y accesible, sin elementos competitivos o multijugador.
-* Facilitar escalabilidad mediante carga de preguntas desde archivos JSON.
-* Mantener un registro claro del progreso: preguntas respondidas, aciertos y avance actual.
-
----
-
-# **Características principales**
-
-## **1. Categorías disponibles**
-
-El juego incluye categorías temáticas predefinidas:
-
-* **Historia**
-* **Ciencia**
-* **Cultura Pop**
-* **Películas**
-* **Deportes**
-
-Cada categoría se carga desde archivos JSON independientes en `assets/questions/`.
-
----
-
-## **2. Modo de juego**
-
-### **Nueva partida**
-
-El jugador elige una o más categorías.
-
-El sistema:
-
-1. Carga todas las preguntas de los archivos JSON.
-2. Filtra por las categorías seleccionadas.
-3. Mezcla las preguntas aleatoriamente.
-4. Genera una partida nueva con el listado ordenado aleatoriamente.
-
-### **Continuar partida**
-
-Si existe un progreso guardado, el jugador puede retomarlo exactamente en el punto donde lo dejó:
-
-* Pregunta actual
-* Aciertos
-* Preguntas contestadas
-* Orden original de preguntas
-
-El juego guarda automáticamente después de cada respuesta.
-
----
-
-## **3. Preguntas (Multiple Choice)**
-
-Cada pregunta contiene:
-
-* Enunciado
-* Lista de 4 opciones
-* Índice de la respuesta correcta
-* Categoría
-* ID único
-
-El jugador elige una opción y recibe retroalimentación inmediata (acierto/error).
-
----
-
-## **4. Sistema de puntuación**
-
-* **Aciertos:** el jugador suma 1 punto por respuesta correcta.
-* **Progreso:** el sistema registra cuántas preguntas ha contestado y cuántas quedan.
-* **Resultados:** al final se muestra un resumen de desempeño.
-
----
-
-## **5. Persistencia de datos**
-
-El juego utiliza almacenamiento local para:
-
-* Guardar y cargar partidas (`GameState`)
-* Mantener puntaje, índice de pregunta actual y orden de preguntas
-* Almacenamiento basado en SharedPreferences / archivo local (según plataforma)
-
----
-
-# **Estructura técnica del proyecto**
-
-## **Arquitectura simple, escalable y SOLID**
-
-### **Clases principales**
-
-* `Question` — Modelo de pregunta
-* `Category` — Enum de categorías
-* `GameState` — Representa el estado completo de la partida
-* `GameStateStorage` — Interfaz para guardar/cargar
-* `QuestionRepository` — Interfaz para cargar preguntas
-* `JsonQuestionRepository` — Carga de preguntas desde archivos JSON
-* `GameEngine` — Controlador principal del juego
-
----
-
-# **Estructura de assets**
-
+```md
+![Diagrama de flujo del estado del juego](docs/images/state_flow_diagram.png)
+![Diagrama general de clases](docs/images/class_diagram.png)
 ```
-assets/
-   questions/
-      history.json
-      science.json
-      movies.json
-      pop_culture.json
-      sports.json
-```
-
-Cada archivo contiene únicamente preguntas de su categoría.
-
----
-
-# **Formato de JSON**
-
-```json
-[
-  {
-    "id": "h1",
-    "category": "HISTORY",
-    "text": "¿En qué año ocurrió la caída del Imperio romano de Occidente?",
-    "options": ["476 d.C.", "1492 d.C.", "800 d.C.", "1215 d.C."],
-    "correctIndex": 0
-  }
-]
-```
-
----
-
-# **Flujo de juego**
-
-1. Menú principal:
-
-   * Nueva partida
-   * Continuar partida
-
-2. Selección de categorías
-
-3. El motor selecciona y mezcla preguntas
-
-4. El jugador responde una pregunta a la vez
-
-5. Se registra acierto/error
-
-6. Guardado automático
-
-7. Cuando no quedan preguntas → pantalla de resultados
-
----
-
-# **Interfaz y experiencia**
-
-* UI minimalista y clara
-* Feedback inmediato:
-
-  * Acierto → verde
-  * Error → rojo
-* Animación ligera para mostrar transición entre preguntas
-* Progreso visible (pregunta X de Y)
-
----
-
-# **Resumen**
-
-Who Knows it? es un juego de trivia **simple, rápido de implementar y fácil de expandir**, ideal para un proyecto académico en tiempo limitado, pero con base sólida para evolucionar a una app completa en el futuro.
