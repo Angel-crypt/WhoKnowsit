@@ -2,6 +2,9 @@
 
 **WhoKnowsIt** es un videojuego de trivia desarrollado en **Android nativo**, enfocado en poner a prueba los conocimientos del jugador en distintas categorías mediante partidas configurables y un sistema de guardado.
 
+El objetivo del proyecto es aplicar conceptos de desarrollo móvil en Android,
+poniendo en práctica principios SOLID, junto con el manejo de estado y persistencia de datos, mediante la implementación de un videojuego funcional.
+
 ## Descripción general
 WhoKnowsIt es un juego de preguntas y respuestas para **un solo jugador (Single Player)**. El usuario puede configurar cada partida eligiendo:
 
@@ -55,14 +58,56 @@ La interacción es completamente táctil:
 ## Arquitectura
 
 ### Enfoque arquitectónico
-El proyecto inició sin un arqitectura esrcita. Conforme creció la complejidad, me apoye de IA para definir la mejor arquitectura para el proyecto. Refactorizando hacia una **arquitectura por capas**, separando responsabilidades y mejorando la mantenibilidad del código.
+El proyecto inició sin una arquitectura explícita. Conforme creció la complejidad,
+utilicé apoyo de herramientas de IA para analizar y definir una estructura más adecuada, refactorizando el código hacia una **arquitectura por capas** basada en principios SOLID, con el objetivo de mejorar la separación de responsabilidades y la mantenibilidad del proyecto.
 
 ### Capas del sistema
 
-*   **UI (Presentation Layer):** Activities encargadas únicamente de renderizar el estado (`MainActivity`, `GameActivity`).
-*   **Domain (Business Logic):** Lógica del juego y reglas (`QuestionManager`, `SaveManager`).
-*   **Data (Data Layer):** Fuente de datos de preguntas (`DataSource`).
-*   **Core:** Modelos y estados globales (`GameState`, `GameController`, `GameConfig`).
+* **UI (Presentation Layer):**  
+  Activities encargadas únicamente de renderizar el estado  
+  (`MainActivity`, `GameActivity`, `QuestionActivity`, etc.).
+
+* **Domain (Business Logic):**  
+  Reglas del juego y lógica de negocio  
+  (`GameController`, `QuestionManager`, `SaveManager`, `ScoreManager`, `SoundManager`).
+
+* **Data (Data Layer):**  
+  Fuentes de datos y acceso a información  
+  (`QuestionDataSource`, `LocalQuestionDataSource`).
+
+* **Core / App:**  
+  Modelos, configuración y estado global del juego  
+  (`GameState`, `GameConfig`, enums, `WhoKnowsItApplication`).
+
+## Estructura del proyecto
+```
+com.example.whoknowsit
+├── core
+│   ├── enums
+│   │   ├── Category.kt
+│   │   ├── Difficulty.kt
+│   │   └── GameMode.kt
+│   ├── GameConfig.kt
+│   ├── GameController.kt
+│   └── GameState.kt
+├── data
+│   ├── models
+│   │   └── Question.kt
+│   ├── LocalQuestionDataSource.kt
+│   └── QuestionDataSource.kt
+├── domain
+│   ├── QuestionManager.kt
+│   ├── SaveManager.kt
+│   ├── ScoreManager.kt
+│   └── SoundManager.kt
+├── ui
+│   ├── FeedbackActivity.kt
+│   ├── GameActivity.kt
+│   ├── MainActivity.kt
+│   ├── QuestionActivity.kt
+│   └── ResultActivity.kt
+└── WhoKnowsItApplication.kt
+```
 
 ## Componentes principales
 
@@ -71,8 +116,9 @@ El proyecto inició sin un arqitectura esrcita. Conforme creció la complejidad,
     *  Controla el flujo de preguntas, validación de respuestas y finalización de la partida.
 
 *   **`QuestionManager`**:
-    *  Proporciona las preguntas según categoría y dificultad.
-    *  Filtra el banco de preguntas disponible.
+    * Coordina la obtención y selección de preguntas.
+    * Se apoya en `QuestionDataSource` para aislar la fuente de datos.
+    * Permite cambiar la fuente de preguntas sin afectar la lógica del juego.
 
 *   **`SaveManager`**:
     *  Gestiona la persistencia del estado del juego.
@@ -86,6 +132,24 @@ El proyecto inició sin un arqitectura esrcita. Conforme creció la complejidad,
     *  Maneja los efectos de sonido del juego.
     *  Implementado con `MediaPlayer`.
 
+*   **`ScoreManager`**:
+    *  Gestiona el cálculo y acumulación del puntaje.
+    *  Aplica reglas de puntuación según dificultad y respuestas correctas.
+
+*   **`WhoKnowsItApplication`**:
+    * Clase `Application` del proyecto.
+    * Inicializa dependencias globales y recursos compartidos.
+    * Centraliza la configuración inicial del juego y managers.
+
+### Persistencia y serialización de estado
+
+El estado del juego se almacena mediante DataStore, utilizando serialización en formato JSON.
+Las principales clases serializadas son:
+
+- `GameState`: representa el progreso actual de la partida, incluyendo el puntaje, el índice de la pregunta y la configuración activa.
+- `GameConfig`: define los parámetros seleccionados por el usuario, como la categoría, la dificultad y la cantidad de preguntas.
+
+La serialización en JSON permite almacenar estructuras complejas de forma legible, independiente del mecanismo de almacenamiento físico y fácilmente restaurable al reanudar una partida.
 
 ## Manual de usuario
 
@@ -116,9 +180,20 @@ El proyecto inició sin un arqitectura esrcita. Conforme creció la complejidad,
 *  Modo multijugador.
 *  Modo contrarreloj (Time Attack).
 
+## Conclusiones
+
+El desarrollo de WhoKnowsIt permitió aplicar conceptos clave de Android
+como manejo de estado, persistencia de datos y separación por capas.
+Durante el proyecto se reforzó la importancia de una arquitectura clara
+para facilitar cambios y mantenimiento.
+
+El juego cumple con los objetivos planteados y deja una base sólida
+para futuras extensiones.
+
 ## Diagramas
 
 ```md
 ![Diagrama de flujo del estado del juego](docs/images/state_flow_diagram.png)
-![Diagrama general de clases](docs/images/class_diagram.png)
+![Diagrama de jerarquía y relaciones de clases](docs/images/class_diagram.png)
+![Diagrama de secuencia de eventos](docs/images/sequence_diagram.png)
 ```
